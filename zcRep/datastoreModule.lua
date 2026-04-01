@@ -1,4 +1,5 @@
 -- datastore stuff. Dont feel like adding any comments
+-- this is so cool
 
 local DataStoreService = game:GetService("DataStoreService")
 
