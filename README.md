@@ -32,4 +32,7 @@ Zeus chat loads some files from a web server when the game runs. This is in atte
 
 
 
+Create an issue or join the discord for help and support
+https://discord.gg/TRrBk3XP
+
 
