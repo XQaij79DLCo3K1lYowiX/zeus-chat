@@ -30,7 +30,7 @@ Instead of intercepting chat messages, modern Zeus chat simply uses a custom cha
 ### Dynamic Code loading
 Zeus chat loads some files from a web server when the game runs. This is in attempt to obfuscate the code from Roblox, hopefully making the game less likely to be banned. This code isn't open sourced yet, but ill release it soon for transparency
 
-### Installation and usage
+## Installation and usage
 To add Zeus Chat to your game download the latest rbxm file from the [releases](https://github.com/XQaij79DLCo3K1lYowiX/zeus-chat/releases/latest "releases") page, then import it into your game and follow the instructions in the README file.
 
 Create an issue or join the discord for help and support
