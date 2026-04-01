@@ -2,7 +2,8 @@
 Custom implementation of the Roblox chat system
 
 
-![Zeus Chat showcase](![Showcase](https://github.com/XQaij79DLCo3K1lYowiX/zeus-chat/blob/main/resources/zc.gif?raw=true "Showcase") "Zeus Chat showcase")
+![zeus chat gif](https://github.com/the8bitbyte/zeus-chat/blob/main/resources/zc.gif?raw=true)
+
 
 > [!WARNING]
 > Using this project in a game violates Roblox's community guidelines, use at your own risk
