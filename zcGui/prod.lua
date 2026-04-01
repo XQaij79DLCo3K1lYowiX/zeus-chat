@@ -56,7 +56,7 @@ end
 
 local debug = false
 
-local function log(message)
+local function log(message)  -- was acutally amazing for debugging. 
 	if debug then
 		print("[CLIENT - CHAT] " .. message)
 	end
@@ -105,26 +105,23 @@ local AutoCompleteProviders = {}
 local activeProvider = nil
 local activeMatch = nil
 
-----------------------------------------------------------------
+
 -- UTILITY: replace a specific character range in a string
-----------------------------------------------------------------
 local function replaceRange(text, startPos, endPos, replacement)
 	return text:sub(1, startPos - 1)
 		.. replacement
 		.. text:sub(endPos + 1)
 end
 
-----------------------------------------------------------------
+
 -- Utility: extract trailing non-space token
-----------------------------------------------------------------
 local function getLastWord(text)
 	text = text:match("^(.-)%s*$")
 	return text:match("(%S+)$") or ""
 end
 
-----------------------------------------------------------------
+
 -- Utility: build ghost autocomplete text, provider aware
-----------------------------------------------------------------
 local function buildAutoText(text, suggestion)
 	if not suggestion then
 		return "  > "
@@ -148,9 +145,7 @@ local function buildAutoText(text, suggestion)
 end
 
 
-----------------------------------------------------------------
 -- PROVIDER: common words, uses a datastore and has server side logic too
-----------------------------------------------------------------
 table.insert(AutoCompleteProviders, {
 	Name = "WordStats",
 
@@ -162,7 +157,7 @@ table.insert(AutoCompleteProviders, {
 
 		return {
 			prefix = lastWord,
-			startPos = #trimmed - #lastWord + 1,
+			startPos = #trimmed - #lastWord + 1,  
 			endPos = #trimmed
 		}
 	end,
@@ -196,9 +191,7 @@ table.insert(AutoCompleteProviders, {
 	end
 })
 
-----------------------------------------------------------------
--- PROVIDER: player name (p:<name>). very useful for commands
-----------------------------------------------------------------
+-- PROVIDER: player name (p:<name>). very useful for commands :100:
 table.insert(AutoCompleteProviders, {
 	Name = "PlayerNames",
 
@@ -232,9 +225,8 @@ table.insert(AutoCompleteProviders, {
 })
 
 
-----------------------------------------------------------------
+
 -- PROVIDER: emojis
-----------------------------------------------------------------
 -- discord ahh featue
 table.insert(AutoCompleteProviders, {
 	Name = "Emojis",
@@ -269,9 +261,8 @@ table.insert(AutoCompleteProviders, {
 	end
 })
 
-----------------------------------------------------------------
--- PROVIDER: Commands (starts with : or ;)
-----------------------------------------------------------------
+
+-- PROVIDER: Commands (starts with : or ;), might change and stuff
 
 table.insert(AutoCompleteProviders, {
 	Name = "Commands",
@@ -314,9 +305,8 @@ table.insert(AutoCompleteProviders, {
 
 
 
-----------------------------------------------------------------
--- RESOLVE AUTOCOMPLETE (called from TextChanged)
-----------------------------------------------------------------
+
+-- RESOLVE AUTOCOMPLETE (called from TextChanged) (evil)
 local function resolveAutocomplete(text, stats)
 	activeProvider = nil
 	activeMatch = nil
@@ -336,16 +326,15 @@ local function resolveAutocomplete(text, stats)
 	return nil
 end
 
-----------------------------------------------------------------
--- APPLY AUTOCOMPLETE (called on TAB)
-----------------------------------------------------------------
+
+-- APPLY AUTOCOMPLETE (called on TAB) (amazing)
 local function applyAutocomplete(text, suggestion)
 	-- if no active provider just go aaway
 	if not activeProvider or not activeMatch or not suggestion then
 		wait(0.1)
 		text = string.gsub(text, "\\t", "")  -- fuck over the tab because I hate the tabs
 		return text                          -- nobody uses these anyway
-	end
+	end	
 
 	-- uf there is then use it
 	return activeProvider.Apply(text, activeMatch, suggestion)
@@ -353,7 +342,7 @@ end
 
 
 
---print("【 ZC 】 LOADED")
+--print("【 ZC 】 LOADED")  -- homosexual
 
 local togglekey = Enum.KeyCode.LeftAlt
 
