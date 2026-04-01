@@ -5,7 +5,7 @@ Custom implementation of the Roblox chat system
 ![zeus chat gif](https://github.com/the8bitbyte/zeus-chat/blob/main/resources/zc.gif?raw=true)
 
 > [!WARNING]
-> Using this project in a game violates Roblox's community guidelines, and is for educational purposes only
+> Using this project in a game violates Roblox's community guidelines, use at your own risk
 
 ## about
 Zeus chat was originally designed as a chat filter bypass tool about a year ago. The idea back then was just Intercept chat messages > relay through remote event > make it look real. This made sense as it was designed with legacy chat in mind. As legacy chat was removed, that implementation died.
