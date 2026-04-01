@@ -58,7 +58,7 @@ local config = {
 	-- version.
 	
 	updateWarning = true,
-	version = "0.2.5",    -- dont change plesae
+	version = "0.2.4",    -- dont change plesae
 	
 	-- wether or not to cache the current ZC version in a datastore. Good if you abandoning
 	-- and still want the chat to work. Not recommended as it could be unsafe. 
