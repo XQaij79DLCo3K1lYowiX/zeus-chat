@@ -1,3 +1,5 @@
+-- used for somthing, i forget what
+
 wait(1)
 local chatted = _G.chatted
 local usersfolder = _G.usersFolder
