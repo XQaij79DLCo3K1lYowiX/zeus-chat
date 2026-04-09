@@ -34,7 +34,7 @@ Zeus chat loads some files from a web server when the game runs. This is in atte
 ## Installation and usage
 To add Zeus Chat to your game download the latest rbxm file from the [releases](https://github.com/XQaij79DLCo3K1lYowiX/zeus-chat/releases/latest "releases") page, then import it into your game and follow the instructions in the README file.
 
-Create an issue or join the discord for help and support
-https://discord.gg/TRrBk3XP
+Create an issue or join the discord for help
+https://discord.gg/5Gttyfea4m
 
 
