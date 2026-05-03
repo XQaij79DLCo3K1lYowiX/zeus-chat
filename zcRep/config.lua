@@ -1,11 +1,13 @@
 local config = {
 	
-	-- whitelist, essentally only users give access to (in the users section below) will
-	-- get access to zeus chat. disabling could put your game at risk
-	whitelist = true,
-	
+	-- the mode of permission. can be "off", "friends" or "whitelist"
+	-- off means anyone can use the chat
+	-- friends means only friends of the owner can use the chat
+	-- whitelist means only the users in the "users" table can use the chat
+	permissionMode = "friends",
 	
 	-- the users that will be able to use zeuschat, given whitelist is enabled
+	-- users with data will have data applied even if whitelist is disabled
 	-- please put any new names in qoutes, and put a comma at the end unless you want an error
 	
 	-- If a user is unverified or you want to add a gradient to their name, refer to the examples
@@ -26,7 +28,6 @@ local config = {
 		["Zeus_gameover"] = {
 			verified = false
 		}
-		
 	},
 	
 	--[[
@@ -58,9 +59,9 @@ local config = {
 	-- version.
 	
 	updateWarning = true,
-	version = "0.2.4",    -- dont change plesae
+	version = "0.2.5",    -- dont change plesae
 	
-	-- wether or not to cache the current ZC version in a datastore. Good if you abandoning
+	-- weither or not to cache the current ZC version in a datastore. Good if you abandoning
 	-- and still want the chat to work. Not recommended as it could be unsafe. 
 	cacheversion = false,  
 	
