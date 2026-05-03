@@ -1,14 +1,18 @@
 -- handles ALL of the gui and some client side stuff.
 -- visuals, quality of life shit, etc.
 
+
+wait(0.01) -- give time for init to happen
+local ep = require(_G.ep) 
+
 local brod = _G.brodcastRemote
 local rec = _G.receiveRemote
 local Service = game:GetService("TextChatService")
-local emoji = _G.emojiModule
-local conf = _G.config
+local emojis = ep.safeload(_G.emojiModule)
+local config = ep.loadconfig()
 local cmds = {}
 
-
+--[[
 local waits = 0          -- this wait / timeout thing CANNOT be efficient. whatevre.
 while not emoji do
 	if waits > 10 then
@@ -22,7 +26,8 @@ end
 
 
 local emojis = require(emoji)
-
+]]
+--[[
 local waits = 0
 while not conf do
 	if waits > 10 then
@@ -35,6 +40,7 @@ while not conf do
 end
 
 local config = require(conf)
+]] 
 
 
 local waits = 0
@@ -346,14 +352,15 @@ end
 
 local togglekey = Enum.KeyCode.LeftAlt
 
-if check(game.Players.LocalPlayer.Name) then
+if ep.checkUser(game.Players.LocalPlayer.Name, config) ~= nil then
 	
 	
 	game.Players:GetChildren()
 	
 	local msglog = {}
 	local dispindex = -1
-
+	
+	local player = game.Players.LocalPlayer
 	local tweenservice = game:GetService("TweenService")
 	local autocompfunc = _G.autoCompFetch
 	local UserInputService = game:GetService("UserInputService")
@@ -376,8 +383,9 @@ if check(game.Players.LocalPlayer.Name) then
 	log("Initial inputconfig.Enabled: " .. tostring(inputconfig.Enabled))
 	log("Initial enabled: " .. tostring(enabled))
 	
+	user = ep.checkUser(player.Name, config)	
 	
-	if check(game.Players.LocalPlayer.Name)["verified"] ~= nil and check(game.Players.LocalPlayer.Name)["verified"] == false then
+	if user.data ~= nil and user.data["verified"] ~= nil and user.data["verified"] == false then
 		tb.Position = UDim2.new(0, 485, .25, 70)
 		auto.Position = UDim2.new(0, 485, .25, 70)
 		bg.Position = UDim2.new(0, 485, .25, 70)
