@@ -9,8 +9,11 @@ local brod = _G.brodcastRemote
 local rec = _G.receiveRemote
 local Service = game:GetService("TextChatService")
 local emojis = ep.safeload(_G.emojiModule)
+local snd = _G.snd
 local config = ep.loadconfig()
 local cmds = {}
+
+local debug = false
 
 --[[
 local waits = 0          -- this wait / timeout thing CANNOT be efficient. whatevre.
@@ -60,7 +63,7 @@ if _G.fetchCmds and config.adonisAutoComplete then
 end
 
 
-local debug = false
+
 
 local function log(message)  -- was acutally amazing for debugging. 
 	if debug then
@@ -263,6 +266,7 @@ table.insert(AutoCompleteProviders, {
 
 	-- replace the typed portion with the full emoji code
 	Apply = function(text, match, suggestion)
+		log("applied emoji ac")
 		return replaceRange(text, match.startPos, match.endPos, suggestion)
 	end
 })
@@ -335,6 +339,7 @@ end
 
 -- apply autocomplete (called on TAB) (amazing)
 local function applyAutocomplete(text, suggestion)
+	log("apply called")
 	-- if no active provider just go aaway
 	if not activeProvider or not activeMatch or not suggestion then
 		wait(0.1)
@@ -456,6 +461,10 @@ local function initDesktopGUI()
 		if tb.Text:sub(-1) == "\t" then
 			tb.Text = tb.Text:sub(1, -2)
 			log("Tab character stripped from input")
+			wait(0.01)                                                -- slight delay or else EVERYTHING breaks.
+			tb.Text = applyAutocomplete(tb.Text, currentsuggestion)   -- had to hack this together as usual
+			tb.CursorPosition = #tb.Text + 1						  -- method was not working.
+			log("applied autocomplete " .. currentsuggestion)
 		end
 	end)
 
@@ -553,7 +562,7 @@ local function initDesktopGUI()
 		end
 	end)
 
-	tb.FocusLost:Connect(function(enterPressed) -- fascinating. when not typing anymore. handles sending messages now
+	tb.FocusLost:Connect(function(enterPressed) -- fascinating. when not typing anymore. DOESNT handle sending messages now (now that im being good about (in)secure)
 		log("TextBox focus lost | enterPressed: " .. tostring(enterPressed))
 
 		if enterPressed and enabled then
@@ -563,7 +572,9 @@ local function initDesktopGUI()
 				auto.Text = "  > "
 
 				local message = tb.Text
-				brod:FireServer(message)
+				
+					
+				snd:Fire(message) -- push event over to other client side script to handle big important things
 				table.insert(msglog, message)
 
 				log("Message sent: " .. message)
