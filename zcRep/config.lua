@@ -19,7 +19,7 @@ local config = {
 			verified = false,
 			gradient = {
 				"#890aff",
-				"#b10aff"
+				"#E20AFF"
 			},
 		},
 		
@@ -47,19 +47,13 @@ local config = {
 	jlmessages = true,
 	
 	
-	
-	-- loaded message. lets you know everything is functional
-	
-	loadedMessage = true,
-	
-	
 	-- stuff related to updates. not recommended to mess with it.
 	-- if the update warning is annoying you, disable it. But don't be
 	-- suprised if zeus chat stops working once i cut support for that
 	-- version.
 	
 	updateWarning = true,
-	version = "0.2.5",    -- dont change plesae
+	version = "0.2.6",    -- dont change plesae
 	
 	-- weither or not to cache the current ZC version in a datastore. Good if you abandoning
 	-- and still want the chat to work. Not recommended as it could be unsafe. 
