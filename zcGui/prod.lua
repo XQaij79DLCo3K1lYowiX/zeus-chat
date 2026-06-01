@@ -15,6 +15,15 @@ local cmds = {}
 
 local debug = false
 
+
+-- PRIVATE CHAT STATE STATE VARIABLES
+local isPrivateChatting = false
+local privateChatTarget = ""
+local lastPrivateUser = nil
+local basePrompt = "  > "
+local currentPrompt = basePrompt
+local paddingSpaces = ""
+
 --[[
 local waits = 0          -- this wait / timeout thing CANNOT be efficient. whatevre.
 while not emoji do 		 -- ^ ok i got rid of it. wow. 
@@ -133,26 +142,23 @@ end
 -- Utility: build ghost autocomplete text, provider aware
 local function buildAutoText(text, suggestion)
 	if not suggestion then
-		return "  > "
+		return currentPrompt
 	end
 
-	-- check if provider is active and if so use the prvfix length
 	if activeMatch and activeMatch.prefix then
 		local remaining = suggestion:sub(#activeMatch.prefix + 1)
-		return "  > "
+		return currentPrompt
 			.. string.rep(" ", #text)
 			.. remaining
 	end
 
-	-- just in case, bettwer safe then sorry
 	local lastWord = getLastWord(text)
 	local remaining = suggestion:sub(#lastWord + 1)
 
-	return "  > "
+	return currentPrompt
 		.. string.rep(" ", #text)
 		.. remaining
 end
-
 
 -- provider: common words, uses a datastore and has server side logic too
 table.insert(AutoCompleteProviders, {
@@ -313,6 +319,43 @@ table.insert(AutoCompleteProviders, {
 	end
 })
 
+-- private chat, dont feel like going in depth with comments
+table.insert(AutoCompleteProviders, {
+	Name = "PrivateChat",
+
+	Match = function(text)
+		-- Find where the "!private " command and its trailing spaces end
+		local cmdStart, cmdEnd = text:find("^!private%s+")
+		if not cmdStart then return nil end
+
+		-- The partial username is everything after the command prefix
+		local partial = text:sub(cmdEnd + 1)
+
+		-- If there are trailing spaces after the username, don't match
+		if partial:find("%s") then return nil end
+
+		return {
+			prefix = partial,
+			startPos = cmdEnd + 1,  -- Start replacing right after the "!private " text
+			endPos = #text          -- Replace up to the current end of the string
+		}
+	end,
+
+	Suggest = function(match)
+		local prefix = match.prefix:lower()
+
+		for _, plr in ipairs(game.Players:GetPlayers()) do
+			if plr.Name:lower():sub(1, #prefix) == prefix then
+				return plr.Name
+			end
+		end
+	end,
+
+	Apply = function(text, match, suggestion)
+		return replaceRange(text, match.startPos, match.endPos, suggestion)
+	end
+})
+
 
 
 
@@ -352,9 +395,6 @@ local function applyAutocomplete(text, suggestion)
 end
 
 local function initDesktopGUI()
-	
-
-
 	local msglog = {}
 	local dispindex = -1
 
@@ -367,7 +407,7 @@ local function initDesktopGUI()
 	local tb = gui.test_tb
 	local auto = gui.auto
 	local bg = gui.bg
-	
+
 	for _, i in ipairs(gui:GetChildren()) do
 		i.Parent = script.Parent
 	end
@@ -377,7 +417,6 @@ local function initDesktopGUI()
 	local currentsuggestion
 
 	inputconfig.Enabled = false
-	--inputconfig.KeyboardKeyCode = Enum.KeyCode.F15 -- what a terrible idea
 
 	local stats = autocompfunc:InvokeServer()
 
@@ -387,61 +426,76 @@ local function initDesktopGUI()
 	local enabled = true
 	local visible = false
 
+
+
 	log("Chat UI init complete")
 
-	-- show and hide, they have a reason thing for the crazy amount of debugging ive been doing
+	-- PRIVATE CHAT LIFECYCLE FUNCTIONS
+	local function startPrivateChat(targetUser)
+		isPrivateChatting = true
+		privateChatTarget = targetUser
+		currentPrompt = " [" .. targetUser .. "] > "
+		-- Calculate how many spaces we need to shift the cursor to align perfectly
+		paddingSpaces = string.rep(" ", #currentPrompt - #basePrompt)
+
+		auto.Text = currentPrompt
+		tb.Text = paddingSpaces
+		tb.CursorPosition = #tb.Text + 1
+		log("Started private chat channel with: " .. targetUser)
+	end
+
+	local function stopPrivateChat()
+		if not isPrivateChatting then return end
+		isPrivateChatting = false
+		lastPrivateUser = privateChatTarget
+		privateChatTarget = ""
+		currentPrompt = basePrompt
+		paddingSpaces = ""
+
+		-- Clean up any residual typed text when dropping back to public
+		local cleanText = tb.Text:match("^%s*(.*)$") or ""
+		tb.Text = cleanText
+		auto.Text = basePrompt
+		tb.CursorPosition = #tb.Text + 1
+		log("Exited private chat channel")
+	end
+
 	local function showBar(reason)
 		if visible then return end
 		visible = true
-
 		log("Showing chat bar | reason: " .. (reason or "unknown"))
-
 		tweenservice:Create(tb, tin, {TextTransparency = 0}):Play()
 		tweenservice:Create(auto, tin, {TextTransparency = 0}):Play()
 		tweenservice:Create(bg, tin, {BackgroundTransparency = 0}):Play()
-
 		tb.Interactable = true
 	end
 
 	local function hideBar(reason)
 		if not visible then return end
 		visible = false
-
 		log("Hiding chat bar | reason: " .. (reason or "unknown"))
-
 		tweenservice:Create(tb, tout, {TextTransparency = 1}):Play()
 		tweenservice:Create(auto, tout, {TextTransparency = 1}):Play()
 		tweenservice:Create(bg, tout, {BackgroundTransparency = 1}):Play()
-
 		tb.Interactable = false
 	end
 
-	-- hover, we want this
 	bg.MouseEnter:Connect(function()
-		if enabled then
-			log("Mouse entered chat bg")
-			showBar("hover")
-		end
+		if enabled then showBar("hover") end
 	end)
 
 	bg.MouseLeave:Connect(function()
-		log("Mouse left chat bg")
-		if not tb:IsFocused() then
-			hideBar("hover leave")
-		end
+		if not tb:IsFocused() then hideBar("hover leave") end
 	end)
 
-	-- click to focus
 	bg.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 and enabled then
-			log("Chat bg clicked")
 			showBar("click")
 			tb:CaptureFocus()
 		end
 	end)
 
 	local user = ep.checkUser(player.Name, config)
-
 	if user.data ~= nil and user.data["verified"] ~= nil and user.data["verified"] == false then
 		tb.Position = UDim2.new(0, 485, .25, 70)
 		auto.Position = UDim2.new(0, 485, .25, 70)
@@ -449,99 +503,98 @@ local function initDesktopGUI()
 		log("Adjusted UI for unverified user")
 	end
 
+	-- TEXT CHANGED INTERCEPTOR
 	tb:GetPropertyChangedSignal("Text"):Connect(function()
-		tb.Text = emojis.ReplaceCodes(tb.Text)
+		-- Safely check if the backspace button tried eating into the required padding structure
+		if isPrivateChatting then
+			if #tb.Text < #paddingSpaces or tb.Text:sub(1, #paddingSpaces) ~= paddingSpaces then
+				--stopPrivateChat()
+				--return
+				tb.Text = paddingSpaces
+			end
+		end
+
+		-- Isolate the user's actual text content from the padding spaces
+		local cleanText = isPrivateChatting and tb.Text:sub(#paddingSpaces + 1) or tb.Text
+
+		-- Run substitutions strictly against the clean text stream
+		local replacedClean = emojis.ReplaceCodes(cleanText)
+		if replacedClean ~= cleanText then
+			tb.Text = (isPrivateChatting and paddingSpaces or "") .. replacedClean
+			tb.CursorPosition = #tb.Text + 1
+			return
+		end
+
 		tb.CursorPosition = #tb.Text + 1
 
-		local suggestion = resolveAutocomplete(tb.Text, stats)
+		local suggestion = resolveAutocomplete(cleanText, stats)
 		currentsuggestion = suggestion
 
-		auto.Text = buildAutoText(tb.Text, suggestion)
+		-- Pass cleanText down to ensure ghost character generation maps one-to-one
+		auto.Text = buildAutoText(cleanText, suggestion)
 
 		if tb.Text:sub(-1) == "\t" then
 			tb.Text = tb.Text:sub(1, -2)
 			log("Tab character stripped from input")
-			wait(0.01)                                                -- slight delay or else EVERYTHING breaks.
-			tb.Text = applyAutocomplete(tb.Text, currentsuggestion)   -- had to hack this together as usual
-			tb.CursorPosition = #tb.Text + 1						  -- method was not working.
-			log("applied autocomplete " .. currentsuggestion)
 		end
 	end)
 
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-		if gameProcessedEvent then return end
-
 		if input.UserInputType == Enum.UserInputType.Keyboard then
 			log("Key pressed: " .. tostring(input.KeyCode))
 
-			-- Slash open
 			if input.KeyCode == Enum.KeyCode.Slash and enabled and not tb:IsFocused() then
-				log("Slash detected, opening chat")
-
 				inputconfig.Enabled = true
 				task.wait()
 				inputconfig.Enabled = false
-
 				showBar("slash")
 				tb:CaptureFocus()
 			end
 
-			-- tab to apply autocomplete
+			-- Tab Completion
 			if input.KeyCode == Enum.KeyCode.Tab and tb:IsFocused() then
 				log("Applying autocomplete")
-				tb.Text = applyAutocomplete(tb.Text, currentsuggestion)
+				local cleanText = isPrivateChatting and tb.Text:sub(#paddingSpaces + 1) or tb.Text
+				local completedClean = applyAutocomplete(cleanText, currentsuggestion)
+
+				tb.Text = (isPrivateChatting and paddingSpaces or "") .. completedClean
 				tb.CursorPosition = #tb.Text + 1
 			end
 
-			-- this fucking sucked, thank god I made it better. 
-			--[[
-			if input.KeyCode == Enum.KeyCode.Return and tb:IsFocused() and enabled then
-				log("Enter pressed, sending message")
-
-				tb:ReleaseFocus()
-
-				if tb.Text ~= "" then
-					auto.Text = "  > "
-
-					local message = tb.Text
-					brod:FireServer(message)
-					table.insert(msglog, message)
-
-					log("Message sent: " .. message)
-
-					stats = autocompfunc:InvokeServer()
-				end
-
-				tb.Text = ""
-				hideBar("message sent")
-			end
-			]]
-			-- Toggle system, just in case everything BREAKS
 			if input.KeyCode == togglekey and not tb:IsFocused() and not inputconfig.IsFocused then
-				log("Toggle key pressed")
-
 				if enabled then
-					--inputconfig.KeyboardKeyCode = Enum.KeyCode.Slash
 					inputconfig.Enabled = true
 					enabled = false
-					log("Switched to default Roblox chat")
 				else
-					--inputconfig.KeyboardKeyCode = Enum.KeyCode.F15
 					inputconfig.Enabled = false
 					enabled = true
-					log("Switched to custom chat")
 				end
 			end
 
-			-- History, literally nobody uses this feature but  Ilove it. Common command line W
+			-- Manual Bind Channel Controls
+			if input.KeyCode == Enum.KeyCode.Left and tb:IsFocused() then
+				if isPrivateChatting then
+					stopPrivateChat()
+				end
+			end
+
+			if input.KeyCode == Enum.KeyCode.Right and tb:IsFocused() then
+				if not isPrivateChatting and lastPrivateUser ~= nil then
+					startPrivateChat(lastPrivateUser)
+				end
+			end
+
+			-- Command Line History Navigation
 			if input.KeyCode == Enum.KeyCode.Up and tb:IsFocused() then
 				if dispindex < #msglog - 1 then
 					dispindex += 1
 				end
 
 				local historyIndex = #msglog - dispindex
-				tb.Text = msglog[historyIndex] or ""
+				local historyMessage = msglog[historyIndex] or ""
 
+				-- Retain padding spaces if currently inside an active channel
+				tb.Text = (isPrivateChatting and paddingSpaces or "") .. historyMessage
 				log("History up -> index: " .. tostring(historyIndex))
 			end
 
@@ -551,38 +604,55 @@ local function initDesktopGUI()
 				end
 
 				if dispindex == -1 then
-					tb.Text = ""
+					tb.Text = isPrivateChatting and paddingSpaces or ""
 					log("History cleared (back to empty)")
 				else
 					local historyIndex = #msglog - dispindex
-					tb.Text = msglog[historyIndex] or ""
+					local historyMessage = msglog[historyIndex] or ""
+					tb.Text = (isPrivateChatting and paddingSpaces or "") .. historyMessage
 					log("History down -> index: " .. tostring(historyIndex))
 				end
 			end
 		end
 	end)
 
-	tb.FocusLost:Connect(function(enterPressed) -- fascinating. when not typing anymore. DOESNT handle sending messages now (now that im being good about (in)secure)
+	tb.FocusLost:Connect(function(enterPressed)
 		log("TextBox focus lost | enterPressed: " .. tostring(enterPressed))
 
 		if enterPressed and enabled then
-			log("Enter pressed, sending message (FocusLost path)")
+			-- Extract target text ignoring layout padding
+			local rawText = tb.Text
+			local cleanText = isPrivateChatting and rawText:sub(#paddingSpaces + 1) or rawText
 
-			if tb.Text ~= "" then
-				auto.Text = "  > "
+			if cleanText ~= "" then
+				-- Intercept and run !private routing checks
+				if cleanText:match("^!private%s+%w+") then
+					local targetUser = cleanText:match("^!private%s+(%w+)")
 
-				local message = tb.Text
-				
-					
-				snd:Fire(message) -- push event over to other client side script to handle big important things
-				table.insert(msglog, message)
+					snd:Fire("init_private", targetUser)
+					startPrivateChat(targetUser)
 
-				log("Message sent: " .. message)
+					-- Refocus immediately so they can begin messaging seamlessly
+					task.defer(function() tb:CaptureFocus() end)
+					return 
+				end
 
+				-- Dynamic message payload distribution
+				if isPrivateChatting then
+					snd:Fire("send_private", privateChatTarget, cleanText)
+					log("Private message sent to " .. privateChatTarget .. ": " .. cleanText)
+				else
+					snd:Fire("send", cleanText)
+					log("Public message sent: " .. cleanText)
+				end
+
+				table.insert(msglog, cleanText)
 				stats = autocompfunc:InvokeServer()
 			end
 
-			tb.Text = ""
+			-- Maintain chat structural states on frame clearing
+			tb.Text = isPrivateChatting and paddingSpaces or ""
+			auto.Text = currentPrompt
 			hideBar("message sent")
 		else
 			task.delay(0.2, function()
