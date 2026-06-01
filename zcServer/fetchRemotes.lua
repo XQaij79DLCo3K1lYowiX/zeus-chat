@@ -8,1229 +8,1676 @@
 Created and hosted by Zeus Gameover / rAEuyq5NrpNFT6BY
 ]]--
 
-return (function(K, I, d, i, V, U, n, J, u, c, Q, e, k, t, H, b, E, R, O, j, v, M)
-	k, c, E, j, b, u, Q, t, v, R, H, M, O, e, J = function(I, U)
-		local V = Q(U);
-		local K = function()
-			return b(I, {}, U, V);
+return (function(t, f, c, B, z, e, S, O, C, M, k, A, o, l, n, H, s, m, u, L, b, T)
+	l, M, o, A, H, T, k, C, b, n, L, m, O, s, u = function(z, f)
+		local e = k(f);
+		local t = function(t, c, B)
+			return s(z, { t, c, B }, f, e);
 		end;
-		return K;
-	end, function(I)
-		local b, U = 1, I[1];
-		while U do
-			E[U], b = E[U] - 1, b + 1;
-			if E[U] == 0 then
-				E[U], J[U] = nil, nil;
+		return t;
+	end, function(z, f)
+		local e = k(f);
+		local t = function(t, c, B, S, u, O)
+			return s(z, {
+				t,
+				c,
+				B,
+				S,
+				u,
+				O,
+			}, f, e);
+		end;
+		return t;
+	end, function(z, f)
+		local e = k(f);
+		local t = function(t)
+			return s(z, { t }, f, e);
+		end;
+		return t;
+	end, 0, function(z, f)
+		local e = k(f);
+		local t = function(...)
+			return s(z, { ... }, f, e);
+		end;
+		return t;
+	end, function(z, f)
+		local e = k(f);
+		local t = function(t, c, B, S)
+			return s(z, {
+				t,
+				c,
+				B,
+				S,
+			}, f, e);
+		end;
+		return t;
+	end, function(z)
+		for s = 1, #z, 1 do
+			O[z[s]] = 1 + O[z[s]];
+		end;
+		if e then
+			local s = e(true);
+			local f = c(s);
+			f.__index, f.__gc, f.__len = z, m, function()
+				return -3928778;
 			end;
-			U = I[b];
+			return s;
+		else
+			return t({}, { __gc = m, __index = z, __len = function()
+				return -3928778;
+			end });
 		end;
-	end, {}, function(I, U)
-		local V = Q(U);
-		local K = function(K, d, n, i, J)
-			return b(I, {
-				K,
-				d,
-				n,
-				i,
-				J,
-			}, U, V);
+	end, function(z, f)
+		local e = k(f);
+		local t = function()
+			return s(z, {}, f, e);
 		end;
-		return K;
-	end, function(b, V, K, d)
-		local Qs = {};
-		local P, m, tL, RL, PL, BL, q, CL, dL, rL, yL, vL, lL, LL, S, s, bs, SL, i, uL, eL, a, A, B, ZL, UL, FL, o, wL, EL, bL, T, l, w, Q, aL, D, AL, OL, fL, X, XL, JL, xL, Js, kL, ML, sL, ns, F, Z, iL, g, h, is, HL, TL, O, N, IL, DL, W, Us, E, p, C, z, Os, zL, cL, Vs, gL, hL, L, oL, r, WL, VL, pL, y, qL, c, YL, Ks, G, ds, nL, QL, t, x, Y, Is, f, mL, NL, Ms, GL, KL, jL, Es;
-		while b do
-			if b > 8301500 then
-				if b > 12816081 then
-					if b < 14744153 then
-						if b < 13865951 then
-							if b > 13307014 then
-								if b > 13412443 then
-									if b < 13512280 then
-										b, s = 14438251, 48538;
-										Z = J[t];
-										f = Z(s);
-										g = T[f];
-										z = g;
-									elseif 13690571 > b then
-										JL, l, b, nL, dL = 9535825 < 929637, nil, 7368676, nil, nil;
-										C = JL;
+		return t;
+	end, function()
+		A = A + 1;
+		O[A] = 1;
+		return A;
+	end, function(z, f)
+		local e = k(f);
+		local t = function(t, c, B, S, u)
+			return s(z, {
+				t,
+				c,
+				B,
+				S,
+				u,
+			}, f, e);
+		end;
+		return t;
+	end, function(z)
+		O[z] = O[z] - 1;
+		if O[z] == 0 then
+			O[z], u[z] = nil, nil;
+		end;
+	end, function(z)
+		local s, f = 1, z[1];
+		while f do
+			O[f], s = O[f] - 1, 1 + s;
+			if O[f] == 0 then
+				O[f], u[f] = nil, nil;
+			end;
+			f = z[s];
+		end;
+	end, {}, function(s, e, t, c)
+		local kW = {};
+		local Y2, OW, R2, S2, W, P, K, bW, d, uW, r2, k2, P2, V, u2, v2, X, AW, z2, s2, H2, q2, w, L2, w2, S, m2, N2, E2, j, J2, F2, Q2, U, e2, r, D2, j2, i2, K2, d2, fW, SW, i, eW, I, l2, I2, g2, tW, sW, a, o2, c2, g, G2, M2, y2, R, y, q, T2, J, Z, h2, k, Q, A, f2, B2, p2, x, p, O, BW, t2, h, b2, zW, C2, Y, a2, x2, D, W2, N, V2, O2, Z2, G, cW, m, X2, v, F, U2, A2, n2, H, E;
+		while s do
+			if s < 8986782 then
+				if 4931366 > s then
+					if 2332285 > s then
+						if s < 874398 then
+							if s > 544759 then
+								if s < 630202 then
+									if 581503 > s then
+										c2, s2 = not t2, s2 + e2;
+										U = f2 >= s2;
+										U = c2 and U;
+										c2 = f2 <= s2;
+										c2 = t2 and c2;
+										U = c2 or U;
+										c2 = 12996626;
+										s = U and c2;
+										U = 13292781;
+										s = s or U;
+									elseif s < 587644 then
+										s = u[t[1]];
+										O = u[t[2]];
+										A = "GetAsync";
+										A = s[A];
+										S = { A(s, O) };
+										S, s = { f(S) }, z.Eo6yF61053jo;
 									else
-										G = J[K[1]];
-										b, a = 4332831, 48531;
-										w = G(a);
-										i = w;
+										J, I = not i, I + W;
+										S = R >= I;
+										S = J and S;
+										J = R <= I;
+										J = i and J;
+										S = J or S;
+										J = 10864048;
+										s = S and J;
+										S = 8034091;
+										s = s or S;
 									end;
 								else
-									if 13318022 > b then
-										Q, E = 48526, V[1];
-										i = J[K[1]];
-										O = i(Q);
-										b = E == O;
-										b = b and 4632523 or 11584697;
-									elseif b < 13322163 then
-										D, h, G, a, z = Q, 48549, b, "sub", b;
-										a = E[a];
-										a = a(E, D, D);
-										g = J[K[1]];
-										T = g(h);
-										w = a == T;
-										p, b = w, w and 5975406 or 8056308;
+									if 745122 > s then
+										h, Y, s, d, m = r, nil, 10054429, nil, nil;
+										k[A] = h;
+										r = nil;
+									elseif 818428 > s then
+										s = b2;
+										s = c2 and 4554475 or 3645681;
 									else
-										cL = "coroutine";
-										QL = I[cL];
-										tL = 48514;
-										cL = J[t];
-										uL = cL(tL);
-										ML = QL[uL];
-										QL = ML(dL);
-										b = 16150368;
-										ML = QL();
-										QL = "warn";
-										ML = I[QL];
-										tL = 48539;
-										cL = J[t];
-										uL = { cL(tL) };
-										QL = ML(U(uL));
+										m = m + Y;
+										S, r = H >= m, not d;
+										S = r and S;
+										r = H <= m;
+										r = d and r;
+										S = r or S;
+										r = 14176831;
+										s = S and r;
+										S = 10495765;
+										s = s or S;
 									end;
 								end;
 							else
-								if 12982838 > b then
-									if b < 12865851 then
-										N, bL = 0, 65536;
-										B, l = N, 65536;
-										C = m / l;
-										A = a(C);
-										IL = m % bL;
-										bL = 256;
-										l = IL / bL;
-										C = a(l);
-										IL = 256;
-										l = m % IL;
-										bL = { z(A, C, l) };
-										b, A = 37064, nil;
-										IL = G(S, U(bL));
-										l, C, IL = nil, nil, 0;
-										m = IL;
-									elseif b < 12933722 then
-										B = m <= S;
-										b = B and 7706861 or 11605561;
+								if s > 417070 then
+									if s < 497734 then
+										r, i, Q, d, I = s, -35153, s, k, "sub";
+										I = O[I];
+										I = I(O, d, d);
+										R = u[t[1]];
+										W = R(i);
+										F = I == W;
+										s, h = F and 4489035 or 5480780, F;
+									elseif s < 511349 then
+										D, f2 = 1, 5;
+										y = x - p;
+										g = y + D;
+										D = s;
+										s2 = g >= f2;
+										f2, U = 5, s;
+										G = s2 and f2;
+										y, s = G, G and 929636 or 9535824;
 									else
-										f = u(f);
-										G, o, w = nil, nil, nil;
-										L = u(L);
-										m = u(m);
-										z, a = nil, nil;
-										P = u(P);
-										h = u(h);
-										c = u(c);
-										B = nil;
-										D = u(D);
-										i, T, b, O, W, x = {}, nil, I.shWNO5iJdz7Cye, nil, nil, nil;
-										Z = u(Z);
-										Y = nil;
-										s = u(s);
-										p = u(p);
-										Q = nil;
-										t = u(t);
+										y, s = s2, e2;
+										s = 7185824;
 									end;
 								else
-									if b < 13144703 then
-										VL, dL = 16777216, 256;
-										UL = r / VL;
-										bL = a(UL);
-										KL, UL = 65536, 256;
-										l = bL % UL;
-										VL = r / KL;
-										UL = a(VL);
-										VL = 256;
-										bL = UL % VL;
-										KL = r / dL;
-										VL = a(KL);
-										KL, dL = 256, 5;
-										UL = VL % KL;
-										KL = 256;
-										VL = r % KL;
-										KL = X == dL;
-										b = KL and 9052716 or 612637;
-									elseif b < 13294918 then
-										VL, l, UL, bL, b = nil, nil, nil, nil, 575572;
+									if 235342 > s then
+										x, D, t2 = 14977381 > 10576765, "warn", -35133;
+										u[j] = x;
+										y = z[D];
+										s2 = u[H];
+										e2 = s2(t2);
+										t2, s = "tostring", 7641042;
+										s2 = z[t2];
+										c2 = u[i];
+										t2 = s2(c2);
+										G = e2  .. t2;
+										D = y(G);
+									elseif 292411 > s then
+										s = G;
+										s = N and 7469798 or 12565161;
 									else
-										z, b = nil, p;
-										b = O .. i;
-										O = b;
-										b = 10015195;
+										A2, s, U = 85, 575572, nil;
+										b2 = D * A2;
+										O2 = b2 + c2;
+										c2, D = nil, O2;
 									end;
 								end;
 							end;
 						else
-							if 14195576 > b then
-								if b > 14050230 then
-									if b < 14100476 then
-										b = C;
-										b = X and 10333679 or 4954469;
-									elseif b < 14148838 then
-										b, QL, ML = 10739307, 48514, "coroutine";
-										dL = I[ML];
-										ML = J[t];
-										OL = ML(QL);
-										KL = dL[OL];
-										QL = 48510;
-										dL = KL(bL);
-										KL = dL();
-										dL = "warn";
-										KL = I[dL];
-										ML = J[t];
-										OL = { ML(QL) };
-										dL = KL(U(OL));
+							if s > 1579468 then
+								if s > 1990089 then
+									if 2128948 > s then
+										k2 = T(11935888, { d, e2 });
+										b2 = "pcall";
+										c2 = z[b2];
+										m2 = { c2(k2) };
+										A2 = m2[2];
+										b2 = m2[1];
+										c2, k2 = b2, s;
+										s = b2 and 12463838 or 12210060;
 									else
-										tL = J[t];
-										vL, cL = 48509, b;
-										jL = tL(vL);
-										uL = T[jL];
-										b, dL = uL and 11530877 or 3109906, uL;
+										s, a = 8071923, nil;
 									end;
 								else
-									if 13896772 > b then
-										b = 4236829;
-									elseif 13963835 > b then
-										b = m;
-										b = S and 744339 or 9730206;
+									if s < 1680264 then
+										A = -35134;
+										s = u[t[1]];
+										S = { s(A) };
+										S, s = { f(S) }, z.E7E1PCiRyqfejz;
+									elseif s < 1832407 then
+										t2, y = -35123, "ipairs";
+										x = z[y];
+										f2 = u[H];
+										e2 = f2(t2);
+										s2 = g[e2];
+										f2 = { x(s2) };
+										D, G, s, y = f2[2], f2[3], 5338356, f2[1];
 									else
-										D, a, G, z = Q, "sub", b, b;
-										a = E[a];
-										a = a(E, D, D);
-										h = 48549;
-										g = J[K[1]];
-										T = g(h);
-										w = a == T;
-										p, b = w, w and 12798856 or 2055026;
+										g = L(g);
+										e2 = L(e2);
+										s, A2, t2, b2 = 8515360, nil, nil, nil;
+										D = L(D);
 									end;
 								end;
 							else
-								if b < 14494745 then
-									if 14271199 > b then
-										ML = "print";
-										dL = I[ML];
-										uL, b = 48530, 15562933;
-										QL = J[t];
-										cL = QL(uL);
-										uL = "tostring";
-										QL = I[uL];
-										tL = J[B];
-										uL = QL(tL);
-										OL = cL .. uL;
-										ML = dL(OL);
-									elseif 14388433 > b then
-										b = 11888597;
+								if 1382226 > s then
+									if 961115 > s then
+										U = 1;
+										G = y > U;
+										s = D;
+										D = 0;
+										s2, U = 4, 0;
+										f2 = s2;
+										s2 = 1;
+										e2 = s2;
+										s2, s = 0, 575572;
+										t2 = s2 > e2;
+										s2 = U - e2;
+									elseif 1170607 > s then
+										s, S = z.UYuiekrwRnODS, { A };
 									else
-										f = J[t];
-										x = 48501;
-										s = f(x);
-										Z = z .. s;
-										f = M();
-										J[f] = Z;
-										x = 48515;
-										Z = J[t];
-										s = Z(x);
-										W = "pcall";
-										Z = M();
-										J[Z] = s;
-										s = M();
-										x = e(8529023, { t, Z });
-										J[s] = x;
-										x = v(15884859, { t, Z });
-										P = I[W];
-										S = v(2514604, { D, f });
-										L = { P(S) };
-										P = M();
-										Y, W, S = L[2], L[1], 15716117 <= 10874434;
-										L = M();
-										J[P] = Y;
-										m = b;
-										b, Y = W and 8214080 or 13917854, 1009245 > 4489706;
-										J[L] = S;
-										S = W;
+										O = u[t[1]];
+										S = #O;
+										O = 0;
+										s = S == O;
+										s = s and 11127515 or 7854834;
 									end;
 								else
-									if 14599685 > b then
-										a = a + T;
-										i, Z = a <= g, not h;
-										i = Z and i;
-										Z = a >= g;
-										Z = h and Z;
-										i = Z or i;
-										Z = 2378948;
-										b = i and Z;
-										i = 14338615;
-										b = b or i;
+									if 1434337 > s then
+										a, p, j, P = 1, 31910970784267, "h", 1;
+										s = r(E, a, P);
+										x = k(j, p);
+										P = A[x];
+										a = s;
+										s = a == P;
+										s = s and 7706861 or 15569259;
+									elseif s < 1476612 then
+										R = 10;
+										s = I > R;
+										s = s and 14438251 or 7953450;
 									else
-										T = "require";
-										g = I[T];
-										T = g(w);
-										h = J[t];
-										f = 48543;
-										Z = h(f);
-										h = M();
-										s = 48538;
-										g = T[Z];
-										J[h] = g;
-										Z = J[t];
-										f = Z(s);
-										g = T[f];
-										b = g and 13499631 or 14438251;
+										c2 = 4;
+										t2 = y == c2;
+										s = t2 and 8605729 or 8352483;
 									end;
 								end;
 							end;
 						end;
 					else
-						if 15676942 > b then
-							if b > 15317061 then
-								if 15563627 > b then
-									if b < 15399236 then
-										X = 48507;
-										m = J[t];
-										B = m(X);
-										b = Y and 16727764 or 8515360;
-										m = M();
-										J[m] = B;
-									elseif b < 15494636 then
-										O = "JSONDecode";
-										b = J[K[1]];
-										E = J[K[2]];
-										O = b[O];
-										i = { O(b, E) };
-										b, i = I.sM21RkMGpVmui1, { U(i) };
+						if 3933885 > s then
+							if 3438137 > s then
+								if 2902274 > s then
+									if 2593542 > s then
+										H2, l2, s = "warn", -35141, 14146197;
+										c2 = z[H2];
+										n2 = u[H];
+										o2 = n2(l2);
+										l2 = "tostring";
+										n2 = z[l2];
+										l2 = n2(L2);
+										T2 = o2  .. l2;
+										H2 = c2(T2);
+									elseif 2773053 > s then
+										s, g, p = 13805553, nil, nil;
 									else
-										QL = k(1597098, { D, bL });
-										ML = "pcall";
-										dL = I[ML];
-										cL = { dL(QL) };
-										QL, ML = b, cL[1];
-										b, OL, dL = ML and 4885327 or 9614644, cL[2], ML;
+										G = u[i];
+										s = 16387949;
+										e2 = u[H];
+										c2 = -35142;
+										t2 = e2(c2);
+										s2 = g[t2];
+										D = G ~= s2;
+										x = D;
 									end;
 								else
-									if 15566790 > b then
-										QL, dL = 48541, "warn";
-										KL = I[dL];
-										uL = 48547;
-										ML = J[t];
-										OL = { ML(QL) };
-										dL = KL(U(OL));
-										OL = "script";
-										ML = I[OL];
-										b = 10739307;
-										QL = J[t];
-										OL = "WaitForChild";
-										cL = { QL(uL) };
-										OL = ML[OL];
-										OL = OL(ML, U(cL));
-										ML = J[t];
-										cL = 48516;
-										QL = ML(cL);
-										dL = OL[QL];
-										KL = G(dL);
-										dL = KL();
+									if s < 3108799 then
+										s = u[t[1]];
+										O = u[t[2]];
+										A = "GetAsync";
+										A = s[A];
+										S = { A(s, O) };
+										S, s = { f(S) }, z["8C8xW3srj2hmH7"];
+									elseif 3305778 > s then
+										s = p;
+										s = x and 14227468 or 14419664;
 									else
-										S, L = 2, {};
-										F = T(W, S);
-										W, m = F, 1;
-										S = p(W);
-										b = 12898395;
+										c2 = u[H];
+										e2, A2 = s, -35110;
+										b2 = c2(A2);
+										t2 = D[b2];
+										s2, s = t2, t2 and 15175639 or 513947;
 									end;
 								end;
 							else
-								if b < 15060172 then
-									if 14852655 > b then
-										QL = "warn";
-										ML = I[QL];
-										tL = 48513;
-										cL = J[t];
-										uL = { cL(tL) };
-										QL = ML(U(uL));
-										uL = "script";
-										cL = I[uL];
-										uL, vL = "WaitForChild", 48547;
-										tL = J[t];
-										jL = { tL(vL) };
-										uL, b = cL[uL], 16150368;
-										uL = uL(cL, U(jL));
-										cL = J[t];
-										jL = 48516;
-										tL = cL(jL);
-										QL = uL[tL];
-										ML = G(QL);
-										QL = ML();
-									elseif b < 14884570 then
-										b = J[K[1]];
-										E = J[K[2]];
-										O = "GetAsync";
-										O = b[O];
-										i = { O(b, E) };
-										b, i = I.oyJrifjEJZLi, { U(i) };
+								if s < 3691229 then
+									if 3546172 > s then
+										J = Z;
+										s = F[J];
+										p, j, E = 24932195298649, "\209\201I\204aQ", s;
+										a = h(E);
+										x = k(j, p);
+										P = A[x];
+										s = a == P;
+										s = s and 1415832 or 8071923;
+									elseif 3638612 > s then
+										k, s, S = 6, 0, 1;
+										m = k;
+										k = 1;
+										H, A = k, s;
+										k = 0;
+										Y = k > H;
+										k, s = S - H, 3858488;
 									else
-										Q = 48499;
-										i = J[K[1]];
-										E = V[1];
-										O = E - Q;
-										b = i[O];
-										i = { b };
-										b = I.HTvOBnLIZWbO1t;
+										s, b2 = 2017337, "print";
+										c2 = z[b2];
+										k2 = u[H];
+										L2 = -35150;
+										m2 = k2(L2);
+										L2 = "tostring";
+										k2 = z[L2];
+										H2 = u[g];
+										L2 = k2(H2);
+										A2 = m2  .. L2;
+										b2 = c2(A2);
 									end;
 								else
-									if b < 15225935 then
-										b, t, i = {}, nil, "setmetatable";
-										T = M();
-										nL = 32674941385583;
-										g = M();
-										a = M();
-										f, h, o, X, UL = "__index", {}, nil, 28261026542440, 31697472453032;
-										J[a] = b;
-										b = j(1915944, {
-											a,
-											D,
-											G,
-											c,
-										});
-										J[g] = b;
-										dL, b, C = 32419045964536, {}, 12604284360429;
-										J[T] = b;
-										b = I[i];
-										s = J[T];
-										HL, x, P = 10032794800703, "__metatable", nil;
-										c = u(c);
-										Z, oL = { [f] = s, [x] = P }, 19447725253472;
-										i = b(h, Z);
-										o, W, p, F, Q = "\170\169\145\003]\218\238\147e\227\128\192C\151GZ\014\210\'\182\234", 16237197319561, nil, 16182577421679, i;
-										b = v(5496652, {
-											T,
-											a,
-											z,
-											D,
-											G,
-											g,
-										});
-										g = u(g);
-										T = u(T);
-										z = u(z);
-										D = u(D);
-										G = u(G);
-										iL, w, D, Y, T, m = 3154454463932, nil, 34130321702421, 14389635963436, 1397418197642, 19820297741325;
-										a = u(a);
-										O = b;
-										t = O(o, D);
-										h = 14747314870995;
-										c = Q[t];
-										r, D, w, L, cL, kL, x, G, z = 23663607098123, "\207\205\240d\159\173u\137w\141\003y\209P\236\028\225\143Z\171+\177\193<L\000U\188K\200\152\r\009\140e\166\148\r[\000\163t\128\r\160z\0231\133\207\253F\194\030p\201D\186\028\221\000\026\214h\141\017y\150\175\031\191\186Q\166\184\154\211\016\209\028\186!8q\004@\206rn<\141", 1867351851877, 29397688956281, 10104580887137, 30681773406159, 21912521189339, 721573495120, 33733138218332;
-										o = O(D, z);
-										a, z = 31591453505910, "\ng\148\255-\220";
-										t = Q[o];
-										q, P, p = 33866756275610, 2590901929142, 3114812753322;
-										D = O(z, p);
-										p = "\149k\168\206\163\197\242#\223\159";
-										o = Q[D];
-										z = O(p, G);
-										G, g = "\011\143SW<\rq\194\000\255\1744P\016\164H\166\\\029I", 31649079409041;
-										D = Q[z];
-										s = 27387183641041;
-										p = O(G, w);
-										z = Q[p];
-										KL, w = 6747373063237, "\148\150\251-";
-										G = O(w, a);
-										p = Q[G];
-										bL, a = 3632560309915, "\182\180\011\251\\\014\254\210\215\227M\205\135\147\011G\193\159\016\146\183\242\'#\006\176\226@\149";
-										w = O(a, g);
-										G = Q[w];
-										g = "\2280A\014\238\224\179\138a";
-										a = O(g, T);
-										JL, QL = 28883753268362, 6623389797388;
-										w = Q[a];
-										T, Z = "]=\1343\011\026\130\245\194\191\161\206\222\200", 6466918222787;
-										g = O(T, h);
-										h = "#b\187";
-										a = Q[g];
-										T = O(h, Z);
-										ML = 17901769351312;
-										g = Q[T];
-										Z, f = "=\158\026\136\217\029", 7735402319378;
-										h = O(Z, f);
-										f = "\025\245\179\002\198\159\149\250C\1738\183n\242n";
-										T = Q[h];
-										Z = O(f, s);
-										B = 7115417783537;
-										h = Q[Z];
-										s = "\217\195V\'k\244\212\163\157\139\251M\169\127\212(X\028G\238F\023\235\030\235\232\160\235\148P\156&#\215\195\020a\161\215\252p[\175B\243\161\1303\156\185\170H S\244u\210i\181=h\250\177\030\'\161\001\240\138t";
-										f = O(s, x);
-										Z = Q[f];
-										x, RL = "\243H\191\008\158\222\136Y?\026\171", 25396869164594;
-										s = O(x, P);
-										P = "\229`,X\184\002i\165\129\251/u\017\230\167\157\162\231R\165V:\199\132\222\0067\214%\139\229T\163\214\017\208\210\194\205\217\242b\190%[\241\176\017\'\153X\127\246KA\234\230\238";
-										f = Q[s];
-										x = O(P, W);
-										W, vL = "t|k\157\202\014\212w\142}", 1284084449877;
-										s = Q[x];
-										P = O(W, Y);
-										x = Q[P];
-										Y = "\177\205\208R\160\158Y@@\004H\248_\179";
-										W = O(Y, F);
-										A, N, F, S = 13528708126875, 16718342545001, "r\144\164!4n\166f\241\135,\228Mc\030(\151x>\249", 21174901352068;
-										P = Q[W];
-										Y = O(F, S);
-										VL = 30807589517321;
-										W = Q[Y];
-										S = "\221\248N\130\203nY&xG.\197b\228\175\236\224\206\169\200\221";
-										F = O(S, L);
-										Y = Q[F];
-										L = "\001";
-										S = O(L, m);
-										F = Q[S];
-										EL, m = 34072359583226, "~<\214\n\209\201";
-										L = O(m, B);
-										B = "e\233\168\2174\220l4\251>U\133.\208\176\131";
-										S = Q[L];
-										y = 2509420037264;
-										m = O(B, X);
-										IL, X = 32258823404205, "\224\203\166|3vp\"\188Y\244:B\030\163\209<\196\028O\029\204\023\210\028\199\019\171L\021\2254\221\023\202\254\185\251(\'\133\233\163\232X\129V\029\223H\196Fe";
-										L = Q[m];
-										B = O(X, r);
-										m = Q[B];
-										r = "z\187\158\194\1919F\230o\209\199\203\240\155\127\019\207\249\139(\018\189\151\026\012\176\129\165\150\019\161?\141\247\205\216\130\143$\176\202\186\140\224\023B\241\233\221\018\239\228\220\160\002\181\028\218\"\225\019\238\007\158\190\152\154}";
-										X = O(r, y);
-										y = "s\134@";
-										B = Q[X];
-										r = O(y, q);
-										q = "\031yS\151\157q\131\029MI\237P\180\138x\164]PsQ\221\241V\185td\130\194h\1313\005\140\143\016\177\183^\193\011\131$d\137-\148 6\221\185\148\251p1[u\227e\234\205\181b\191\234\187%\130O\028S\198\198\153\178|T\005\213\145*\n\134B\217\202I\020{";
-										X = Q[r];
-										y = O(q, N);
-										N = "\019\0140\152\132\236";
-										r = Q[y];
-										q = O(N, A);
-										A = "\165{4i\247\148}v\156\015\213W\254\184rb\012\156}k\149\003M\011\139U\166\127\181\208\142=ijn\025/\141\156\147\201ep3!\218\028Z:\170T}K\153\016\235\197\223\026G\180\190\147UKD\145\190\019+z),\246=\237v\214\206n8";
-										y = Q[q];
-										N = O(A, C);
-										q = Q[N];
-										C, l = "\211\003b\224\198\251\250?", 32751522855827;
-										A = O(C, l);
-										l = "\208\253\252\175\195\194\000\145";
-										N = Q[A];
-										C = O(l, IL);
-										IL, eL = "\149p\230.\220\027\214\224\189\026\204\191ZV", 12332307469934;
-										A = Q[C];
-										l = O(IL, bL);
-										bL = "\"|\168\177j\207*\197\163\159\184\223\1492\151\011\182n\0210\206\195\017\194y\165\207?\000\255A\176\185g0r\195\224J>\197CV\255_@\na\149$\180\172\165\008[l;\018\225/\009\204\143\235f\165~\002\247\018@+p\228b \169\147a\000>\222,w1\004M\016L\215\016\144\138\165J\219-\131";
-										C = Q[l];
-										IL = O(bL, UL);
-										UL = "y\216\1790N\004\225\011\158\222S\021\151\140\235kh\137\165";
-										l = Q[IL];
-										bL = O(UL, VL);
-										VL, tL = "\215\227\1456\210\183+\187R\1725\152,\243\162\166\203\219\198\024", 9214291726530;
-										IL = Q[bL];
-										uL = 22078820591657;
-										UL = O(VL, KL);
-										KL = "\203\145\239@";
-										bL = Q[UL];
-										VL = O(KL, dL);
-										dL = "2R\168\175\127\149\154a\223\225\146c\r!&\205)\140v&7\228[\205\029\140u\245[}\191\2295U^v\165ll\196w\n\002\159";
-										UL = Q[VL];
-										KL = O(dL, nL);
-										nL, OL = "4\211\184G\230\136\235\144\152\031N\164\236\148D\208L\223\180\0077\166\012\006\0114\199\022;6\157+\015\243j\188g?\207\187\254q\225qp\215G\1282\139l\170R\178G}^\237\237", 166299385933;
-										VL = Q[KL];
-										dL = O(nL, iL);
-										iL = "\175\029P\249@\173_\007\216v";
-										KL = Q[dL];
-										nL = O(iL, JL);
-										dL = Q[nL];
-										JL = "\249\233\145";
-										iL = O(JL, EL);
-										nL = Q[iL];
-										EL, jL = "\179\151\163g\242!", 26341778206698;
-										JL = O(EL, ML);
-										ML = "\218\232\n\163\008\139\177\221!\'\022\135\157\217$\138\166\172\2434\152\172\190!\226-MT\009\019\024u\011\181N\248\207\221\147!/\1928\210\204[\236g\178\128\251W\022-\000\190";
-										iL = Q[JL];
-										EL = O(ML, OL);
-										OL = "2\193\225\n,\2475s3\005\254\162\191o\231\008>\214d\231";
-										JL = Q[EL];
-										ML = O(OL, QL);
-										EL = Q[ML];
-										QL = "{X\225\249!\233w\161\221bc\215\008N\204\014\174@";
-										OL = O(QL, cL);
-										cL = "m\127\140";
-										ML = Q[OL];
-										QL = O(cL, uL);
-										uL = "\030,\152yy\005C\026Q";
-										OL = Q[QL];
-										cL = O(uL, tL);
-										tL = "bg\145U\230}\245\206\127?mt\127\248\2425l\163Io\250|\130\225\168\240\215\245\192\1454";
-										QL = Q[cL];
-										uL = O(tL, jL);
-										cL = Q[uL];
-										jL = "C\218\167Wd\132r\196x\001 \025\175D";
-										tL = O(jL, vL);
-										uL = Q[tL];
-										vL = "\249\002\176\239\220S+^\132->\026\n\220\191\204k\189\131\027\188g\221\144\237Q\223\132\1319b\247\027\231\214m\172\132\192\217I\247\234\150\176\031\185g\253";
-										jL = O(vL, RL);
-										RL = "\185\176\152@";
-										tL = Q[jL];
-										vL = O(RL, eL);
-										eL = ">\141X\137\224\207\176\127Q\191\170\000\226\238\003\001 \136M\027\218\141\254\000\235\254\243~+*\180\196\0242\174o\215\247\192(\\OR\246\164\207\217(x\246&K\237\160\202\187p3,\024z\"\241";
-										jL = Q[vL];
-										RL = O(eL, kL);
-										kL = "N7,\204\142w\030\008\017\209\027\148\186\128\235\142";
-										vL = Q[RL];
-										eL = O(kL, HL);
-										RL = Q[eL];
-										HL = "\012\131\145\252.\237\195\129\020\012\156p>\203!\r\151\243d\128\149P\206\132\007\240vu%\159\253zwVA\030\152\253*\253p\009\168\170";
-										kL = O(HL, oL);
-										eL = Q[kL];
-										b = {
-											c,
-											t,
-											o,
-											D,
-											z,
-											p,
-											G,
-											w,
-											a,
-											g,
-											T,
-											h,
-											Z,
-											f,
-											s,
-											x,
-											P,
-											W,
-											Y,
-											F,
-											S,
-											L,
-											m,
-											B,
-											X,
-											r,
-											y,
-											q,
-											N,
-											A,
-											C,
-											l,
-											IL,
-											bL,
-											UL,
-											VL,
-											KL,
-											dL,
-											nL,
-											iL,
-											JL,
-											EL,
-											ML,
-											OL,
-											QL,
-											cL,
-											uL,
-											tL,
-											jL,
-											vL,
-											RL,
-											eL,
-										};
-										t = "ipairs";
-										c = M();
-										w, G = 52, 1;
-										J[c] = b;
-										g = 52;
-										b = I[t];
-										p = { G, w };
-										w, a = 1, 40;
-										G = { w, a };
-										a = 41;
-										w = { a, g };
-										z = { p, G, w };
-										p = { b(z) };
-										o, D, t, b = p[2], p[3], p[1], 1134271;
-									elseif b < 15248762 then
-										C = 48504;
-										X = J[t];
-										r = X(C);
-										S = B[r];
-										b = S and 2660649 or 4236829;
+									if 3797633 > s then
+										y, s2 = 7317360 < 10252446, "warn";
+										G = z[s2];
+										g = y;
+										e2 = u[H];
+										c2 = -35116;
+										t2 = { e2(c2) };
+										s2 = G(f(t2));
+										c2 = -35110;
+										e2 = u[H];
+										t2 = e2(c2);
+										s2 = D[t2];
+										G = v(s2);
+										e2 = u[H];
+										c2, b2 = -35103, "getfenv";
+										t2 = e2(c2);
+										s2 = Q[t2];
+										c2 = z[b2];
+										b2 = { c2() };
+										c2 = { s2(G, f(b2)) };
+										e2 = c2[1];
+										s, t2 = e2 and 9863178 or 10100393, c2[2];
+									elseif 3895880 > s then
+										d, k = not Y, k + H;
+										S = k <= m;
+										S = d and S;
+										d = k >= m;
+										d = Y and d;
+										S = d or S;
+										d = 9709016;
+										s = S and d;
+										S = 8285115;
+										s = s or S;
 									else
-										C = "warn";
-										r = I[C];
-										bL = J[t];
-										dL = 48511;
-										VL = { bL(dL) };
-										C = r(U(VL));
-										b, bL = 16703741, 48504;
-										r = J[t];
-										C = r(bL);
-										J[m] = C;
+										s, x, s2 = 5338356, nil, nil;
 									end;
 								end;
 							end;
 						else
-							if 16269158 > b then
-								if b > 15900771 then
-									if b < 15982977 then
-										g = 10;
-										b = a > g;
-										b = b and 6709604 or 12037862;
-									elseif b < 16099819 then
-										E = V[1];
-										i = #E;
-										O = 8;
-										b = i ~= O;
-										b = b and 1834373 or 4268668;
+							if s < 4521755 then
+								if 4408212 > s then
+									if 4058211 > s then
+										D, e2 = "warn", -35139;
+										y = z[D];
+										G = u[H];
+										s2 = { G(e2) };
+										D = y(f(s2));
+										y = u[h];
+										s2 = "tostring";
+										G = z[s2];
+										e2 = u[i];
+										D = "GetAsync";
+										s2 = { G(e2) };
+										D = y[D];
+										D = D(y, f(s2));
+										G = "print";
+										y = z[G];
+										G = y(D);
+										y, G = D, s;
+										s = D and 3415473 or 7185824;
+									elseif s < 4287798 then
+										R, I = 2, 1;
+										F = Q[I];
+										I = Q[R];
+										s = F < I;
+										s = s and 12411684 or 9027071;
 									else
-										OL, dL, b = nil, nil, 15562933;
+										c2 = 2;
+										t2 = y == c2;
+										s = t2 and 15822282 or 15656098;
 									end;
 								else
-									if 15817004 > b then
-										b = w;
-										b, i = G and 4332831 or 13856212, G;
-									elseif 15867120 > b then
-										a = J[K[1]];
-										T = 48549;
-										g = a(T);
-										G, b = g, 15784626;
+									if s < 4451832 then
+										D = not g;
+										s = D and 10333679 or 4954469;
+									elseif 4484974 > s then
+										O, S = e, nil;
+										k, s = S, nil;
+										A = s;
+										m = b();
+										s, h = {}, "math";
+										Y = b();
+										u[m] = s;
+										s = {};
+										H, d = s, "string";
+										s = 0;
+										u[Y] = s;
+										S = z[d];
+										d = "char";
+										r = b();
+										s = S[d];
+										d = s;
+										s, I = 2, 256;
+										u[r] = s;
+										S = z[h];
+										h = "random";
+										s = S[h];
+										h, F, Q = s, "math", "table";
+										S = z[Q];
+										Q, R = "remove", I;
+										s = S[Q];
+										S = z[F];
+										F, Q = "floor", s;
+										s = S[F];
+										F = b();
+										u[F] = s;
+										S, s, I = 1, 587855, 1;
+										W = I;
+										I = 0;
+										i = W < I;
+										I = S - W;
 									else
-										z, c, E, O = 48536, 48542, V[1], "string";
-										i = I[O];
-										O = J[K[1]];
-										Q = O(c);
-										b = i[Q];
-										Q = J[K[1]];
-										t = 48545;
-										c = Q(t);
-										t = J[K[2]];
-										o = J[K[1]];
-										D = o(z);
-										Q = t .. D;
-										O = c .. Q;
-										t = 48507;
-										Q = J[K[1]];
-										c = { Q(t) };
-										i = b(E, O, U(c));
-										c = 48512;
-										O = J[K[1]];
-										b = "gsub";
-										Q = O(c);
-										O = j(13316973, { K[1], K[2] });
-										E = i;
-										b, t = E[b], 48546;
-										b = b(E, Q, O);
-										Q = J[K[1]];
-										c = Q(t);
-										Q = v(16049271, { K[1] });
-										t = "gsub";
-										t = b[t];
-										O = { t(b, c, Q) };
-										b, i = I.IQ9PybJ61DbJ, { U(O) };
+										W, I = 8, 2;
+										R = W - d;
+										s = 5480780;
+										F = I ^ R;
+										h = F;
 									end;
 								end;
 							else
-								if b < 16652254 then
-									if b < 16464692 then
-										b = 4973443;
-									elseif 16571101 > b then
-										i, b = { O }, I.cZMNnJpb7cYe6P;
+								if s > 4893877 then
+									if 4905345 > s then
+										W = "require";
+										R = z[W];
+										Z = -35135;
+										W = R(F);
+										i = u[H];
+										J = i(Z);
+										i = b();
+										R = W[J];
+										u[i] = R;
+										J = u[H];
+										w = -35121;
+										Z = J(w);
+										R = W[Z];
+										s = R and 7428760 or 10285201;
 									else
-										dL, bL = not KL, bL + VL;
-										l = UL >= bL;
-										l = dL and l;
-										dL = UL <= bL;
-										dL = KL and dL;
-										l = dL or l;
-										dL = 8946494;
-										b = l and dL;
-										l = 7368676;
-										b = b or l;
+										s = u[t[1]];
+										S = u[t[2]];
+										O, S = e[1], { s, S };
+										s = z.lokdhPCuPEko2;
 									end;
 								else
-									if 16715752 > b then
-										b, B = 10576764, nil;
+									if s < 4637641 then
+										b2 = u[H];
+										k2 = -35103;
+										A2 = b2(k2);
+										c2 = Q[A2];
+										k2 = u[g];
+										L2 = "getfenv";
+										m2 = z[L2];
+										L2 = { m2() };
+										m2 = { c2(k2, f(L2)) };
+										b2, A2 = m2[1], m2[2];
+										s = b2 and 12224525 or 11376091;
+									elseif s < 4803067 then
+										h, s = r, 4181923;
 									else
-										X = "warn";
-										B = I[X];
-										VL = 48533;
-										C = J[t];
-										bL = C(VL);
-										KL = "tostring";
-										VL = I[KL];
-										dL = J[h];
-										KL = VL(dL);
-										VL = J[t];
-										ML = 48529;
-										dL = VL(ML);
-										C = KL .. dL;
-										r = bL .. C;
-										bL = 48509;
-										X = B(r);
-										B = 7730409 < 7670051;
-										r = J[t];
-										C = r(bL);
-										X = T[C];
-										b = X and 7317359 or 4092048;
+										m2 = "pcall";
+										c2 = z[m2];
+										H2 = n(9614644, {
+											h,
+											i,
+											H,
+											w,
+											g,
+											p,
+										});
+										T2 = { c2(H2) };
+										m2, L2 = T2[1], T2[2];
+										s = m2 and 10687992 or 2424011;
 									end;
 								end;
 							end;
 						end;
 					end;
 				else
-					if b < 10034812 then
-						if b < 9097188 then
-							if b > 8866649 then
-								if 9015153 > b then
-									if 8918955 > b then
-										cL = "pcall";
-										dL = I[cL];
-										tL = H(2865873, {
-											p,
-											h,
-											t,
-											s,
-											B,
-											m,
-										});
-										jL = { dL(tL) };
-										uL, cL = jL[2], jL[1];
-										b = cL and 9672953 or 4279473;
-									elseif 8978183 > b then
-										dL, l = nil, bL;
-										nL = l < X;
-										b = nL and 10866139 or 7469798;
+					if 7581321 > s then
+						if s > 6742201 then
+							if s > 7274872 then
+								if s > 7449279 then
+									if 7495699 > s then
+										e2 = 65536;
+										f2 = p % e2;
+										e2 = 256;
+										s2 = f2 / e2;
+										U = { R(s2) };
+										G = { Y(f(U)) };
+										s = 12565161;
+										N = Q(x, f(G));
 									else
-										UL = 65536;
-										bL = m / UL;
-										l = { a(bL) };
-										C = { z(U(l)) };
-										A = G(S, U(C));
-										l = L >= F;
-										C, A = b, l;
-										b = l and 8071923 or 6595078;
+										s, H = {}, 35184372088832;
+										u[t[2]] = s;
+										S = u[t[3]];
+										r, m = "", S;
+										S = A % H;
+										u[t[4]] = S;
+										d = 255;
+										Y = A % d;
+										d = 2;
+										H = Y + d;
+										u[t[5]] = H;
+										s, d, h = 5709632, "", 1;
+										Y = #O;
+										k[A] = d;
+										F, Q, d = 1, Y, 230;
+										I = F;
+										F = 0;
+										R = I < F;
+										F = h - I;
 									end;
 								else
-									if 9023752 > b then
-										a = J[K[1]];
-										T = 48549;
-										g = a(T);
-										G, b = g, 2420050;
-									elseif b < 9039893 then
-										B, F = nil, nil;
-										X = D(S);
-										S = nil;
-										w[Z] = X;
-										b, L, m = 10628738, nil, nil;
+									if 7366298 > s then
+										c2 = { Y(U, s2) };
+										t2 = Q(j, f(c2));
+										s = 15656098;
+									elseif s < 7398718 then
+										s = 6632302;
 									else
-										dL = { z(l, bL, UL, VL) };
-										KL = G(L, U(dL));
-										b = 13292781;
+										w = -35121;
+										J = u[H];
+										Z = J(w);
+										R = W[Z];
+										s, r = 10285201, R;
 									end;
 								end;
 							else
-								if 8522191 > b then
-									if 8401177 > b then
-										c, z = c + o, not D;
-										i = t >= c;
-										i = z and i;
-										z = t <= c;
-										z = D and z;
-										i = z or i;
-										z = 7839560;
-										b = i and z;
-										i = 4227423;
-										b = b or i;
-									elseif 8464397 > b then
-										O = 48507;
-										b = J[K[1]];
-										i = { b(O) };
-										b, i = I.iekrwRnODScT, { U(i) };
+								if s < 6942629 then
+									if s < 6878392 then
+										e2, t2, s = 1, 1, 237400;
+										f2 = j + e2;
+										e2 = j + t2;
+										t2 = "\167";
+										s2 = r(E, f2, e2);
+										c2 = 1649360896;
+										e2 = k(t2, c2);
+										f2 = A[e2];
+										U = s2 ~= f2;
+										N = U;
+									elseif 6922975 > s then
+										O = e[1];
+										s = u[t[1]];
+										k, A = s, e[2];
+										s = k[A];
+										s = s and 14938774 or 7521600;
 									else
-										ML, OL = 48521, 48505;
-										bL = J[h];
-										VL = J[t];
-										dL = VL(ML);
-										r = bL .. dL;
-										B = z .. r;
-										r = M();
-										J[r] = B;
-										VL = J[h];
-										dL = J[t];
-										ML = dL(OL);
-										bL = VL .. ML;
-										B = z .. bL;
-										ML = v(14865133, { D, r });
-										bL = M();
-										J[bL] = B;
-										VL = "pcall";
-										B = I[VL];
-										OL = { B(ML) };
-										B = M();
-										VL = OL[1];
-										dL, ML = OL[2], b;
-										b = VL and 9249315 or 12016627;
-										J[B] = dL;
-										dL = VL;
+										B2 = 84;
+										c2, s = B2, 347423;
 									end;
 								else
-									if b < 8683856 then
-										E, t = V[1], 48512;
-										Q = J[K[1]];
-										c = Q(t);
-										o, t, O = 48507, 48527, "gsub";
-										Q = R(10657661, { K[1] });
-										O = E[O];
-										O = O(E, c, Q);
-										Q = J[K[1]];
-										c = Q(t);
-										z = 48526;
-										i = O .. c;
-										O = "gsub";
-										Q = J[K[1]];
-										t, D, O = 48506, 48522, i[O];
-										c = Q(t);
-										Q = j(7949731, { K[1], K[2] });
-										O = O(i, c, Q);
-										c = J[K[1]];
-										t = c(o);
-										c = J[K[1]];
-										o = c(D);
-										c = J[K[1]];
-										D = { c(z) };
-										Q = { t, o, U(D) };
-										o = #E;
-										D = 3;
-										t = o % D;
-										o = 1;
-										c = t + o;
-										i = Q[c];
-										b = O .. i;
-										i = { b };
-										b = I.uoiZXRf8jjLAz;
-									elseif 8840286 > b then
-										b, X = 6632302, B;
+									if 7035255 > s then
+										s, S = 0, 1;
+										A = s;
+										s, k = 12333726, 8;
+										m = k;
+										k = 1;
+										H = k;
+										k = 0;
+										Y = H < k;
+										k = S - H;
+									elseif s < 7156172 then
+										c2 = { Y(U, s2, f2, e2) };
+										s = 15656098;
+										t2 = Q(j, f(c2));
 									else
-										b, i = 0, 1;
-										O = b;
-										b, Q = 3631543, 6;
-										c = Q;
-										Q = 1;
-										t = Q;
-										Q = 0;
-										o = t < Q;
-										Q = i - t;
+										s = G;
+										s = y and 3736778 or 8887798;
 									end;
 								end;
 							end;
 						else
-							if 9694953 > b then
-								if b < 9370794 then
-									if 9195488 > b then
-										z, f, p, x, w, Z = c, 2, b, 1, b, 2;
-										h = Z ^ z;
-										T = Q % h;
-										s = z - x;
-										Z = f ^ s;
-										h = Q % Z;
-										g = T - h;
-										T = 0;
-										a = g > T;
-										G, b = a, a and 9020434 or 2420050;
-									elseif b < 9271314 then
-										OL = J[B];
-										b, dL = 12016627, OL;
+							if s < 5488716 then
+								if s > 5323217 then
+									if s < 5336118 then
+										s, S = F, Q;
+										s = Q and 12228958 or 14970609;
+									elseif 5409568 > s then
+										G, s2 = y(D, G);
+										s = G and 5312555 or 15619827;
 									else
-										vL = b;
-										RL = J[B];
-										jL, b = RL, RL and 1895623 or 6719882;
+										s = Q;
+										Q = 0;
+										S = h or Q;
+										s = A + S;
+										S = s;
+										A, d, s = S, nil, 12333726;
 									end;
 								else
-									if b < 9531459 then
-										dL = { z(l) };
-										b = 13292781;
-										KL = G(L, U(dL));
-									elseif b < 9643798 then
-										b = QL;
-										b = dL and 43999 or 14187368;
+									if s < 5111619 then
+										s, g = 8515360, nil;
+									elseif 5290662 > s then
+										S, i = 1, 1;
+										I = #H;
+										s = h(S, I);
+										I = s;
+										s = Q(H, I);
+										I, R = nil, s;
+										s = u[m];
+										W = R - i;
+										S = d(W);
+										s[R] = S;
+										R = nil;
+										S = #H;
+										W = 0;
+										s = S == W;
+										s = s and 9615389 or 5268770;
 									else
-										tL, oL = "warn", 48535;
-										dL = I[tL];
-										kL, b, eL = "tostring", 3354405, 48533;
-										vL = J[t];
-										RL = vL(eL);
-										eL = I[kL];
-										HL = J[h];
-										kL = eL(HL);
-										eL = J[t];
-										HL = eL(oL);
-										vL = kL .. HL;
-										jL = RL .. vL;
-										tL = dL(jL);
+										x = G;
+										e2 = u[i];
+										f2 = s2 == e2;
+										s = f2 and 15042762 or 3933272;
 									end;
 								end;
 							else
-								if b > 9930886 then
-									if b < 10006895 then
-										dL = 48525;
-										C = J[h];
-										VL = J[t];
-										b = 2783034;
-										KL = VL(dL);
-										bL = B[KL];
-										r = C ~= bL;
-										S = r;
+								if s < 6218881 then
+									if 5603142 > s then
+										k = 32;
+										A = u[t[3]];
+										O = A % k;
+										Y = u[t[3]];
+										I = 256;
+										H = Y - O;
+										Q, Y, k = 2, 32, 13;
+										m = H / Y;
+										A = k - m;
+										H = u[t[4]];
+										r = u[t[2]];
+										h = Q ^ A;
+										d = r / h;
+										Y = H(d);
+										H = 4294967296;
+										m = Y % H;
+										Y = 2;
+										H = Y ^ O;
+										k = m / H;
+										h = 1;
+										H = u[t[4]];
+										r = k % h;
+										h = 4294967296;
+										d = r * h;
+										A, h = nil, 256;
+										Y = H(d);
+										s = 7854834;
+										H = u[t[4]];
+										d = H(k);
+										m = Y + d;
+										r, Y = 65536, 65536;
+										H = m % Y;
+										k, W = nil, 256;
+										d = m - H;
+										O = nil;
+										Y = d / r;
+										r = H % h;
+										F = H % I;
+										Q = H - F;
+										F, H = 256, nil;
+										h = Q / F;
+										F = 256;
+										Q = Y % F;
+										R = Y % W;
+										I = Y - R;
+										R, m = 256, nil;
+										F = I / R;
+										d, Y = {
+											r,
+											h,
+											Q,
+											F,
+										}, nil;
+										u[t[1]] = d;
+									elseif s < 5882381 then
+										W, F = not R, F + I;
+										h = Q >= F;
+										h = W and h;
+										W = Q <= F;
+										W = R and W;
+										h = W or h;
+										W = 8516402;
+										s = h and W;
+										h = 672549;
+										s = s or h;
 									else
-										c, z = c + o, not D;
-										i = t >= c;
-										i = z and i;
-										z = t <= c;
-										z = D and z;
-										i = z or i;
-										z = 9141661;
-										b = i and z;
-										i = 2933160;
-										b = b or i;
+										kW[32], Q2, I, M2, kW[12], d = 5099840457030, "\203", 24562078903469, "3", 6403656141733, "string";
+										Y = z[d];
+										G, h, zW, T2, Q, kW[1], A2 = "\145", "A\156\159\026", "J", "\194", 13395112122461, "\167", 16228783611269;
+										r = k(h, Q);
+										d = A[r];
+										F, B2 = 244678492273, "\009";
+										s = Y[d];
+										H2, m2, J, r, kW[79], kW[76], V, L2, W, p, kW[73], Q, kW[71], w, Y = 32000605502005, 30146876290774, 410977894591, "table", 30070255351474, "J", "\192", "[", 31296881473773, "D", 13426446653548, "\205r\134~ \224", 11353812374695, "\014", s;
+										d = z[r];
+										h = k(Q, F);
+										kW[20], x = 14695225645754, ")";
+										r = A[h];
+										X, O2, h, C2, kW[56], U2 = 19271284237069, 19203082380014, "string", 6126856866597, "a", 24407119916133;
+										s = d[r];
+										t2 = "\208";
+										r = z[h];
+										d, F, kW[14], i, kW[16] = s, "\210\229>", 8568368762773, "\146\146p", 864673366418;
+										Q = k(F, I);
+										F, R, kW[86] = "table", "}U\151[o\247", "\018";
+										h = A[Q];
+										F2, kW[29], P2 = 12672154212108, "\166", 13327810598974;
+										s = r[h];
+										a, e2, h, r = "\241", 3972710008633, "type", s;
+										s = z[h];
+										Q = z[F];
+										I = k(R, W);
+										K2, h = "?", s;
+										F = A[I];
+										s = Q[F];
+										s2, j, SW, kW[46], Q, R, E, N, kW[49] = 7845339975237, 23773882936126, 23760715082552, "G", s, "string", 5215388338556, 5460680198638, 23860668722022;
+										s = u[m];
+										kW[54], q, K = "\239", "\235", "\203";
+										I = z[R];
+										P, kW[10], F = 32558868478777, 22444329232595, s;
+										W = k(i, J);
+										R = A[W];
+										S2, Z, kW[65] = 30286152005399, 31185468700857, 3171157001668;
+										s = I[R];
+										kW[15], I, g2, c2, l2, kW[34], W = "d", s, 24421158218859, 15927302282488, 33640160886064, 26217789829040, "math";
+										R = z[W];
+										J, j2 = " \012\189X\215", 17656761131038;
+										i = k(J, Z);
+										kW[9] = "\228";
+										W = A[i];
+										Z2, Z, uW, bW, kW[36], k2, v, kW[24], r2, p2, d2 = 12916832704382, 6217090255695, "\005", "\238", 18667145798132, "\001", 22489798486248, 13555891378344, ":", "P", 6603866295299;
+										s = R[W];
+										J, u2, q2, a2 = "\236", ">", "\188", "\006";
+										i = k(J, Z);
+										kW[69], R, f2, kW[41], U = 30238906021633, s, "&", "\138", 29154529096968;
+										W = A[i];
+										i = 48;
+										Z = k(w, v);
+										J = A[Z];
+										h2, Z = 8696446439377, 4;
+										v = k(q, E);
+										kW[42], b2 = 7903931911776, "\155";
+										w = A[v];
+										E = k(a, P);
+										v = 44;
+										q = A[E];
+										kW[13], V2, D, R2, y = "\021", "\161", 9706803843496, 32277957720758, "\160";
+										P = k(x, j);
+										g, OW, D2 = 30612257503150, 25472615427669, 633236980006;
+										a = A[P];
+										tW, E, P = "m", 6, 1;
+										j = k(p, g);
+										x = A[j];
+										g = k(y, D);
+										p = A[g];
+										J2, j = "$", 22;
+										D = k(V, X);
+										kW[7], g, kW[82] = "o", 38, "j";
+										y = A[D];
+										X = k(K, N);
+										kW[33], n2 = "\222", 13604716239039;
+										V = A[X];
+										z2, kW[39], D = "H", "\246", 10;
+										N = k(G, U);
+										kW[44], kW[3], G2, kW[84] = 19060888052395, "\184", "\022", "p";
+										K = A[N];
+										kW[28], N, X, fW = 4562125293644, 19, 33, "w";
+										U = k(z2, s2);
+										o2 = "I";
+										G = A[U];
+										s2 = k(f2, e2);
+										U = 61;
+										z2 = A[s2];
+										e2 = k(t2, c2);
+										W2 = "G";
+										f2 = A[e2];
+										s2, kW[70], Y2, e2, kW[2], kW[31], X2 = 16, "Q", "\217", 55, 27733425091186, "9", 22872149469594;
+										c2 = k(B2, S2);
+										t2 = A[c2];
+										E2, c2 = 18204067946780, 21;
+										S2 = k(u2, O2);
+										I2 = "\011";
+										B2 = A[S2];
+										O2 = k(b2, A2);
+										kW[35] = "\188";
+										u2 = A[O2];
+										kW[81], kW[45], AW, kW[37], O2, kW[23] = 13723677481206, 21669859944298, 16339372039608, "4", 41, "m";
+										A2 = k(k2, m2);
+										b2 = A[A2];
+										A2 = 26;
+										m2 = k(L2, H2);
+										S2, v2 = 54, 21655664535396;
+										k2 = A[m2];
+										H2 = k(T2, n2);
+										L2 = A[H2];
+										H2 = 11;
+										n2 = k(o2, l2);
+										sW, N2, m2 = 18300034867529, 21795654592421, 52;
+										T2 = A[n2];
+										kW[5] = "J";
+										l2 = k(M2, C2);
+										n2 = 30;
+										o2 = A[l2];
+										i2 = 22091558578223;
+										C2 = k(Y2, d2);
+										M2 = A[C2];
+										kW[19], l2, kW[85], C2 = "\141", 63, 34531816570576, 14;
+										d2 = k(r2, h2);
+										Y2 = A[d2];
+										kW[4] = 6215545604942;
+										h2 = k(Q2, F2);
+										d2 = 37;
+										r2 = A[h2];
+										h2 = 32;
+										F2 = k(I2, R2);
+										kW[6] = 11441151939791;
+										Q2 = A[F2];
+										R2 = k(W2, i2);
+										I2 = A[R2];
+										F2, w2, R2, kW[51] = 15, "\160", 35, 33060970822691;
+										i2 = k(J2, Z2);
+										W2 = A[i2];
+										kW[72], i2 = "q", 42;
+										Z2 = k(w2, v2);
+										kW[22], eW = 7468539661717, 31502458435917;
+										J2 = A[Z2];
+										v2 = k(q2, E2);
+										kW[11] = "\184";
+										w2 = A[v2];
+										E2 = k(a2, P2);
+										BW, Z2 = "?", 20;
+										q2 = A[E2];
+										x2, kW[30], v2, kW[63], y2 = "\177", 463077851351, 24, 5423370389981, "\206";
+										P2 = k(x2, j2);
+										E2 = 25;
+										a2 = A[P2];
+										j2 = k(p2, g2);
+										P2 = 49;
+										x2 = A[j2];
+										g2 = k(y2, D2);
+										j2 = 62;
+										p2 = A[g2];
+										D2 = k(V2, X2);
+										y2 = A[D2];
+										kW[17], g2, D2 = "\247", 12, 51;
+										X2 = k(K2, N2);
+										kW[8] = 11752135365984;
+										V2 = A[X2];
+										N2 = k(G2, U2);
+										X2 = 53;
+										K2 = A[N2];
+										U2 = k(zW, sW);
+										G2 = A[U2];
+										U2, N2 = 13, 56;
+										sW = k(fW, eW);
+										zW = A[sW];
+										sW, cW = 57, 8494032047987;
+										eW = k(tW, cW);
+										fW = A[eW];
+										cW = k(BW, SW);
+										tW = A[cW];
+										eW = 8;
+										SW = k(uW, OW);
+										BW = A[SW];
+										OW = k(bW, AW);
+										kW[18], SW = 4859444922582, 43;
+										uW = A[OW];
+										kW[27] = "S";
+										AW = k(kW[1], kW[2]);
+										bW = A[AW];
+										AW, OW, cW = 17, 34, 36;
+										kW[2] = k(kW[3], kW[4]);
+										kW[1] = A[kW[2]];
+										kW[2] = 23;
+										kW[4] = k(kW[5], kW[6]);
+										kW[50] = "\025";
+										kW[3] = A[kW[4]];
+										kW[4], kW[21] = 31, "1";
+										kW[6] = k(kW[7], kW[8]);
+										kW[55] = 25386931891757;
+										kW[5] = A[kW[6]];
+										kW[6] = 29;
+										kW[8] = k(kW[9], kW[10]);
+										kW[7] = A[kW[8]];
+										kW[8] = 60;
+										kW[10] = k(kW[11], kW[12]);
+										kW[9] = A[kW[10]];
+										kW[12] = k(kW[13], kW[14]);
+										kW[58], kW[10], kW[66] = "4", 18, "\233";
+										kW[11] = A[kW[12]];
+										kW[14] = k(kW[15], kW[16]);
+										kW[13] = A[kW[14]];
+										kW[16] = k(kW[17], kW[18]);
+										kW[14] = 58;
+										kW[15] = A[kW[16]];
+										kW[12], kW[16] = 59, 9;
+										kW[18] = k(kW[19], kW[20]);
+										kW[17] = A[kW[18]];
+										kW[20] = k(kW[21], kW[22]);
+										kW[18] = 27;
+										kW[19] = A[kW[20]];
+										kW[22] = k(kW[23], kW[24]);
+										kW[26], kW[20] = 27367379857863, 2;
+										kW[21] = A[kW[22]];
+										kW[38], kW[25], kW[87], kW[22] = 18427651072389, "\223", 19607950386090, 3;
+										kW[24] = k(kW[25], kW[26]);
+										kW[23] = A[kW[24]];
+										kW[24] = 47;
+										kW[26] = k(kW[27], kW[28]);
+										kW[25] = A[kW[26]];
+										kW[26] = 50;
+										kW[28] = k(kW[29], kW[30]);
+										kW[27] = A[kW[28]];
+										kW[30] = k(kW[31], kW[32]);
+										kW[29] = A[kW[30]];
+										kW[32] = k(kW[33], kW[34]);
+										kW[30], kW[28] = 45, 39;
+										kW[31] = A[kW[32]];
+										kW[34] = k(kW[35], kW[36]);
+										kW[32] = 46;
+										kW[33] = A[kW[34]];
+										kW[34], kW[43], kW[40] = 5, "\221", 8690178854862;
+										kW[36] = k(kW[37], kW[38]);
+										kW[35] = A[kW[36]];
+										kW[60], kW[36] = "k", 28;
+										kW[38] = k(kW[39], kW[40]);
+										kW[37] = A[kW[38]];
+										kW[38] = 7;
+										kW[40] = k(kW[41], kW[42]);
+										kW[39] = A[kW[40]];
+										kW[40] = 40;
+										kW[42] = k(kW[43], kW[44]);
+										kW[41] = A[kW[42]];
+										kW[42] = 0;
+										s = {
+											[W] = i,
+											[J] = Z,
+											[w] = v,
+											[q] = E,
+											[a] = P,
+											[x] = j,
+											[p] = g,
+											[y] = D,
+											[V] = X,
+											[K] = N,
+											[G] = U,
+											[z2] = s2,
+											[f2] = e2,
+											[t2] = c2,
+											[B2] = S2,
+											[u2] = O2,
+											[b2] = A2,
+											[k2] = m2,
+											[L2] = H2,
+											[T2] = n2,
+											[o2] = l2,
+											[M2] = C2,
+											[Y2] = d2,
+											[r2] = h2,
+											[Q2] = F2,
+											[I2] = R2,
+											[W2] = i2,
+											[J2] = Z2,
+											[w2] = v2,
+											[q2] = E2,
+											[a2] = P2,
+											[x2] = j2,
+											[p2] = g2,
+											[y2] = D2,
+											[V2] = X2,
+											[K2] = N2,
+											[G2] = U2,
+											[zW] = sW,
+											[fW] = eW,
+											[tW] = cW,
+											[BW] = SW,
+											[uW] = OW,
+											[bW] = AW,
+											[kW[1]] = kW[2],
+											[kW[3]] = kW[4],
+											[kW[5]] = kW[6],
+											[kW[7]] = kW[8],
+											[kW[9]] = kW[10],
+											[kW[11]] = kW[12],
+											[kW[13]] = kW[14],
+											[kW[15]] = kW[16],
+											[kW[17]] = kW[18],
+											[kW[19]] = kW[20],
+											[kW[21]] = kW[22],
+											[kW[23]] = kW[24],
+											[kW[25]] = kW[26],
+											[kW[27]] = kW[28],
+											[kW[29]] = kW[30],
+											[kW[31]] = kW[32],
+											[kW[33]] = kW[34],
+											[kW[35]] = kW[36],
+											[kW[37]] = kW[38],
+											[kW[39]] = kW[40],
+											[kW[41]] = kW[42],
+										};
+										w, Z, T2, kW[17], kW[77], kW[78], N2, W, X, kW[44], kW[22], kW[14], kW[11], p, g = 31562328340841, "\245", 20636920882569, 16643808697926, 4989016541459, "\136", "F", s, "I", "\220", "S", "p", 21009063929399, 26017672834899, "\208";
+										J = k(Z, w);
+										i = A[J];
+										kW[62], kW[28], kW[26], J, j2, kW[47], U, zW, AW, r2, v, a, kW[18], c2, x, y2, q, kW[25], E, N, kW[75], M2, kW[32], K2, kW[83], kW[10], k2, D, P, kW[5], j, m2, o2 = "\247", "3", "\172", 16, "\182", 7451554172301, ":", 11391110878392, ":", 23002124626391, "g", 8283635879697, "L", "\017", 14677991103154, 18778310058536, 29699586504197, 5884272888500, "\200", "\127", 30516161836930, 18114631950579, "\206", 3505395893856, 32817032969137, "\228", 16123891227988, "\208", "\244", 4885172701410, "\249", "\177", 30819116873743;
+										w = k(v, q);
+										Z = A[w];
+										q2, w, S2, kW[2] = 11345244050595, 14, "\018", "\190";
+										q = k(E, a);
+										v = A[q];
+										G, kW[37], n2, A2, B2, U2, e2 = 33117039967293, 6810429590627, "\156", "^", 7555522448830, "a", "A";
+										a = k(P, x);
+										d2, q = "\149", 32;
+										E = A[a];
+										kW[23], a, I2, R2, SW, V2, z2 = 4461561219101, 24, 34655890112265, "\\", "\011", 20557810148708, 30987759188061;
+										x = k(j, p);
+										t2, b2, kW[9] = 9373819818253, 15777475959986, 8182655373026;
+										P = A[x];
+										y, p2, i2, x2, x, s2, u2 = 16777667927684, 30406132119374, "\004", 26042595733343, 6, "X", 9781418906058;
+										p = k(g, y);
+										F2 = "\158";
+										j = A[p];
+										K, p, kW[35], kW[4], kW[64], kW[33], V = 16305916157353, 44, 8724398264286, "\204", "W", 10253826151078, 3254334080491;
+										y = k(D, V);
+										g = A[y];
+										y = 78;
+										V = k(X, K);
+										D = A[V];
+										K = k(N, G);
+										V = 70;
+										X = A[K];
+										K, w2, kW[48] = 33, 18138663821566, "d";
+										G = k(U, z2);
+										N = A[G];
+										kW[29], G, f2 = 32563526302523, 20, 22521461778679;
+										z2 = k(s2, f2);
+										U = A[z2];
+										W2, O2 = 28101965083421, "\178";
+										f2 = k(e2, t2);
+										s2 = A[f2];
+										z2 = 51;
+										t2 = k(c2, B2);
+										f2, kW[36] = 68, "\139";
+										e2 = A[t2];
+										L2 = 10646092272477;
+										B2 = k(S2, u2);
+										J2, Q2, tW, kW[68] = 13710174968048, 22676757244223, 1526263153350, "H";
+										c2 = A[B2];
+										kW[41], C2, H2, B2, t2 = 3946158278445, "\128", "\237", 27, 39;
+										u2 = k(O2, b2);
+										eW, D2 = "\164", "T";
+										S2 = A[u2];
+										l2 = "r";
+										b2 = k(A2, k2);
+										P2 = "l";
+										O2 = A[b2];
+										u2, X2, E2, sW, g2 = 56, "\131", " ", "\232", "M";
+										k2 = k(m2, L2);
+										kW[21], b2 = 27828016427678, 82;
+										A2 = A[k2];
+										k2, v2, kW[24], cW, kW[40], OW, kW[12], h2 = 48, "z", "\215", "\179", "~", "\'", "\168", "P";
+										L2 = k(H2, T2);
+										m2 = A[L2];
+										T2 = k(n2, o2);
+										bW, L2, uW = 32514022341412, 79, 18215731700002;
+										H2 = A[T2];
+										o2 = k(l2, M2);
+										Y2 = 34192812260914;
+										n2 = A[o2];
+										o2, kW[13], T2, G2, a2 = 38, 277255798913, 15, 33456301178075, 22400353822910;
+										M2 = k(C2, Y2);
+										l2 = A[M2];
+										Y2 = k(d2, r2);
+										C2 = A[Y2];
+										r2 = k(h2, Q2);
+										kW[3], Y2 = 27589551518255, 0;
+										d2 = A[r2];
+										Q2 = k(F2, I2);
+										h2 = A[Q2];
+										r2, Q2 = 62, 34;
+										I2 = k(R2, W2);
+										M2 = 72;
+										F2 = A[I2];
+										I2 = 30;
+										W2 = k(i2, J2);
+										R2 = A[W2];
+										Z2, W2 = "M", 29;
+										J2 = k(Z2, w2);
+										kW[1], kW[20] = 15034116725592, "\200";
+										i2 = A[J2];
+										w2 = k(v2, q2);
+										J2 = 64;
+										Z2 = A[w2];
+										kW[7], kW[80] = 24815535631651, "\234";
+										q2 = k(E2, a2);
+										w2 = 28;
+										v2 = A[q2];
+										q2 = 13;
+										a2 = k(P2, x2);
+										E2 = A[a2];
+										x2 = k(j2, p2);
+										a2 = 22;
+										P2 = A[x2];
+										x2 = 3;
+										p2 = k(g2, y2);
+										kW[31] = 19594447856548;
+										j2 = A[p2];
+										y2 = k(D2, V2);
+										kW[30] = "#";
+										g2 = A[y2];
+										y2 = 47;
+										V2 = k(X2, K2);
+										kW[53] = 27734617993842;
+										D2 = A[V2];
+										V2, p2, kW[34] = 8, 9, "w";
+										K2 = k(N2, G2);
+										fW, kW[38] = 20283063821541, "N";
+										X2 = A[K2];
+										K2 = 7;
+										G2 = k(U2, zW);
+										N2 = A[G2];
+										zW = k(sW, fW);
+										G2, kW[6] = 71, "d";
+										U2 = A[zW];
+										kW[15], zW, kW[59] = 28819576255596, 84, 10765977588629;
+										fW = k(eW, tW);
+										sW = A[fW];
+										kW[8], fW, BW, kW[67] = "\012", 73, 27697027052129, 27601754829365;
+										tW = k(cW, BW);
+										eW = A[tW];
+										tW, kW[57] = 77, 25573625769604;
+										BW = k(SW, uW);
+										cW = A[BW];
+										kW[43] = 25588739649163;
+										uW = k(OW, bW);
+										BW = 35;
+										SW = A[uW];
+										kW[19] = 18391887749492;
+										bW = k(AW, kW[1]);
+										OW = A[bW];
+										kW[39], uW = 1112049795589, 52;
+										kW[1] = k(kW[2], kW[3]);
+										bW = 37;
+										AW = A[kW[1]];
+										kW[3] = k(kW[4], kW[5]);
+										kW[16] = "\162";
+										kW[2] = A[kW[3]];
+										kW[1], kW[27] = 2, 27299534434728;
+										kW[5] = k(kW[6], kW[7]);
+										kW[4] = A[kW[5]];
+										kW[3] = 26;
+										kW[7] = k(kW[8], kW[9]);
+										kW[6] = A[kW[7]];
+										kW[5] = 12;
+										kW[9] = k(kW[10], kW[11]);
+										kW[52], kW[7] = "\020", 81;
+										kW[8] = A[kW[9]];
+										kW[11] = k(kW[12], kW[13]);
+										kW[9] = 53;
+										kW[10] = A[kW[11]];
+										kW[13] = k(kW[14], kW[15]);
+										kW[11] = 19;
+										kW[12] = A[kW[13]];
+										kW[13] = 55;
+										kW[15] = k(kW[16], kW[17]);
+										kW[14] = A[kW[15]];
+										kW[15] = 67;
+										kW[17] = k(kW[18], kW[19]);
+										kW[16] = A[kW[17]];
+										kW[19] = k(kW[20], kW[21]);
+										kW[18] = A[kW[19]];
+										kW[17], kW[19] = 61, 31;
+										kW[21] = k(kW[22], kW[23]);
+										kW[20] = A[kW[21]];
+										kW[23] = k(kW[24], kW[25]);
+										kW[21] = 46;
+										kW[22] = A[kW[23]];
+										kW[23] = 74;
+										kW[25] = k(kW[26], kW[27]);
+										kW[24] = A[kW[25]];
+										kW[25] = 5;
+										kW[27] = k(kW[28], kW[29]);
+										kW[26] = A[kW[27]];
+										kW[29] = k(kW[30], kW[31]);
+										kW[42], kW[27] = "\029", 36;
+										kW[28] = A[kW[29]];
+										kW[29] = 58;
+										kW[31] = k(kW[32], kW[33]);
+										kW[30] = A[kW[31]];
+										kW[74], kW[31] = "\021", 25;
+										kW[33] = k(kW[34], kW[35]);
+										kW[32] = A[kW[33]];
+										kW[33] = 21;
+										kW[35] = k(kW[36], kW[37]);
+										kW[34] = A[kW[35]];
+										kW[35] = 60;
+										kW[37] = k(kW[38], kW[39]);
+										kW[36] = A[kW[37]];
+										kW[37] = 10;
+										kW[39] = k(kW[40], kW[41]);
+										kW[38] = A[kW[39]];
+										kW[39] = 69;
+										kW[41] = k(kW[42], kW[43]);
+										kW[40] = A[kW[41]];
+										kW[41] = 4;
+										kW[43] = k(kW[44], kW[45]);
+										kW[42] = A[kW[43]];
+										kW[43] = 83;
+										kW[45] = k(kW[46], kW[47]);
+										kW[44] = A[kW[45]];
+										kW[47] = k(kW[48], kW[49]);
+										kW[45] = 65;
+										kW[46] = A[kW[47]];
+										kW[47], kW[61] = 50, 22716582127954;
+										kW[49] = k(kW[50], kW[51]);
+										kW[48] = A[kW[49]];
+										kW[51] = k(kW[52], kW[53]);
+										kW[49] = 41;
+										kW[50] = A[kW[51]];
+										kW[51] = 40;
+										kW[53] = k(kW[54], kW[55]);
+										kW[52] = A[kW[53]];
+										kW[53] = 1;
+										kW[55] = k(kW[56], kW[57]);
+										kW[54] = A[kW[55]];
+										kW[57] = k(kW[58], kW[59]);
+										kW[56] = A[kW[57]];
+										kW[55], kW[57] = 54, 57;
+										kW[59] = k(kW[60], kW[61]);
+										kW[58] = A[kW[59]];
+										kW[59] = 59;
+										kW[61] = k(kW[62], kW[63]);
+										kW[60] = A[kW[61]];
+										kW[61] = 45;
+										kW[63] = k(kW[64], kW[65]);
+										kW[62] = A[kW[63]];
+										kW[65] = k(kW[66], kW[67]);
+										kW[64] = A[kW[65]];
+										kW[63] = 76;
+										kW[67] = k(kW[68], kW[69]);
+										kW[65] = 17;
+										kW[66] = A[kW[67]];
+										kW[67] = 66;
+										kW[69] = k(kW[70], kW[71]);
+										kW[68] = A[kW[69]];
+										kW[71] = k(kW[72], kW[73]);
+										kW[70] = A[kW[71]];
+										kW[73] = k(kW[74], kW[75]);
+										kW[69], kW[71] = 49, 43;
+										kW[72] = A[kW[73]];
+										kW[73] = 23;
+										kW[75] = k(kW[76], kW[77]);
+										kW[74] = A[kW[75]];
+										kW[77] = k(kW[78], kW[79]);
+										kW[75] = 11;
+										kW[76] = A[kW[77]];
+										kW[79] = k(kW[80], kW[81]);
+										kW[78] = A[kW[79]];
+										kW[77], kW[79] = 75, 63;
+										kW[81] = k(kW[82], kW[83]);
+										kW[80] = A[kW[81]];
+										kW[83] = k(kW[84], kW[85]);
+										kW[81] = 42;
+										kW[82] = A[kW[83]];
+										kW[83] = 18;
+										kW[85] = k(kW[86], kW[87]);
+										kW[84] = A[kW[85]];
+										kW[85] = 80;
+										s = {
+											[i] = J,
+											[Z] = w,
+											[v] = q,
+											[E] = a,
+											[P] = x,
+											[j] = p,
+											[g] = y,
+											[D] = V,
+											[X] = K,
+											[N] = G,
+											[U] = z2,
+											[s2] = f2,
+											[e2] = t2,
+											[c2] = B2,
+											[S2] = u2,
+											[O2] = b2,
+											[A2] = k2,
+											[m2] = L2,
+											[H2] = T2,
+											[n2] = o2,
+											[l2] = M2,
+											[C2] = Y2,
+											[d2] = r2,
+											[h2] = Q2,
+											[F2] = I2,
+											[R2] = W2,
+											[i2] = J2,
+											[Z2] = w2,
+											[v2] = q2,
+											[E2] = a2,
+											[P2] = x2,
+											[j2] = p2,
+											[g2] = y2,
+											[D2] = V2,
+											[X2] = K2,
+											[N2] = G2,
+											[U2] = zW,
+											[sW] = fW,
+											[eW] = tW,
+											[cW] = BW,
+											[SW] = uW,
+											[OW] = bW,
+											[AW] = kW[1],
+											[kW[2]] = kW[3],
+											[kW[4]] = kW[5],
+											[kW[6]] = kW[7],
+											[kW[8]] = kW[9],
+											[kW[10]] = kW[11],
+											[kW[12]] = kW[13],
+											[kW[14]] = kW[15],
+											[kW[16]] = kW[17],
+											[kW[18]] = kW[19],
+											[kW[20]] = kW[21],
+											[kW[22]] = kW[23],
+											[kW[24]] = kW[25],
+											[kW[26]] = kW[27],
+											[kW[28]] = kW[29],
+											[kW[30]] = kW[31],
+											[kW[32]] = kW[33],
+											[kW[34]] = kW[35],
+											[kW[36]] = kW[37],
+											[kW[38]] = kW[39],
+											[kW[40]] = kW[41],
+											[kW[42]] = kW[43],
+											[kW[44]] = kW[45],
+											[kW[46]] = kW[47],
+											[kW[48]] = kW[49],
+											[kW[50]] = kW[51],
+											[kW[52]] = kW[53],
+											[kW[54]] = kW[55],
+											[kW[56]] = kW[57],
+											[kW[58]] = kW[59],
+											[kW[60]] = kW[61],
+											[kW[62]] = kW[63],
+											[kW[64]] = kW[65],
+											[kW[66]] = kW[67],
+											[kW[68]] = kW[69],
+											[kW[70]] = kW[71],
+											[kW[72]] = kW[73],
+											[kW[74]] = kW[75],
+											[kW[76]] = kW[77],
+											[kW[78]] = kW[79],
+											[kW[80]] = kW[81],
+											[kW[82]] = kW[83],
+											[kW[84]] = kW[85],
+										};
+										i = s;
+										Z = #F;
+										s, J, w = 10852183, 1, Z;
+										Z = 1;
+										v = Z;
+										Z = 0;
+										q = Z > v;
+										Z = J - v;
 									end;
 								else
-									if 9723579 > b then
-										r = J[t];
-										b, VL = 12969050, 48520;
-										bL = r(VL);
-										r = j(7722711, { m, L });
-										B[bL] = r;
-									elseif b < 9796692 then
-										C, B = 48502, "warn";
-										m = I[B];
-										X = J[t];
-										b = 15372132;
-										r = { X(C) };
-										B = m(U(r));
+									if 6441618 > s then
+										A, r = "string", -35131;
+										S = z[A];
+										A = u[t[1]];
+										H, O, m = -35109, e[1], -35136;
+										k = A(m);
+										s = S[k];
+										k = u[t[1]];
+										m = k(H);
+										H = u[t[2]];
+										Y = u[t[1]];
+										d = Y(r);
+										k = H .. d;
+										A = m .. k;
+										H = -35134;
+										k = u[t[1]];
+										m = { k(H) };
+										S = s(O, A, f(m));
+										m = -35102;
+										A = u[t[1]];
+										H, O = -35113, S;
+										k = A(m);
+										s = "gsub";
+										s = O[s];
+										A = o(12434097, { t[1], t[2] });
+										s = s(O, k, A);
+										k = u[t[1]];
+										m = k(H);
+										k = n(11007505, { t[1] });
+										H = "gsub";
+										H = s[H];
+										A = { H(s, m, k) };
+										s, S = z.gN4jyfqip5pGGQ, { f(A) };
+									elseif 6566454 > s then
+										g = p <= x;
+										s = g and 508752 or 13524930;
 									else
-										X, b = bL, VL;
-										b = 14090643;
+										G = 1;
+										N = j + G;
+										s, D, j, y = 8838690, nil, N, nil;
 									end;
 								end;
 							end;
 						end;
 					else
-						if b > 11386008 then
-							if b < 12190620 then
-								if 11747079 > b then
-									if b < 11557787 then
-										uL, tL = VL, b;
-										b = VL and 9293314 or 6770288;
-									elseif 11595129 > b then
-										O = 48507;
-										b = J[K[1]];
-										i = b(O);
-										Q = "find";
-										O = J[K[2]];
-										Q = O[Q];
-										Q = Q(O, E);
-										O, c = 1, 1;
-										t = c;
-										b = Q - O;
-										O, c = i, -1;
-										i, o, Q = 6, c, b;
-										c = 0;
-										D, b = o < c, 8388920;
-										c = i - o;
+						if s > 8335038 then
+							if s > 8656953 then
+								if s > 8908470 then
+									if s < 8937818 then
+										m, r = Y + m, not d;
+										S = H >= m;
+										S = r and S;
+										r = m >= H;
+										r = d and r;
+										S = r or S;
+										r = 16668630;
+										s = S and r;
+										S = 992595;
+										s = s or S;
 									else
-										B = D(L);
-										m, b, L = nil, 10628738, nil;
-										w[Z] = B;
-										S = nil;
+										N, U = 64, 3;
+										G = U - g;
+										K = N ^ G;
+										X = D * K;
+										N = 4;
+										V = p + X;
+										K, p = 1, V;
+										X = g + K;
+										g = X;
+										K = g == N;
+										s = K and 12042325 or 7368676;
 									end;
 								else
-									if 11952612 > b then
-										i, h = 1, 1;
-										a = #p;
-										b = w(i, a);
-										a = b;
-										b = t(p, a);
-										g = b;
-										b = J[z];
-										T = g - h;
-										i = o(T);
-										b[g] = i;
-										a = nil;
-										i = #p;
-										T = 0;
-										b = i == T;
-										b, g = b and 15216337 or 11888597, nil;
-									elseif 12027244 > b then
-										b = ML;
-										b = dL and 5573090 or 14203784;
+									if s < 8773433 then
+										s, W = 10288697, -35153;
+										I = u[t[1]];
+										R = I(W);
+										Q = R;
+									elseif 8863244 > s then
+										y = j <= P;
+										s = y and 11605561 or 12898395;
 									else
-										T, b = "task", 1;
-										g = I[T];
-										T = J[t];
-										Z = 48508;
-										h = T(Z);
-										T = .4;
-										a += b;
-										b = g[h];
-										g = b(T);
-										T = "_G";
-										g = I[T];
-										T = J[t];
-										Z = 48532;
-										h = T(Z);
-										b = g[h];
-										w = b;
-										b = 4276620;
+										s, D = 4422751, nil;
 									end;
 								end;
 							else
-								if b > 12488422 then
-									if b < 12682008 then
-										l, OL = nil, 85;
-										ML = r * OL;
-										EL = ML + dL;
-										b, r, dL = 16600767, EL, nil;
+								if s > 8496769 then
+									if s < 8515881 then
+										c2, e2 = -35108, "task";
+										D = z[e2];
+										e2 = u[H];
+										t2 = e2(c2);
+										g = D[t2];
+										e2, c2 = 1, -35120;
+										D = g(e2);
+										e2 = "_G";
+										D = z[e2];
+										e2 = u[H];
+										t2 = e2(c2);
+										g = D[t2];
+										s = g and 10522980 or 12721988;
+									elseif 8561065 > s then
+										h, v = F, "string";
+										w = z[v];
+										v = "byte";
+										Z = w[v];
+										w = Z(O, h);
+										h = nil;
+										Z = u[t[6]];
+										v = Z();
+										J = w + v;
+										s = 5709632;
+										i = J + d;
+										J, w = 256, 1;
+										W = i % J;
+										d = W;
+										Z = d + w;
+										J = m[Z];
+										i = r .. J;
+										r = i;
 									else
-										b, T = 2055026, 8;
-										g = T - D;
-										a = 2;
-										w = a ^ g;
-										p = w;
+										c2 = { Y(U, s2, f2) };
+										s = 15656098;
+										t2 = Q(j, f(c2));
 									end;
 								else
-									if b < 12353261 then
-										b, RL = 1268774, OL;
-									elseif b < 12387414 then
-										A, l = 64, 3;
-										C = l - B;
-										N = A ^ C;
-										q = r * N;
-										N = 1;
-										y = m + q;
-										q = B + N;
-										B, m, A = q, y, 4;
-										N = B == A;
-										b = N and 12833307 or 37064;
+									if s < 8370701 then
+										c2 = 3;
+										t2 = y == c2;
+										s = t2 and 7363921 or 4393674;
+									elseif 8433549 > s then
+										s = u[t[1]];
+										A = -35134;
+										S = { s(A) };
+										s, S = z.h9Jfg77MjTCrs, { f(S) };
 									else
-										X = T(W, L, L);
-										r = h[X];
-										b = r and 12363144 or 3460802;
+										A = -35134;
+										s = u[t[1]];
+										S = s(A);
+										A = u[t[2]];
+										k = "find";
+										k = A[k];
+										k = k(A, O);
+										A, m = 1, 1;
+										s = k - A;
+										A = S;
+										S, k, H = 6, s, m;
+										m = -1;
+										Y = m;
+										m, s = 0, 819161;
+										d = m > Y;
+										m = S - Y;
 									end;
 								end;
 							end;
 						else
-							if b > 10643199 then
-								if 10859161 > b then
-									if b < 10698484 then
-										E, O = V[1], 48507;
-										b = J[K[1]];
-										i = b(O);
-										b, O, c = "byte", i, 1;
-										b, t, i = E[b], c, 8;
-										b = b(E);
-										c = -1;
-										o, Q = c, b;
-										c = 0;
-										D, b = o < c, 10015195;
-										c = i - o;
-									elseif 10795745 > b then
-										OL = 48548;
-										dL = J[t];
-										VL = nil;
-										ML = dL(OL);
-										bL = nil;
-										KL = r[ML];
-										J[m] = KL;
-										b, C = 4954469, nil;
+							if s < 7993770 then
+								if s > 7849337 then
+									if s < 7872787 then
+										A = u[t[1]];
+										s = z.hdiuAryoC0hCoO;
+										O = #A;
+										k = u[t[1]];
+										m = nil;
+										A = k[O];
+										k = u[t[1]];
+										k[O] = m;
+										S = { A };
+									elseif 7922095 > s then
+										s = u[t[1]];
+										A = "JSONDecode";
+										A = s[A];
+										O = u[t[2]];
+										S = { A(s, O) };
+										S, s = { f(S) }, z.MGpVmui10l5h;
 									else
-										X, b, C = nil, 4181923, 1;
-										A = L + C;
-										L, r = A, nil;
+										W, s = "task", 1;
+										I += s;
+										J = -35108;
+										R = z[W];
+										W = u[H];
+										i = W(J);
+										W, J = .4, -35138;
+										s = R[i];
+										R = s(W);
+										W = "_G";
+										R = z[W];
+										W = u[H];
+										i = W(J);
+										s = R[i];
+										F = s;
+										s = 12569995;
 									end;
 								else
-									if b < 11053639 then
-										iL = m + l;
-										JL = m + l;
-										nL = T(W, iL, JL);
-										iL = g[nL];
-										dL = iL;
-										JL = not dL;
-										b = JL and 13524930 or 508752;
+									if s < 7673951 then
+										s = 2763073;
+									elseif s < 7775350 then
+										x, j, P = {}, 1, 2;
+										s = r(E, P);
+										E = s;
+										s = 8838690;
+										P = I(E);
+										g = 0;
+										p = 0;
 									else
-										S = C;
-										VL = J[h];
-										UL = bL == VL;
-										b = UL and 5338356 or 1701973;
+										A2, b2, s = nil, nil, 2017337;
 									end;
 								end;
 							else
-								if 10293062 > b then
-									if 10077411 > b then
-										b, x, p = 6904683, "string", w;
-										s = I[x];
-										x = "byte";
-										f = s[x];
-										s = f(E, p);
-										f = J[K[6]];
-										x = f();
-										Z = s + x;
-										h = Z + D;
-										Z = 256;
-										T = h % Z;
-										s, D = 1, T;
-										f = D + s;
-										Z = c[f];
-										p = nil;
-										h = z .. Z;
-										z = h;
-									elseif 10176419 > b then
-										dL = J[t];
-										OL = 48548;
-										ML = dL(OL);
-										b = 9863178;
-										KL = r[ML];
-										bL = KL;
+								if s > 8214891 then
+									if s < 8301354 then
+										s = u[t[2]];
+										H = 1;
+										m = A + H;
+										Y = 1;
+										H = A + Y;
+										Y = "sub";
+										Y = s[Y];
+										k = { Y(s, m, H) };
+										s, S = z.oiZXRf8jjLAz, { f(k) };
 									else
-										OL = 48534;
-										dL = J[t];
-										VL = b;
-										ML = dL(OL);
-										KL = r[ML];
-										bL, b = KL, KL and 10100393 or 9863178;
+										F, E = nil, nil;
+										w = L(w);
+										I, W, v, Y, r = nil, nil, nil, nil, nil;
+										m = L(m);
+										Q, a = nil, nil;
+										J = L(J);
+										k, s, A, S = nil, z.SRNoG5IOCJshW, nil, {};
+										i = L(i);
+										j = L(j);
+										d = L(d);
+										Z = L(Z);
+										p = L(p);
+										g = nil;
+										q = L(q);
+										h = L(h);
+										H = L(H);
 									end;
 								else
-									if b < 10455221 then
-										bL = "warn";
-										C = I[bL];
-										X = 15613774 > 1551713;
-										VL = J[t];
-										B, dL = X, 48500;
-										KL = { VL(dL) };
-										bL = C(U(KL));
-										VL = J[t];
-										dL = 48534;
-										KL = VL(dL);
-										bL = r[KL];
-										C = x(bL);
-										KL = { G(C) };
-										VL, bL = KL[2], KL[1];
-										b = bL and 14110309 or 15564321;
-									elseif 10602751 > b then
-										bL, dL = "task", 48508;
-										r = I[bL];
-										bL = J[t];
-										VL = bL(dL);
-										B = r[VL];
-										bL = 1;
-										r = B(bL);
-										bL, dL = "_G", 48517;
-										r = I[bL];
-										bL = J[t];
-										VL = bL(dL);
-										B = r[VL];
-										b = B and 9716953 or 1689625;
+									if s < 8053007 then
+										s = 5268770;
+									elseif 8108295 > s then
+										J, E, s = nil, nil, 10852183;
 									else
-										Y, b = nil, 2838314;
+										O = e[1];
+										S = #O;
+										A = 6;
+										s = S < A;
+										s = s and 13319072 or 3631543;
 									end;
 								end;
 							end;
@@ -1238,1499 +1685,1139 @@ return (function(K, I, d, i, V, U, n, J, u, c, Q, e, k, t, H, b, E, R, O, j, v, 
 					end;
 				end;
 			else
-				if b < 4158549 then
-					if 1889058 > b then
-						if b > 826949 then
-							if b > 1674090 then
-								if b < 1808659 then
-									if b < 1695799 then
-										ML, bL = 48528, "warn";
-										r = I[bL];
-										b = 12969050;
-										VL = J[t];
-										dL = { VL(ML) };
-										bL = r(U(dL));
-									elseif 1742459 > b then
-										S, b, bL = nil, 2763073, nil;
+				if s > 12387414 then
+					if s < 14323566 then
+						if s > 13305926 then
+							if 13983167 > s then
+								if s < 13665241 then
+									if s < 13343479 then
+										s = u[t[1]];
+										A = -35134;
+										S = { s(A) };
+										S, s = { f(S) }, z.CxeNvRox0Xr0;
+									elseif 13446408 > s then
+										n2 = s;
+										o2 = u[g];
+										s, T2 = o2 and 11370088 or 14185584, o2;
 									else
-										p, z, b = nil, nil, 1134271;
+										s, x, p = 2240559, nil, nil;
+										g = d(j);
+										j = nil;
+										F[J] = g;
 									end;
 								else
-									if 1858433 > b then
-										b = J[K[1]];
-										O = 48507;
-										i = { b(O) };
-										b, i = I.CSaqP1gNVaFeGm, { U(i) };
+									if s < 13812128 then
+										s, y = a and 12558597 or 16727764, -35134;
+										p = u[H];
+										g = p(y);
+										p = b();
+										u[p] = g;
+									elseif s < 13847197 then
+										o2, s = A2, 15015770;
 									else
-										Qs[73], XL = 7903931911776, 30146876290774;
-										b = j(14904008, { c });
-										Vs, Z, w, lL, pL, Qs[37], Qs[1], z, o, Us = "\143", 15230372354996, 23758427843383, "\148", "7", 11441151939791, 12916832704382, "table", "type", 6603866295299;
-										t = M();
-										G, Qs[12] = "\234\246*C-a", "f";
-										J[t] = b;
-										ML, gL = 31185468700857, "\160";
-										b = I[o];
-										Qs[14], S, BL, CL, o = "<", 3493284595290, "\247", 33640160886064, b;
-										D = I[z];
-										sL, Qs[39] = 3972710008633, 11752135365984;
-										p = O(G, w);
-										FL, PL, Qs[48], a, zL, rL, Is = "\185", 15927302282488, "\149", 33696401915211, 9706803843496, "\221", 6126856866597;
-										z = Q[p];
-										Ms = 22091558578223;
-										b = D[z];
-										IL, W, T, Qs[59], w, p, wL, g, D, Qs[28] = 13395112122461, "v", 22440812030161, 4562125293644, "V6o\213", "string", "3", 21957145290736, b, "9";
-										z = I[p];
-										Es, Qs[19] = "1", 24407119916133;
-										G = O(w, a);
-										Qs[42] = "\023";
-										p = Q[G];
-										ZL, G, Qs[65] = 7845339975237, "string", 26217789829040;
-										b = z[p];
-										z = b;
-										p = I[G];
-										B, a, mL, Qs[80], DL, nL, HL, yL = "o", "\216+\179", 16228783611269, "\231", "o", 31296881473773, "l", 32000605502005;
-										w = O(a, g);
-										G = Q[w];
-										KL, xL, kL = 24562078903469, "J", 23773882936126;
-										b = p[G];
-										Qs[38], q, s, g, h, p, l, w, tL, Qs[25], x, f, F, Qs[74], Qs[52], Qs[46], Qs[81] = "\'", "\015", 35045096390591, "\235V>u\156\158", "\170\007\222\149F", b, "\139", "table", "\226", 8494032047987, "\241", "E", "\\", "\197", "^", "I", 8283635879697;
-										G = I[w];
-										Qs[35], m, fL, C = 6215545604942, 9310623469807, "H", 25674091425459;
-										a = O(g, T);
-										Qs[33], Qs[20], bL, Qs[71], Qs[60], AL, QL, y = 27733425091186, "\222", "\170", 8690178854862, "\130", "T", 6217090255695, 10240657658528;
-										w = Q[a];
-										L = "p";
-										b = G[w];
-										Qs[22], G = "\211", b;
-										b = J[c];
-										w, g, Qs[68] = b, "math", "_";
-										a = I[g];
-										T = O(h, Z);
-										g = Q[T];
-										Ks = 8696446439377;
-										b = a[g];
-										P, a, iL, JL, h, Qs[10], Qs[43], hL, uL, cL, Z, Qs[44] = 12797523121991, b, "\226", 410977894591, "D", "m", 6403656141733, "\137", 22489798486248, "\162", 301481328780, "\127";
-										T = O(h, Z);
-										g = Q[T];
-										Z = O(f, s);
-										h = Q[Z];
-										Y, OL, T, Qs[53], Qs[31], Z, dL, Qs[56], Qs[26] = 32560304732986, "\\", 11, 7468539661717, 16339372039608, 7, "\183", "\008", "\151";
-										s = O(x, P);
-										f = Q[s];
-										s, ds = 80, "\218";
-										P = O(W, Y);
-										Qs[79] = 29699586504197;
-										x = Q[P];
-										GL, X, P = 19271284237069, 28183522145091, 48;
-										Y = O(F, S);
-										jL, A, N = 5215388338556, "\155", 6545297329127;
-										W = Q[Y];
-										Qs[13] = 633236980006;
-										S = O(L, m);
-										r, qL, RL, EL, Y = "\208", "!", 32558868478777, "\017", 57;
-										F = Q[S];
-										Qs[2], S, Qs[32] = "\201", 23, "4";
-										m = O(B, X);
-										YL, UL, Qs[18], VL = 30286152005399, 244678492273, "2", "\239";
-										L = Q[m];
-										m = 70;
-										X = O(r, y);
-										B = Q[X];
-										X = 39;
-										y = O(q, N);
-										r = Q[y];
-										N = O(A, C);
-										y = 69;
-										q = Q[N];
-										Qs[29], SL, Qs[61] = 25472615427669, 19203082380014, 463077851351;
-										C = O(l, IL);
-										Qs[24] = "v";
-										A = Q[C];
-										IL = O(bL, UL);
-										is, N, Qs[45], NL, Qs[67], C, eL, Qs[27] = "\138", 13, 8568368762773, 13604716239039, 18667145798132, 27, "\149", 23760715082552;
-										l = Q[IL];
-										IL = 60;
-										UL = O(VL, KL);
-										bL = Q[UL];
-										UL = 19;
-										KL = O(dL, nL);
-										VL = Q[KL];
-										nL = O(iL, JL);
-										dL = Q[nL];
-										JL = O(EL, ML);
-										iL = Q[JL];
-										KL, JL, nL = 56, 14, 83;
-										ML = O(OL, QL);
-										EL = Q[ML];
-										ML, Qs[78] = 1, "\206";
-										QL = O(cL, uL);
-										OL = Q[QL];
-										vL, oL, aL, Qs[49], QL = "\138", 30612257503150, 5460680198638, 4859444922582, 67;
-										uL = O(tL, jL);
-										cL = Q[uL];
-										jL = O(vL, RL);
-										WL, TL, Qs[47], uL = "\226", 29154529096968, 864673366418, 74;
-										tL = Q[jL];
-										RL = O(eL, kL);
-										vL = Q[RL];
-										RL = 82;
-										kL = O(HL, oL);
-										jL = 24;
-										eL = Q[kL];
-										oL = O(DL, zL);
-										Qs[16] = "P";
-										HL = Q[oL];
-										Qs[4], Qs[50], oL, kL = "\143", "y", 38, 18;
-										zL = O(pL, GL);
-										DL = Q[zL];
-										Qs[84] = "m";
-										GL = O(wL, aL);
-										zL, bs, Qs[64] = 42, "\243", "\217";
-										pL = Q[GL];
-										GL, Qs[62] = 35, "\151";
-										aL = O(gL, TL);
-										wL = Q[aL];
-										aL = 61;
-										TL = O(hL, ZL);
-										gL = Q[TL];
-										ZL = O(fL, sL);
-										TL, Qs[85] = 59, 26017672834899;
-										hL = Q[ZL];
-										ns, ZL = 12672154212108, 55;
-										sL = O(xL, PL);
-										Qs[66], Qs[7] = "*", 13327810598974;
-										fL = Q[sL];
-										sL, Os, Qs[41], LL, Qs[70] = 71, "\006", 22444329232595, "\190", "\018";
-										PL = O(WL, YL);
-										xL = Q[PL];
-										YL = O(FL, SL);
-										WL = Q[YL];
-										PL = 66;
-										SL = O(LL, mL);
-										YL = 49;
-										FL = Q[SL];
-										SL = 43;
-										mL = O(BL, XL);
-										LL = Q[mL];
-										Qs[8], mL, Qs[15] = "\195", 50, 22872149469594;
-										XL = O(rL, yL);
-										Qs[23] = 31502458435917;
-										BL = Q[XL];
-										yL = O(qL, NL);
-										Qs[40] = "\171";
-										rL = Q[yL];
-										yL, XL, Qs[6] = 73, 17, "\200";
-										NL = O(AL, CL);
-										Qs[58], Qs[54] = "\138", "e";
-										qL = Q[NL];
-										CL = O(lL, Is);
-										Qs[3] = 21655664535396;
-										AL = Q[CL];
-										CL, Js = 30, 32277957720758;
-										Is = O(bs, Us);
-										lL = Q[Is];
-										NL, Qs[55] = 25, 13555891378344;
-										Us = O(Vs, Ks);
-										Qs[75], Is = 19060888052395, 81;
-										bs = Q[Us];
-										Us = 45;
-										Ks = O(ds, ns);
-										Vs = Q[Ks];
-										Ks = 29;
-										ns = O(is, Js);
-										Qs[11] = 24421158218859;
-										ds = Q[ns];
-										Js = O(Es, Ms);
-										is = Q[Js];
-										Ms = O(Os, Qs[1]);
-										Es = Q[Ms];
-										Qs[21], Qs[5] = 18300034867529, 18204067946780;
-										Qs[1] = O(Qs[2], Qs[3]);
-										Ms, Js, ns = 4, 33, 15;
-										Os = Q[Qs[1]];
-										Qs[1], Qs[17] = 47, 21795654592421;
-										Qs[3] = O(Qs[4], Qs[5]);
-										Qs[9] = 17656761131038;
-										Qs[2] = Q[Qs[3]];
-										Qs[36], Qs[3] = "\n", 76;
-										Qs[5] = O(Qs[6], Qs[7]);
-										Qs[72] = "I";
-										Qs[4] = Q[Qs[5]];
-										Qs[7] = O(Qs[8], Qs[9]);
-										Qs[5] = 36;
-										Qs[6] = Q[Qs[7]];
-										Qs[7] = 63;
-										Qs[9] = O(Qs[10], Qs[11]);
-										Qs[8] = Q[Qs[9]];
-										Qs[9] = 64;
-										Qs[11] = O(Qs[12], Qs[13]);
-										Qs[10] = Q[Qs[11]];
-										Qs[30] = "\023";
-										Qs[13] = O(Qs[14], Qs[15]);
-										Qs[12] = Q[Qs[13]];
-										Qs[11], Qs[13] = 65, 41;
-										Qs[15] = O(Qs[16], Qs[17]);
-										Qs[14] = Q[Qs[15]];
-										Qs[17] = O(Qs[18], Qs[19]);
-										Qs[16] = Q[Qs[17]];
-										Qs[15] = 20;
-										Qs[19] = O(Qs[20], Qs[21]);
-										Qs[18] = Q[Qs[19]];
-										Qs[17] = 28;
-										Qs[21] = O(Qs[22], Qs[23]);
-										Qs[20] = Q[Qs[21]];
-										Qs[34], Qs[21], Qs[83], Qs[19] = "\127", 75, 14677991103154, 37;
-										Qs[23] = O(Qs[24], Qs[25]);
-										Qs[22] = Q[Qs[23]];
-										Qs[25] = O(Qs[26], Qs[27]);
-										Qs[23] = 32;
-										Qs[24] = Q[Qs[25]];
-										Qs[25] = 21;
-										Qs[27] = O(Qs[28], Qs[29]);
-										Qs[26] = Q[Qs[27]];
-										Qs[27], Qs[76] = 6, "\009";
-										Qs[29] = O(Qs[30], Qs[31]);
-										Qs[28] = Q[Qs[29]];
-										Qs[31] = O(Qs[32], Qs[33]);
-										Qs[51], Qs[29], Qs[82] = 14695225645754, 53, "<";
-										Qs[30] = Q[Qs[31]];
-										Qs[33] = O(Qs[34], Qs[35]);
-										Qs[31] = 10;
-										Qs[32] = Q[Qs[33]];
-										Qs[33] = 68;
-										Qs[35] = O(Qs[36], Qs[37]);
-										Qs[34] = Q[Qs[35]];
-										Qs[37] = O(Qs[38], Qs[39]);
-										Qs[35] = 2;
-										Qs[36] = Q[Qs[37]];
-										Qs[39] = O(Qs[40], Qs[41]);
-										Qs[38] = Q[Qs[39]];
-										Qs[37], Qs[39] = 79, 54;
-										Qs[41] = O(Qs[42], Qs[43]);
-										Qs[77] = 31562328340841;
-										Qs[40] = Q[Qs[41]];
-										Qs[41] = 58;
-										Qs[43] = O(Qs[44], Qs[45]);
-										Qs[42] = Q[Qs[43]];
-										Qs[57], Qs[43] = 27367379857863, 84;
-										Qs[45] = O(Qs[46], Qs[47]);
-										Qs[63] = 5099840457030;
-										Qs[44] = Q[Qs[45]];
-										Qs[47] = O(Qs[48], Qs[49]);
-										Qs[45] = 51;
-										Qs[46] = Q[Qs[47]];
-										Qs[49] = O(Qs[50], Qs[51]);
-										Qs[47] = 52;
-										Qs[48] = Q[Qs[49]];
-										Qs[51] = O(Qs[52], Qs[53]);
-										Qs[49] = 5;
-										Qs[50] = Q[Qs[51]];
-										Qs[53] = O(Qs[54], Qs[55]);
-										Qs[51] = 72;
-										Qs[52] = Q[Qs[53]];
-										Qs[55] = O(Qs[56], Qs[57]);
-										Qs[53] = 8;
-										Qs[54] = Q[Qs[55]];
-										Qs[57] = O(Qs[58], Qs[59]);
-										Qs[56] = Q[Qs[57]];
-										Qs[55] = 46;
-										Qs[59] = O(Qs[60], Qs[61]);
-										Qs[58] = Q[Qs[59]];
-										Qs[61] = O(Qs[62], Qs[63]);
-										Qs[59], Qs[57] = 77, 0;
-										Qs[60] = Q[Qs[61]];
-										Qs[61] = 22;
-										Qs[63] = O(Qs[64], Qs[65]);
-										Qs[69] = 18427651072389;
-										Qs[62] = Q[Qs[63]];
-										Qs[65] = O(Qs[66], Qs[67]);
-										Qs[63] = 12;
-										Qs[64] = Q[Qs[65]];
-										Qs[67] = O(Qs[68], Qs[69]);
-										Qs[65] = 34;
-										Qs[66] = Q[Qs[67]];
-										Qs[67] = 16;
-										Qs[69] = O(Qs[70], Qs[71]);
-										Qs[68] = Q[Qs[69]];
-										Qs[71] = O(Qs[72], Qs[73]);
-										Qs[70] = Q[Qs[71]];
-										Qs[73] = O(Qs[74], Qs[75]);
-										Qs[72] = Q[Qs[73]];
-										Qs[71], Qs[73] = 40, 3;
-										Qs[75] = O(Qs[76], Qs[77]);
-										Qs[69] = 31;
-										Qs[74] = Q[Qs[75]];
-										Qs[77] = O(Qs[78], Qs[79]);
-										Qs[75] = 9;
-										Qs[76] = Q[Qs[77]];
-										Qs[77] = 62;
-										Qs[79] = O(Qs[80], Qs[81]);
-										Qs[78] = Q[Qs[79]];
-										Qs[79] = 78;
-										Qs[81] = O(Qs[82], Qs[83]);
-										Qs[80] = Q[Qs[81]];
-										Qs[81] = 26;
-										Qs[83] = O(Qs[84], Qs[85]);
-										Qs[82] = Q[Qs[83]];
-										Qs[83] = 44;
-										b = {
-											[g] = T,
-											[h] = Z,
-											[f] = s,
-											[x] = P,
-											[W] = Y,
-											[F] = S,
-											[L] = m,
-											[B] = X,
-											[r] = y,
-											[q] = N,
-											[A] = C,
-											[l] = IL,
-											[bL] = UL,
-											[VL] = KL,
-											[dL] = nL,
-											[iL] = JL,
-											[EL] = ML,
-											[OL] = QL,
-											[cL] = uL,
-											[tL] = jL,
-											[vL] = RL,
-											[eL] = kL,
-											[HL] = oL,
-											[DL] = zL,
-											[pL] = GL,
-											[wL] = aL,
-											[gL] = TL,
-											[hL] = ZL,
-											[fL] = sL,
-											[xL] = PL,
-											[WL] = YL,
-											[FL] = SL,
-											[LL] = mL,
-											[BL] = XL,
-											[rL] = yL,
-											[qL] = NL,
-											[AL] = CL,
-											[lL] = Is,
-											[bs] = Us,
-											[Vs] = Ks,
-											[ds] = ns,
-											[is] = Js,
-											[Es] = Ms,
-											[Os] = Qs[1],
-											[Qs[2]] = Qs[3],
-											[Qs[4]] = Qs[5],
-											[Qs[6]] = Qs[7],
-											[Qs[8]] = Qs[9],
-											[Qs[10]] = Qs[11],
-											[Qs[12]] = Qs[13],
-											[Qs[14]] = Qs[15],
-											[Qs[16]] = Qs[17],
-											[Qs[18]] = Qs[19],
-											[Qs[20]] = Qs[21],
-											[Qs[22]] = Qs[23],
-											[Qs[24]] = Qs[25],
-											[Qs[26]] = Qs[27],
-											[Qs[28]] = Qs[29],
-											[Qs[30]] = Qs[31],
-											[Qs[32]] = Qs[33],
-											[Qs[34]] = Qs[35],
-											[Qs[36]] = Qs[37],
-											[Qs[38]] = Qs[39],
-											[Qs[40]] = Qs[41],
-											[Qs[42]] = Qs[43],
-											[Qs[44]] = Qs[45],
-											[Qs[46]] = Qs[47],
-											[Qs[48]] = Qs[49],
-											[Qs[50]] = Qs[51],
-											[Qs[52]] = Qs[53],
-											[Qs[54]] = Qs[55],
-											[Qs[56]] = Qs[57],
-											[Qs[58]] = Qs[59],
-											[Qs[60]] = Qs[61],
-											[Qs[62]] = Qs[63],
-											[Qs[64]] = Qs[65],
-											[Qs[66]] = Qs[67],
-											[Qs[68]] = Qs[69],
-											[Qs[70]] = Qs[71],
-											[Qs[72]] = Qs[73],
-											[Qs[74]] = Qs[75],
-											[Qs[76]] = Qs[77],
-											[Qs[78]] = Qs[79],
-											[Qs[80]] = Qs[81],
-											[Qs[82]] = Qs[83],
-										};
-										Qs[45], FL, x, Qs[25], fL, W, OL, f, gL, Qs[2], h, Qs[14], zL = 25573625769604, "\180", "\161", 6810429590627, "\000", "l", "O", "\\\161Z", "\027", "\019", "string", "L", 11345244050595;
-										T = I[h];
-										g, F, eL, GL, aL, X, s, iL, wL = b, "\186", "\127", 22400353822910, 26042595733343, 9373819818253, 16777667927684, "d", "^";
-										Z = O(f, s);
-										VL, q, s = "\246", ">", 3254334080491;
-										h = Q[Z];
-										bL = "\180";
-										b = T[h];
-										f, Qs[33], JL, S, oL, sL, y, Qs[1], vL, P = "\166", 21669859944298, 18114631950579, 30987759188061, 18138663821566, 20557810148708, 7555522448830, 277255798913, "\166", 16305916157353;
-										Z = O(f, s);
-										T = b;
-										h = Q[Z];
-										Qs[27] = 1112049795589;
-										s = O(x, P);
-										Qs[29], Y, l = 3946158278445, 33117039967293, "#";
-										f = Q[s];
-										SL, Is, Qs[42], jL, Z, s, m = 11391110878392, 15034116725592, "(", 34655890112265, 9, 30, 22521461778679;
-										P = O(W, Y);
-										x = Q[P];
-										Y = O(F, S);
-										UL, Es, uL, L, C, r, Qs[9], ML, A, IL, EL, P = 10646092272477, "\147", 22676757244223, "\148", 15777475959986, "\019", 27828016427678, 34192812260914, "\254", 16123891227988, "\188", 31;
-										W = Q[Y];
-										Y, B = 22, "\175";
-										S = O(L, m);
-										kL, Qs[23] = 13710174968048, 8724398264286;
-										F = Q[S];
-										S, RL = 10, 28101965083421;
-										m = O(B, X);
-										ZL, Qs[28], Ks, N = 18778310058536, "\168", 4885172701410, 9781418906058;
-										L = Q[m];
-										X = O(r, y);
-										m = 21;
-										B = Q[X];
-										Us, pL, yL, Qs[22], X = 27589551518255, "2", 27697027052129, "\024", 54;
-										y = O(q, N);
-										Qs[10], Qs[12], WL, PL, Qs[37], Vs, HL = "\024", "\141", "\156", 3505395893856, 23860668722022, "=", "\132";
-										r = Q[y];
-										y, AL, lL, tL, QL = 50, "\131", "\151", "\214", 23002124626391;
-										N = O(A, C);
-										q = Q[N];
-										C = O(l, IL);
-										N = 0;
-										A = Q[C];
-										YL = 33456301178075;
-										IL = O(bL, UL);
-										DL = "\223";
-										l = Q[IL];
-										nL, dL, KL, C, IL, is, Qs[26], mL = 30819116873743, "\133", 20636920882569, 48, 59, ";", "\237", 20283063821541;
-										UL = O(VL, KL);
-										bL = Q[UL];
-										KL = O(dL, nL);
-										ns, Qs[11] = 24815535631651, 4461561219101;
-										VL = Q[KL];
-										UL, Qs[6] = 62, "/";
-										nL = O(iL, JL);
-										KL = 56;
-										dL = Q[nL];
-										JL = O(EL, ML);
-										rL = "W";
-										iL = Q[JL];
-										cL, nL, TL, Qs[20] = ")", 25, 30406132119374, "\162";
-										ML = O(OL, QL);
-										EL = Q[ML];
-										ML, JL = 7, 15;
-										QL = O(cL, uL);
-										OL = Q[QL];
-										uL = O(tL, jL);
-										Qs[16], Os, hL, QL, Qs[41] = "\153", "C", "\'", 42, 27734617993842;
-										cL = Q[uL];
-										Qs[4] = "-";
-										jL = O(vL, RL);
-										tL = Q[jL];
-										uL, jL, BL = 36, 20, "{";
-										RL = O(eL, kL);
-										xL = "\146";
-										vL = Q[RL];
-										RL = 28;
-										kL = O(HL, oL);
-										eL = Q[kL];
-										Qs[15], Js, CL, Qs[44] = 27299534434728, 8182655373026, 32514022341412, "8";
-										oL = O(DL, zL);
-										HL = Q[oL];
-										LL, oL = "\250", 60;
-										zL = O(pL, GL);
-										DL = Q[zL];
-										zL = 6;
-										GL = O(wL, aL);
-										Qs[13], kL = 5884272888500, 5;
-										pL = Q[GL];
-										Qs[36] = "\009";
-										aL = O(gL, TL);
-										wL = Q[aL];
-										NL, aL = 18215731700002, 11;
-										TL = O(hL, ZL);
-										GL = 24;
-										gL = Q[TL];
-										ZL = O(fL, sL);
-										Qs[3], Ms, TL = 28819576255596, 21009063929399, 17;
-										hL = Q[ZL];
-										sL = O(xL, PL);
-										Qs[18], XL = "\224", 1526263153350;
-										fL = Q[sL];
-										ZL, sL = 38, 53;
-										PL = O(WL, YL);
-										xL = Q[PL];
-										YL = O(FL, SL);
-										Qs[32], PL = "\175", 35;
-										WL = Q[YL];
-										YL, Qs[17] = 2, 32563526302523;
-										SL = O(LL, mL);
-										FL = Q[SL];
-										mL = O(BL, XL);
-										LL = Q[mL];
-										SL, Qs[19], mL, qL = 18, 19594447856548, 46, "b";
-										XL = O(rL, yL);
-										BL = Q[XL];
-										XL = 39;
-										yL = O(qL, NL);
-										rL = Q[yL];
-										Qs[5] = 16643808697926;
-										NL = O(AL, CL);
-										qL = Q[NL];
-										Qs[35] = 7451554172301;
-										CL = O(lL, Is);
-										yL, Qs[24] = 12, "\002";
-										AL = Q[CL];
-										Qs[8], bs, NL = "\169", "2", 51;
-										Is = O(bs, Us);
-										ds, CL, Qs[43] = "\223", 26, 25386931891757;
-										lL = Q[Is];
-										Us = O(Vs, Ks);
-										Is = 29;
-										bs = Q[Us];
-										Ks = O(ds, ns);
-										Us = 58;
-										Vs = Q[Ks];
-										ns = O(is, Js);
-										ds = Q[ns];
-										Ks, ns, Qs[30] = 23, 34, "U";
-										Js = O(Es, Ms);
-										is = Q[Js];
-										Ms = O(Os, Qs[1]);
-										Qs[21], Js = 10253826151078, 13;
-										Es = Q[Ms];
-										Qs[1] = O(Qs[2], Qs[3]);
-										Os = Q[Qs[1]];
-										Qs[1], Ms = 27, 4;
-										Qs[3] = O(Qs[4], Qs[5]);
-										Qs[2] = Q[Qs[3]];
-										Qs[3], Qs[7] = 45, 18391887749492;
-										Qs[5] = O(Qs[6], Qs[7]);
-										Qs[4] = Q[Qs[5]];
-										Qs[7] = O(Qs[8], Qs[9]);
-										Qs[6] = Q[Qs[7]];
-										Qs[5] = 19;
-										Qs[9] = O(Qs[10], Qs[11]);
-										Qs[8] = Q[Qs[9]];
-										Qs[11] = O(Qs[12], Qs[13]);
-										Qs[9] = 57;
-										Qs[10] = Q[Qs[11]];
-										Qs[31] = 25588739649163;
-										Qs[13] = O(Qs[14], Qs[15]);
-										Qs[12] = Q[Qs[13]];
-										Qs[40], Qs[13], Qs[11], Qs[7] = "<", 43, 8, 16;
-										Qs[15] = O(Qs[16], Qs[17]);
-										Qs[14] = Q[Qs[15]];
-										Qs[15] = 3;
-										Qs[17] = O(Qs[18], Qs[19]);
-										Qs[16] = Q[Qs[17]];
-										Qs[17] = 61;
-										Qs[19] = O(Qs[20], Qs[21]);
-										Qs[34] = "\248";
-										Qs[18] = Q[Qs[19]];
-										Qs[19] = 52;
-										Qs[21] = O(Qs[22], Qs[23]);
-										Qs[20] = Q[Qs[21]];
-										Qs[21] = 40;
-										Qs[23] = O(Qs[24], Qs[25]);
-										Qs[22] = Q[Qs[23]];
-										Qs[25] = O(Qs[26], Qs[27]);
-										Qs[23] = 33;
-										Qs[24] = Q[Qs[25]];
-										Qs[27] = O(Qs[28], Qs[29]);
-										Qs[26] = Q[Qs[27]];
-										Qs[29] = O(Qs[30], Qs[31]);
-										Qs[27] = 1;
-										Qs[28] = Q[Qs[29]];
-										Qs[25], Qs[29] = 32, 44;
-										Qs[31] = O(Qs[32], Qs[33]);
-										Qs[30] = Q[Qs[31]];
-										Qs[33] = O(Qs[34], Qs[35]);
-										Qs[31] = 47;
-										Qs[32] = Q[Qs[33]];
-										Qs[35] = O(Qs[36], Qs[37]);
-										Qs[39], Qs[33] = 33060970822691, 49;
-										Qs[34] = Q[Qs[35]];
-										Qs[38], Qs[35] = "\179", 37;
-										Qs[37] = O(Qs[38], Qs[39]);
-										Qs[36] = Q[Qs[37]];
-										Qs[37] = 63;
-										Qs[39] = O(Qs[40], Qs[41]);
-										Qs[38] = Q[Qs[39]];
-										Qs[39] = 14;
-										Qs[41] = O(Qs[42], Qs[43]);
-										Qs[40] = Q[Qs[41]];
-										Qs[43] = O(Qs[44], Qs[45]);
-										Qs[42] = Q[Qs[43]];
-										Qs[43], Qs[41] = 41, 55;
-										b = {
-											[h] = Z,
-											[f] = s,
-											[x] = P,
-											[W] = Y,
-											[F] = S,
-											[L] = m,
-											[B] = X,
-											[r] = y,
-											[q] = N,
-											[A] = C,
-											[l] = IL,
-											[bL] = UL,
-											[VL] = KL,
-											[dL] = nL,
-											[iL] = JL,
-											[EL] = ML,
-											[OL] = QL,
-											[cL] = uL,
-											[tL] = jL,
-											[vL] = RL,
-											[eL] = kL,
-											[HL] = oL,
-											[DL] = zL,
-											[pL] = GL,
-											[wL] = aL,
-											[gL] = TL,
-											[hL] = ZL,
-											[fL] = sL,
-											[xL] = PL,
-											[WL] = YL,
-											[FL] = SL,
-											[LL] = mL,
-											[BL] = XL,
-											[rL] = yL,
-											[qL] = NL,
-											[AL] = CL,
-											[lL] = Is,
-											[bs] = Us,
-											[Vs] = Ks,
-											[ds] = ns,
-											[is] = Js,
-											[Es] = Ms,
-											[Os] = Qs[1],
-											[Qs[2]] = Qs[3],
-											[Qs[4]] = Qs[5],
-											[Qs[6]] = Qs[7],
-											[Qs[8]] = Qs[9],
-											[Qs[10]] = Qs[11],
-											[Qs[12]] = Qs[13],
-											[Qs[14]] = Qs[15],
-											[Qs[16]] = Qs[17],
-											[Qs[18]] = Qs[19],
-											[Qs[20]] = Qs[21],
-											[Qs[22]] = Qs[23],
-											[Qs[24]] = Qs[25],
-											[Qs[26]] = Qs[27],
-											[Qs[28]] = Qs[29],
-											[Qs[30]] = Qs[31],
-											[Qs[32]] = Qs[33],
-											[Qs[34]] = Qs[35],
-											[Qs[36]] = Qs[37],
-											[Qs[38]] = Qs[39],
-											[Qs[40]] = Qs[41],
-											[Qs[42]] = Qs[43],
-										};
-										Z, h = 1, b;
-										f = #w;
-										s = f;
-										f = 1;
-										x, b = f, 3702371;
-										f = 0;
-										P = x < f;
-										f = Z - x;
+										D = not a;
+										x, y = D, s;
+										s = D and 2783034 or 16387949;
 									end;
 								end;
 							else
-								if b > 1342303 then
-									if b < 1506465 then
-										r, b, X = nil, 9027071, nil;
-									elseif 1627826 > b then
-										O = "GetAsync";
-										b = J[K[1]];
-										O = b[O];
-										E = J[K[2]];
-										i = { O(b, E) };
-										b, i = I["3ZXZZGD0BKJ1M4"], { U(i) };
+								if s > 14181207 then
+									if s < 14206526 then
+										L2, s = T2, n2;
+										s = 11801367;
 									else
-										D, Q = not o, t + Q;
-										i = Q <= c;
-										i = D and i;
-										D = Q >= c;
-										D = o and D;
-										i = D or i;
-										D = 14009817;
-										b = i and D;
-										i = 7763152;
-										b = b or i;
+										y = C(7890741, { d, q });
+										p = "pcall";
+										x = z[p];
+										D = { x(y) };
+										p = D[1];
+										g = D[2];
+										s = p and 11241139 or 2763073;
 									end;
 								else
-									if 1021915 > b then
-										o = 1;
-										b = J[K[2]];
-										t = 1;
-										c = O + t;
-										t = O + o;
-										o = "sub";
-										o = b[o];
-										Q = { o(b, c, t) };
-										i, b = { U(Q) }, I.x0Xr0gPTcKID;
-									elseif b < 1201522 then
-										D, p = t(o, D);
-										b = D and 5656446 or 1882493;
+									if s < 14118420 then
+										c2 = u[H];
+										e2, A2, s, G, t2 = nil, -35149, 8887798, nil, nil;
+										b2 = c2(A2);
+										s2 = D[b2];
+										u[p] = s2;
+									elseif s < 14161514 then
+										s, L2, m2 = 1962842, nil, nil;
 									else
-										jL, b = RL, eL;
-										b = 6719882;
+										F, h, r, J, Z, v = s, s, m, 2, 2, 1;
+										i = J ^ r;
+										W = k % i;
+										w = r - v;
+										J = Z ^ w;
+										i = k % J;
+										R = W - i;
+										W = 0;
+										I = R > W;
+										Q, s = I, I and 15259359 or 5333880;
 									end;
 								end;
 							end;
 						else
-							if 519902 > b then
-								if b > 75901 then
-									if b < 227613 then
-										L, Z = "\180O\003\031\242R", f;
-										b = w[Z];
-										W = b;
-										Y = o(W);
-										m = 10765977588629;
-										S = O(L, m);
-										F = Q[S];
-										b = Y == F;
-										b = b and 617696 or 2838314;
-									elseif b < 428087 then
-										dL = { z(l, bL) };
-										KL = G(L, U(dL));
-										b = 13292781;
+							if 12567578 > s then
+								if s < 12448967 then
+									if 12417191 > s then
+										s = u[m];
+										i, W, I, v = 2, 2, 1, 2;
+										F = Q[I];
+										q = 1;
+										I = u[m];
+										R = Q[W];
+										Z = u[m];
+										w = Q[v];
+										W = 1;
+										J = Z[w];
+										w = u[m];
+										v = Q[q];
+										Z = w[v];
+										q = 1;
+										v = Q[q];
+										q = 1;
+										w = v + q;
+										E = 2;
+										q = Q[E];
+										E = 1;
+										v = q - E;
+										s[F] = J;
+										I[R] = Z;
+										s = 4181923;
+										Q[W] = w;
+										Q[i] = v;
+									elseif 12428397 > s then
+										k = 35154;
+										S = u[t[1]];
+										O = e[1];
+										A = O + k;
+										s = S[A];
+										S = { s };
+										s = z.bO1tKfqeZe9la;
 									else
-										b, nL = 12565161, nil;
+										O, k = e[1], -35129;
+										S = u[t[1]];
+										A = S(k);
+										s = O == A;
+										s = s and 8388920 or 8478178;
 									end;
 								else
-									if b < 18925 then
-										O = J[K[1]];
-										E = #O;
-										Q = J[K[1]];
-										b = I.eGRLAjQzPtRH;
-										O = Q[E];
-										c, i = nil, { O };
-										Q = J[K[1]];
-										Q[E] = c;
-									elseif b < 40531 then
-										b = 10852183;
+									if 12511217 > s then
+										s, c2 = 12210060, A2;
+									elseif s < 12561879 then
+										y = "warn";
+										g = z[y];
+										e2, t2, b2 = -35114, "tostring", -35104;
+										G = u[H];
+										s2 = G(e2);
+										e2 = z[t2];
+										c2 = u[i];
+										t2 = e2(c2);
+										e2 = u[H];
+										c2 = e2(b2);
+										G = t2  .. c2;
+										D = s2  .. G;
+										y = g(D);
+										s2, g = -35126, 16474887 < 754824;
+										D = u[H];
+										G = D(s2);
+										y = W[G];
+										s = y and 3934499 or 4422751;
 									else
-										b = 14187368;
-										dL = J[s];
-										QL = dL(OL);
-										J[m] = QL;
+										D, s, y = nil, 12898395, nil;
 									end;
 								end;
 							else
-								if b > 615166 then
-									if 677034 > b then
-										Y, F, m, L = 1, 1, 22716582127954, "\222";
-										b = T(W, Y, F);
-										S = O(L, m);
-										Y = b;
-										F = Q[S];
-										b = Y == F;
-										b = b and 6055131 or 4720807;
-									elseif b < 740356 then
-										G, D, o, a = nil, nil, nil, nil;
-										o = "game";
-										b = I[o];
-										h, p = nil, nil;
-										h, T, w, a, g, p = 48518, nil, nil, "script", nil, 48551;
-										D = J[t];
-										z, o = nil, "GetService";
-										o = b[o];
-										z = { D(p) };
-										G = 48540;
-										D = M();
-										o = o(b, U(z));
-										w = 48544;
-										J[D] = o;
-										o = "game";
-										b = I[o];
-										z = J[t];
-										p = { z(G) };
-										o = "GetService";
-										o = b[o];
-										o = o(b, U(p));
-										b = J[t];
-										p = 48523;
-										z = b(p);
-										p = J[t];
-										b = "GetDataStore";
-										G = { p(w) };
-										b = o[b];
-										b = b(o, U(G));
-										G = "require";
-										p = M();
-										J[p] = b;
-										b = I[G];
-										w = I[a];
-										g = J[t];
-										T = { g(h) };
-										g = "WaitForChild";
-										g = w[g];
-										a = { g(w, U(T)) };
-										T = 48532;
-										G = b(U(a));
-										a = "_G";
-										w = I[a];
-										a = J[t];
-										g = a(T);
-										b = w[g];
-										w = b;
-										b = 0;
-										a = b;
-										b = 4276620;
+								if s < 12810191 then
+									if 12601076 > s then
+										s = not F;
+										s = s and 1452843 or 4902427;
+									elseif 12677072 > s then
+										s, W = 9413032, 6;
+										R = W - d;
+										I = 2;
+										F = I ^ R;
+										h = F;
 									else
-										m = "pcall";
-										S = I[m];
-										X = j(15426340, { D, P });
-										r = { S(X) };
-										m, B = r[1], r[2];
-										b = m and 15235534 or 4973443;
+										e2 = "warn";
+										D = z[e2];
+										b2, s = -35105, 8317593;
+										t2 = u[H];
+										c2 = { t2(b2) };
+										e2 = D(f(c2));
 									end;
 								else
-									if 553312 > b then
-										O = J[K[3]];
-										Q = 32;
-										E = O % Q;
-										Q = 13;
-										o = J[K[3]];
-										t = o - E;
-										G, o = 2, 32;
-										c = t / o;
-										O = Q - c;
-										t = J[K[4]];
-										b = 786;
-										z = J[K[2]];
-										p = G ^ O;
-										D = z / p;
-										o = t(D);
-										t = 4294967296;
-										c = o % t;
-										o = 2;
-										t = o ^ E;
-										Q = c / t;
-										p, a, T = 1, 256, 256;
-										t = J[K[4]];
-										z = Q % p;
-										p = 4294967296;
-										D = z * p;
-										o = t(D);
-										t = J[K[4]];
-										D = t(Q);
-										p = 256;
-										c = o + D;
-										O, o = nil, 65536;
-										t = c % o;
-										D = c - t;
-										c, z = nil, 65536;
-										o = D / z;
-										z = t % p;
-										w = t % a;
-										G = t - w;
-										w = 256;
-										p = G / w;
-										w = 256;
-										G = o % w;
-										g = o % T;
-										t, E = nil, nil;
-										a = o - g;
-										g = 256;
-										w = a / g;
-										o, D = nil, {
-											z,
-											p,
-											G,
-											w,
-										};
-										J[K[1]] = D;
-										Q = nil;
-									elseif 594104 > b then
-										l = m + X;
-										m, X, b, B, C, r = l, nil, 12898395, nil, nil, nil;
+									if 12947510 > s then
+										g = nil;
+										y = d(x);
+										p = nil;
+										F[J] = y;
+										j, x, P, s = nil, nil, nil, 2240559;
+									elseif 13144703 > s then
+										U, c2 = s2, nil;
+										B2 = U < y;
+										s = B2 and 9448275 or 6941268;
 									else
-										dL = 4;
-										KL = X == dL;
-										b = KL and 5525436 or 7207715;
+										s = G and 11861412 or 10908922;
 									end;
 								end;
 							end;
 						end;
 					else
-						if b > 2852093 then
-							if 3518199 > b then
-								if b > 3190291 then
-									if 3312540 > b then
-										i, b = { O }, I.uAryoC0hCoOB;
-									elseif b < 3407603 then
-										uL, b, cL = nil, 4782842, nil;
+						if s > 15594543 then
+							if s > 16494358 then
+								if 16665129 > s then
+									if 16606486 > s then
+										f2, s2 = 4018026137423, "w";
+										U = k(s2, f2);
+										G = A[U];
+										N = y == G;
+										s = N and 9726847 or 6632302;
+									elseif s < 16636916 then
+										s = m2;
+										s = c2 and 4885327 or 1962842;
 									else
-										UL, bL = 5423370389981, "\007";
-										l = O(bL, UL);
-										C = Q[l];
-										A = X == C;
-										b = A and 9009872 or 10852183;
+										s, r = h, nil;
+										s = A .. S;
+										A = s;
+										s = 8929142;
 									end;
 								else
-									if 2899516 > b then
-										O = "tostring";
-										b = J[K[1]];
-										E = I[O];
-										i, D = "SetAsync", 48548;
-										Q = J[K[2]];
-										O = E(Q);
-										t = 48534;
-										Q = J[K[3]];
-										c = Q(t);
-										Q = J[K[4]];
-										o = J[K[5]];
-										t = Q(o);
-										Q = J[K[3]];
-										o = Q(D);
-										Q = J[K[6]];
-										i, E = b[i], { [c] = t, [o] = Q };
-										i = i(b, O, E);
-										i, b = {}, I.m51oFTCDlElo;
-									elseif b < 3021533 then
-										b, i = I.DWPIU0rwQz9UDL, { O };
+									if 16698197 > s then
+										r, J = m, 2;
+										i = J ^ r;
+										F, Z, v = s, 2, 1;
+										W = k % i;
+										w = r - v;
+										J = Z ^ w;
+										h = s;
+										i = k % J;
+										R = W - i;
+										W = 0;
+										I = R > W;
+										Q, s = I, I and 8708177 or 10288697;
 									else
-										b = cL;
-										b = dL and 8891416 or 4782842;
+										e2 = u[i];
+										t2 = u[H];
+										b2, A2 = -35111, -35125;
+										c2 = t2(b2);
+										D = e2  .. c2;
+										g = r .. D;
+										D = b();
+										u[D] = g;
+										t2 = u[i];
+										c2 = u[H];
+										b2 = c2(A2);
+										e2 = t2  .. b2;
+										g = r .. e2;
+										e2 = b();
+										t2 = "pcall";
+										u[e2] = g;
+										g = z[t2];
+										b2 = C(587434, { d, D });
+										A2 = { g(b2) };
+										b2 = s;
+										g = b();
+										t2 = A2[1];
+										c2 = A2[2];
+										u[g] = c2;
+										c2, s = t2, t2 and 11535100 or 817696;
 									end;
 								end;
 							else
-								if b < 3897209 then
-									if 3603570 > b then
-										a = 48531;
-										G = J[K[1]];
-										b = 13297055;
-										w = G(a);
-										i = w;
-									elseif 3666957 > b then
-										Q, D = t + Q, not o;
-										i = c >= Q;
-										i = D and i;
-										D = Q >= c;
-										D = o and D;
-										i = D or i;
-										D = 13319072;
-										b = i and D;
-										i = 909560;
-										b = b or i;
+								if s > 15739190 then
+									if 15869482 > s then
+										c2 = { Y(U) };
+										s = 15656098;
+										t2 = Q(j, f(c2));
+									elseif 16152316 > s then
+										s, B2 = 347423, nil;
 									else
-										W, f = not P, x + f;
-										Z = f <= s;
-										Z = W and Z;
-										W = s <= f;
-										W = P and W;
-										Z = W or Z;
-										W = 107803;
-										b = Z and W;
-										Z = 736373;
-										b = b or Z;
+										s = y;
+										s = x and 233285 or 7641042;
 									end;
 								else
-									if 4113611 > b then
-										r = not B;
-										b = r and 15261991 or 16703741;
+									if 15622543 > s then
+										s = 13875691;
+									elseif s < 15640678 then
+										m, Y = "string", -35128;
+										k = z[m];
+										m = u[t[1]];
+										H = m(Y);
+										s = k[H];
+										k = { s(A) };
+										S, s = { f(k) }, z.Q9PybJ61DbJdp;
 									else
-										b, D = {}, 255;
-										J[K[2]] = b;
-										w = 1;
-										i = J[K[3]];
-										c, t, z = i, 35184372088832, "";
-										i = O % t;
-										J[K[4]] = i;
-										o = O % D;
-										D = 2;
-										t = o + D;
-										J[K[5]] = t;
-										p = 1;
-										o = #E;
-										D, a = "", w;
-										Q[O] = D;
-										D = 222;
-										w = 0;
-										g = a < w;
-										w, G, b = p - a, o, 6904683;
+										s2, s, f2, U, e2 = nil, 10908922, nil, nil, nil;
 									end;
 								end;
 							end;
 						else
-							if b > 2467327 then
-								if b < 2711861 then
-									if b < 2556921 then
-										b = J[K[1]];
-										E = J[K[2]];
-										O = "GetAsync";
-										O = b[O];
-										i = { O(b, E) };
-										i, b = { U(i) }, I.JgN4jyfqip5pGG;
-									elseif 2629943 > b then
-										Q = 153;
-										O = J[K[2]];
-										E = O * Q;
-										O = 3843309356797;
-										i = E + O;
-										E = 35184372088832;
-										b = i % E;
-										J[K[2]] = b;
-										b = 5163410;
+							if 14993189 > s then
+								if s > 14579146 then
+									if s < 14793452 then
+										u2, U = 12037862 < 6709604, nil;
+										G, s, B2, c2 = u2, 13292781, nil, nil;
+									elseif s < 14954691 then
+										S, s = { A }, z.epXcZMNnJpb7;
 									else
-										X, KL = "ipairs", 48504;
-										S = I[X];
-										UL = J[t];
-										VL = UL(KL);
-										bL = B[VL];
-										UL = { S(bL) };
-										b, X, C, r = 2763073, UL[1], UL[3], UL[2];
+										Q = u[t[1]];
+										s, I = 12228958, -35152;
+										F = Q(I);
+										S = F;
 									end;
 								else
-									if 2773053 > b then
-										C, bL = X(r, C);
-										b = C and 11241139 or 13875691;
-									elseif 2810674 > b then
-										b = X;
-										b = S and 7641042 or 16387949;
+									if 14428957 > s then
+										G, g = -35118, "warn";
+										p = z[g];
+										y = u[H];
+										D = { y(G) };
+										g = p(f(D));
+										s = 13805553;
+									elseif 14474207 > s then
+										R, S = "error", {};
+										s = z[R];
+										J = -35144;
+										W = u[H];
+										i = { W(J) };
+										R = s(f(i));
+										s = z.YFSIa69dcIofB2;
 									else
-										W, Z, b = nil, nil, 3702371;
+										A = u[t[3]];
+										k = 152;
+										O = A * k;
+										A = 257;
+										S = O % A;
+										k = 1;
+										u[t[3]] = S;
+										A = u[t[3]];
+										O = A ~= k;
+										s = O and 5496652 or 14510163;
 									end;
 								end;
 							else
-								if 2147792 > b then
-									if 1905783 > b then
-										eL = b;
-										b, RL = ML and 12343378 or 1268774, ML;
-									elseif 1985485 > b then
-										E = J[K[1]];
-										i = #E;
-										E = 0;
-										b = i == E;
-										b = b and 2599238 or 786;
+								if s < 15217499 then
+									if s < 15029266 then
+										T2, s = o2, l2;
+										s = 14185584;
+									elseif 15109200 > s then
+										s2, f2, x = nil, 2582396 ~= 9998595, nil;
+										a, s = f2, 15619827;
 									else
-										b = G;
-										G = 0;
-										i = p or G;
-										b = O + i;
-										D, i = nil, b;
-										b, O = 1658555, i;
+										A2 = -35149;
+										c2 = u[H];
+										b2 = c2(A2);
+										t2 = D[b2];
+										s, s2 = 513947, t2;
 									end;
 								else
-									if b < 2309753 then
-										VL = 65536;
-										UL = m % VL;
-										VL = 256;
-										bL = UL / VL;
-										l = { a(bL) };
-										C = { z(U(l)) };
-										A = G(S, U(C));
-										b = 1415832;
-									elseif b < 2399499 then
-										Z = a;
-										b = Z;
-										p[Z] = b;
-										Z, b = nil, 14551240;
+									if 15414309 > s then
+										s, W = 5333880, -35153;
+										I = u[t[1]];
+										R = I(W);
+										Q = R;
 									else
-										b = w;
-										b, i = G and 13297055 or 3575597, G;
+										g, p = 5450996943338, "~";
+										j = k(p, g);
+										x = A[j];
+										P = a == x;
+										s = P and 10866139 or 2240559;
 									end;
 								end;
 							end;
 						end;
 					end;
 				else
-					if b > 6228680 then
-						if b < 7419237 then
-							if b > 6837485 then
-								if b > 7262537 then
-									if 7343017 > b then
-										r = "warn";
-										X = I[r];
-										C = J[t];
-										VL = 48519;
-										bL = { C(VL) };
-										r = X(U(bL));
-										X = J[p];
-										bL, r = "tostring", "GetAsync";
-										C = I[bL];
-										VL = J[h];
-										bL = { C(VL) };
-										r, C = X[r], "print";
-										r = r(X, U(bL));
-										X = I[C];
-										C = X(r);
-										C = b;
-										b, X = r and 10252446 or 14090643, r;
+					if s > 10865093 then
+						if s > 11767208 then
+							if s < 12217292 then
+								if 11989106 > s then
+									if 11831389 > s then
+										s, c2 = H2, L2;
+										s = 16612205;
+									elseif s < 11898650 then
+										e2, c2 = 16777216, 256;
+										f2 = D / e2;
+										s2 = R(f2);
+										f2 = 256;
+										U = s2 % f2;
+										t2 = 65536;
+										e2 = D / t2;
+										f2 = R(e2);
+										e2 = 256;
+										s2 = f2 % e2;
+										t2 = D / c2;
+										c2 = 5;
+										e2 = R(t2);
+										t2 = 256;
+										f2 = e2 % t2;
+										t2 = 256;
+										e2 = D % t2;
+										t2 = y == c2;
+										s = t2 and 7126521 or 1500381;
 									else
-										b = C and 12996626 or 575572;
+										s = u[t[1]];
+										A = "GetAsync";
+										O = u[t[2]];
+										A = s[A];
+										S = { A(s, O) };
+										s, S = z.cOL61x83ByN3, { f(S) };
 									end;
 								else
-									if b < 6922975 then
-										w, T = a + w, not g;
-										p = G >= w;
-										p = T and p;
-										T = G <= w;
-										T = g and T;
-										p = T or p;
-										T = 10054429;
-										b = p and T;
-										p = 7521600;
-										b = b or p;
-									elseif 7074491 > b then
-										dL = 2;
-										KL = X == dL;
-										b = KL and 9448275 or 13292781;
+									if s < 12080897 then
+										K, s2 = 0, 65536;
+										g, U = K, 65536;
+										G = p / U;
+										N = R(G);
+										z2 = p % s2;
+										s2 = 256;
+										U = z2 / s2;
+										z2 = 256;
+										G = R(U);
+										U = p % z2;
+										s2 = { Y(N, G, U) };
+										z2 = Q(x, f(s2));
+										N, z2, G, U = nil, 0, nil, nil;
+										p, s = z2, 7368676;
+									elseif s < 12164764 then
+										s, I = 16661628, -35152;
+										Q = u[t[1]];
+										F = Q(I);
+										S = F;
 									else
-										dL = 3;
-										KL = X == dL;
-										b = KL and 347423 or 6941268;
+										s = k2;
+										s = c2 and 10948612 or 12262930;
 									end;
 								end;
 							else
-								if b > 6670953 then
-									if b < 6714743 then
-										g, i = "error", {};
-										b = I[g];
-										T = J[t];
-										Z = 48503;
-										h = { T(Z) };
-										g = b(U(h));
-										b = I.K6yQYTWj7ylXR;
-									elseif b < 6745085 then
-										uL, b = jL, vL;
-										b = 6770288;
+								if s < 12298328 then
+									if s < 12226741 then
+										s, m2 = 7843840, "coroutine";
+										k2 = z[m2];
+										m2 = u[H];
+										H2 = -35148;
+										L2 = m2(H2);
+										c2 = k2[L2];
+										k2 = c2(b2);
+										c2 = k2();
+										k2 = "warn";
+										c2 = z[k2];
+										m2 = u[H];
+										H2 = -35122;
+										L2 = { m2(H2) };
+										k2 = c2(f(L2));
+									elseif s < 12245944 then
+										r, s = nil, h;
+										s = A .. S;
+										A = s;
+										s = 819161;
 									else
-										dL, b = uL, tL;
-										b = 3109906;
+										m2 = s;
+										H2 = u[H];
+										n2 = -35126;
+										T2 = H2(n2);
+										L2 = W[T2];
+										c2, s = L2, L2 and 10297977 or 16612205;
 									end;
 								else
-									if 6498653 > b then
-										E, c, a = V, "math", 256;
-										D = M();
-										b = nil;
-										O, i = b, nil;
-										z = M();
-										Q = i;
-										i = I[c];
-										c, o = "floor", "string";
-										b = i[c];
-										c = M();
-										J[c] = b;
-										w, t = "math", "table";
-										i = I[t];
-										t = "remove";
-										b = i[t];
-										t = b;
-										G = M();
-										i = I[o];
-										o = "char";
-										b = i[o];
-										o = b;
-										b = 0;
-										J[D] = b;
-										g, b = a, {};
-										J[z] = b;
-										a, b = 1, {};
-										p = b;
-										b = 2;
-										J[G] = b;
-										i = I[w];
-										w, T = "random", a;
-										b = i[w];
-										i, a, w = 1, 0, b;
-										h, b = a > T, 14551240;
-										a = i - T;
-									elseif 6613690 > b then
-										VL, KL = 1, 1;
-										UL = L + VL;
-										VL = L + KL;
-										bL = T(W, UL, VL);
-										b, KL, dL = 8071923, "K", 3171157001668;
-										VL = O(KL, dL);
-										UL = Q[VL];
-										l = bL ~= UL;
-										A = l;
+									if 12348435 > s then
+										k = H + k;
+										S, d = k <= m, not Y;
+										S = d and S;
+										d = k >= m;
+										d = Y and d;
+										S = d or S;
+										d = 486717;
+										s = S and d;
+										S = 15625259;
+										s = s or S;
 									else
-										bL = 4;
-										b = r;
-										r, b = 0, 16600767;
-										l = 1;
-										C = X > l;
-										l, UL = 0, bL;
-										bL = 1;
-										VL = bL;
-										bL = 0;
-										KL = VL < bL;
-										bL = l - VL;
+										r, Q, d, I, h, Y = nil, nil, nil, nil, nil, nil;
+										Y, F, R, i, W = "game", nil, nil, nil, nil;
+										s = z[Y];
+										h, Q, R, F, Y = -35112, -35140, "script", -35117, "GetService";
+										Y = s[Y];
+										d = u[H];
+										r = { d(h) };
+										Y = Y(s, f(r));
+										d = b();
+										u[d] = Y;
+										Y = "game";
+										s = z[Y];
+										r = u[H];
+										Y, i = "GetService", -35101;
+										h = { r(Q) };
+										Y = s[Y];
+										Y = Y(s, f(h));
+										s = u[H];
+										h = -35124;
+										r = s(h);
+										s = "GetDataStore";
+										h = u[H];
+										Q = { h(F) };
+										s = Y[s];
+										h = b();
+										s = s(Y, f(Q));
+										u[h] = s;
+										Q = "require";
+										s = z[Q];
+										I = z[R];
+										R = u[H];
+										W = R(i);
+										F = I[W];
+										I = "_G";
+										Q = s(F);
+										W = -35138;
+										F = z[I];
+										I = u[H];
+										R = I(W);
+										s = F[R];
+										F = s;
+										s = 0;
+										I = s;
+										s = 12569995;
 									end;
 								end;
 							end;
 						else
-							if b < 7801356 then
-								if b > 7673951 then
-									if b < 7714786 then
-										r = 1;
-										X = S - m;
-										l = b;
-										B = X + r;
-										r, UL = b, 5;
-										bL = B >= UL;
-										UL = 5;
-										C = bL and UL;
-										b, X = C and 6632302 or 8838690, C;
-									elseif 7742931 > b then
-										b = J[K[1]];
-										E = V[1];
-										i = J[K[2]];
-										i = { b, i };
-										b = I.o2nISRNoG5IO;
+							if s < 11305613 then
+								if 10978058 > s then
+									if s < 10887530 then
+										x = 2;
+										P = r(E, x);
+										E = P;
+										x = I(E);
+										j, s, p = {}, 6500606, 1;
+									elseif 10928767 > s then
+										s, G = 6500606, nil;
+										U = p + y;
+										D, y, p, g = nil, nil, U, nil;
 									else
-										c = "string";
-										Q = I[c];
-										c = J[K[1]];
-										o = 48550;
-										t = c(o);
-										b = Q[t];
-										Q = { b(O) };
-										b, i = I.yqfejzZw64eYX, { U(Q) };
+										c2 = u[w];
+										k2 = c2(A2);
+										s = 12262930;
+										u[p] = k2;
 									end;
 								else
-									if b < 7495699 then
-										b, nL = 12565161, 84;
-										dL = nL;
-									elseif b < 7581321 then
-										b, D, p, c, o = 16541435, nil, z, nil, nil;
-										z = nil;
-										Q[O] = p;
+									if 11067510 > s then
+										O = e[1];
+										S = #O;
+										A = 8;
+										s = S ~= A;
+										s = s and 1658555 or 6943990;
+									elseif 11184327 > s then
+										A = u[t[2]];
+										k = 5;
+										O = A * k;
+										A = 31591453505909;
+										S = O + A;
+										O = 35184372088832;
+										s = S % O;
+										u[t[2]] = s;
+										s = 14510163;
 									else
-										S = 1636513 ~= 14977381;
-										J[L] = S;
-										KL, r = 48537, "warn";
-										X = I[r];
-										bL = J[t];
-										VL = bL(KL);
-										b, KL = 16387949, "tostring";
-										bL = I[KL];
-										dL = J[h];
-										KL = bL(dL);
-										C = VL .. KL;
-										r = X(C);
+										y = u[H];
+										G = -35123;
+										D = y(G);
+										x = g[D];
+										s = x and 1701973 or 13875691;
 									end;
 								end;
 							else
-								if b > 8064115 then
-									if b < 8143001 then
-										b = C;
-										b = A and 2240559 or 1415832;
+								if s > 11570330 then
+									if s < 11669305 then
+										y = r(E, j, j);
+										D = W[y];
+										s = D and 8946494 or 16600767;
 									else
-										B = J[P];
-										b, S = 13917854, B;
+										g = u[q];
+										s, x = 3196084, g;
 									end;
 								else
-									if b < 7894645 then
-										f, x, z, w, p, Z = 2, 1, c, b, b, 2;
-										h = Z ^ z;
-										T = Q % h;
-										s = z - x;
-										Z = f ^ s;
-										h = Q % Z;
-										g = T - h;
-										T = 0;
-										a = g > T;
-										G, b = a, a and 15849382 or 15784626;
-									elseif 8003019 > b then
-										O, E = 6, V[1];
-										i = #E;
-										b = i < O;
-										b = b and 8413434 or 8841883;
+									if s < 11373089 then
+										l2 = s;
+										s, o2 = b2 and 13818704 or 15015770, b2;
+									elseif s < 11455595 then
+										k2 = "warn";
+										c2 = z[k2];
+										o2 = -35107;
+										m2 = u[H];
+										H2 = -35106;
+										L2 = { m2(H2) };
+										k2 = c2(f(L2));
+										k2 = u[H];
+										L2 = -35103;
+										m2 = k2(L2);
+										c2 = Q[m2];
+										H2 = "script";
+										L2 = z[H2];
+										T2 = u[H];
+										n2 = { T2(o2) };
+										H2 = "WaitForChild";
+										H2 = L2[H2];
+										H2 = H2(L2, f(n2));
+										L2 = u[H];
+										n2 = -35151;
+										T2 = L2(n2);
+										m2 = H2[T2];
+										H2, s = "getfenv", 7843840;
+										L2 = z[H2];
+										H2 = { L2() };
+										k2 = c2(m2, f(H2));
+										c2 = k2();
 									else
-										b = G;
-										G = 0;
-										i = p or G;
-										b = O + i;
-										i = b;
-										O, b, D = i, 3631543, nil;
+										s = 817696;
+										A2 = u[g];
+										c2 = A2;
 									end;
 								end;
 							end;
 						end;
 					else
-						if 4919898 > b then
-							if 4292868 > b then
-								if b < 4252748 then
-									if b < 4204673 then
-										X = L <= F;
-										b = X and 12411684 or 9027071;
-									elseif 4232126 > b then
-										b, i = I.Crsr1DbFlk5z4, { O };
+						if s > 10077411 then
+							if 10509372 > s then
+								if s > 10293337 then
+									if 10315828 > s then
+										H2, L2 = s, t2;
+										s = t2 and 13367887 or 11801367;
+									elseif s < 10414722 then
+										G, c2 = "warn", -35119;
+										D = z[G];
+										e2 = u[H];
+										t2 = { e2(c2) };
+										G = D(f(t2));
+										D = u[H];
+										e2 = -35123;
+										G = D(e2);
+										u[p] = G;
+										s = 4954469;
 									else
-										r, X = not Y, b;
-										b, S = r and 9998595 or 2783034, r;
+										S, s = { A }, z.huKCSaqP1gNVaF;
 									end;
 								else
-									if b < 4272644 then
-										b, Q = 0, 8;
-										O, c = b, Q;
-										Q, b = 1, 1658555;
-										t, i = Q, 1;
-										Q = 0;
-										o = t < Q;
-										Q = i - t;
-									elseif b < 4278046 then
-										b = not w;
-										b = b and 15916683 or 14648130;
+									if s < 10192797 then
+										c2 = "warn";
+										s2 = z[c2];
+										k2 = -35115;
+										b2 = u[H];
+										A2 = { b2(k2) };
+										H2, s = -35107, 14090643;
+										c2 = s2(f(A2));
+										k2 = "script";
+										c2 = u[H];
+										A2 = -35103;
+										b2 = c2(A2);
+										s2 = Q[b2];
+										A2 = z[k2];
+										m2 = u[H];
+										k2 = "WaitForChild";
+										L2 = { m2(H2) };
+										k2 = A2[k2];
+										k2 = k2(A2, f(L2));
+										A2 = u[H];
+										L2 = -35151;
+										m2 = A2(L2);
+										b2 = k2[m2];
+										k2 = "getfenv";
+										A2 = z[k2];
+										k2 = { A2() };
+										c2 = s2(b2, f(k2));
+										s2 = c2();
+									elseif 10286949 > s then
+										Z = u[H];
+										v = -35145;
+										w = Z(v);
+										J = r .. w;
+										Z = b();
+										v = -35137;
+										u[Z] = J;
+										J = u[H];
+										x = l(3021514, { d, Z });
+										E = "pcall";
+										w = J(v);
+										J = b();
+										u[J] = w;
+										w = b();
+										p = s;
+										v = l(9542108, { H, J });
+										u[w] = v;
+										q = z[E];
+										v = M(6382631, { H, J });
+										j = { q(x) };
+										x, E = 744340 >= 15426340, j[1];
+										q = b();
+										a = j[2];
+										u[q] = a;
+										a = 13917854 >= 15372132;
+										j = b();
+										s = E and 11733050 or 3196084;
+										u[j] = x;
+										x = E;
 									else
-										tL = "warn";
-										dL = I[tL];
-										vL = J[t];
-										eL = 48524;
-										RL = vL(eL);
-										eL = "tostring";
-										vL = I[eL];
-										eL = vL(uL);
-										jL = RL .. eL;
-										tL = dL(jL);
-										b = 3354405;
+										S, s = Q, F;
+										s = Q and 16661628 or 12119469;
 									end;
 								end;
 							else
-								if 4676665 > b then
-									if 4319547 > b then
-										w, a = 1, 2;
-										G = p[w];
-										w = p[a];
-										b = G < w;
-										b = b and 5437434 or 1782945;
-									elseif 4482677 > b then
-										z, b = nil, p;
-										b = O .. i;
-										O = b;
-										b = 8388920;
+								if 10770087 > s then
+									if 10575859 > s then
+										D = u[H];
+										t2, s = -35143, 8317593;
+										e2 = D(t2);
+										D = l(4908264, { p, j });
+										g[e2] = D;
+									elseif s < 10658365 then
+										r, Q = Y(d, r);
+										s = r and 4720807 or 6055131;
 									else
-										b = J[K[1]];
-										O = 48507;
-										i = { b(O) };
-										i, b = { U(i) }, I.WxVH5kqSNFvbZY;
+										H2, l2 = "warn", -35114;
+										c2 = z[H2];
+										n2 = u[H];
+										o2 = n2(l2);
+										M2, Y2 = "tostring", -35127;
+										l2 = z[M2];
+										C2 = u[i];
+										M2 = l2(C2);
+										l2 = u[H];
+										C2 = l2(Y2);
+										s = 14146197;
+										n2 = M2  .. C2;
+										T2 = o2  .. n2;
+										H2 = c2(T2);
 									end;
 								else
-									if b < 4751824 then
-										m, B = "\168", 27601754829365;
-										L = O(m, B);
-										S = Q[L];
-										F = Y == S;
-										b = F and 15569259 or 10628738;
-									elseif b < 4834084 then
-										ML = nil;
-										B = u(B);
-										bL = u(bL);
-										r = u(r);
-										b, OL, VL = 10576764, nil, nil;
+									if 10858115 > s then
+										E, Z = not q, Z + v;
+										J = Z <= w;
+										J = E and J;
+										E = w <= Z;
+										E = q and E;
+										J = E or J;
+										E = 3460802;
+										s = J and E;
+										J = 12363144;
+										s = s or J;
 									else
-										b, dL = 9614644, OL;
+										J = I;
+										s = J;
+										H[J] = s;
+										J, s = nil, 587855;
 									end;
 								end;
 							end;
 						else
-							if b < 5511044 then
-								if b > 5250883 then
-									if 5387895 > b then
-										bL, UL, b, S = nil, 16364167 ~= 2582396, 13875691, nil;
-										Y = UL;
-									elseif 5467043 > b then
-										b = J[c];
-										w, g = 1, 2;
-										G = p[w];
-										s = 2;
-										w = J[c];
-										a = p[g];
-										g = 1;
-										Z = J[c];
-										f = p[s];
-										h = Z[f];
-										P, x = 2, 1;
-										f = J[c];
-										s = p[x];
-										x, T = 1, 2;
-										Z = f[s];
-										s = p[x];
-										x = 1;
-										f = s + x;
-										x = p[P];
-										P = 1;
-										s = x - P;
-										b[G] = h;
-										w[a] = Z;
-										p[g] = f;
-										p[T] = s;
-										b = 4306263;
+							if 9578376 > s then
+								if 9430653 > s then
+									if 9095577 > s then
+										Q, s, h = nil, 10628738, nil;
+									elseif 9288557 > s then
+										s = u[t[1]];
+										O, A = e[1], -35134;
+										S = s(A);
+										s, m = "byte", 1;
+										s = O[s];
+										s = s(O);
+										k, H, A = s, m, S;
+										m, S = -1, 8;
+										Y = m;
+										m, s = 0, 8929142;
+										d = m > Y;
+										m = S - Y;
 									else
-										O, E = V[2], V[1];
-										b = J[K[1]];
-										Q = b;
-										b = Q[O];
-										b = b and 3270676 or 4135175;
+										s = Q;
+										Q = 0;
+										S = h or Q;
+										s = A + S;
+										d, S = nil, s;
+										A, s = S, 3858488;
 									end;
 								else
-									if 4963956 > b then
-										r, b = nil, 4092048;
-									elseif b < 5068426 then
-										b, m, B = 15372132, nil, nil;
+									if s < 9492049 then
+										S2 = p + U;
+										u2 = p + U;
+										B2 = r(E, S2, u2);
+										S2 = i[B2];
+										c2 = S2;
+										u2 = not c2;
+										s = u2 and 14648130 or 15916683;
+									elseif s < 9538966 then
+										s, y = 929636, g;
 									else
-										Q = 80;
-										O = J[K[3]];
-										E = O * Q;
-										Q, O = 1, 257;
-										i = E % O;
-										J[K[3]] = i;
-										O = J[K[3]];
-										E = O ~= Q;
-										b = E and 531053 or 5163410;
+										Y, H, d, O = -35134, -35102, -35132, e[1];
+										k = u[t[1]];
+										m = k(H);
+										r = -35129;
+										k = l(9164083, { t[1] });
+										A = "gsub";
+										A = O[A];
+										A = A(O, m, k);
+										k = u[t[1]];
+										H = -35147;
+										m = k(H);
+										S = A .. m;
+										H, A = -35146, "gsub";
+										k = u[t[1]];
+										A = S[A];
+										m = k(H);
+										k = T(8144668, { t[1], t[2] });
+										A = A(S, m, k);
+										m = u[t[1]];
+										H = m(Y);
+										m = u[t[1]];
+										Y = m(d);
+										m = u[t[1]];
+										d = { m(r) };
+										k = { H, Y, f(d) };
+										d = 3;
+										Y = #O;
+										H = Y % d;
+										Y = 1;
+										m = H + Y;
+										S = k[m];
+										s = A .. S;
+										S = { s };
+										s = z.BJkBWxVH5kqSNF;
 									end;
 								end;
 							else
-								if b < 5815926 then
-									if b < 5549263 then
-										b = 13292781;
-										dL = { z(l, bL, UL) };
-										KL = G(L, U(dL));
-									elseif 5614768 > b then
-										ML, cL = "require", "script";
-										dL = I[ML];
-										QL = I[cL];
-										cL = J[t];
-										tL = 48518;
-										uL = cL(tL);
-										OL = QL[uL];
-										ML = dL(OL);
-										QL = J[B];
-										cL = { ML(QL) };
-										dL = cL[1];
-										OL = cL[2];
-										b = dL and 13325255 or 14840177;
+								if s > 9717931 then
+									if s < 9795012 then
+										f2 = 65536;
+										s2 = p / f2;
+										U = { R(s2) };
+										G = { Y(f(U)) };
+										N = Q(x, f(G));
+										G = s;
+										U = j >= P;
+										s, N = U and 237400 or 6852101, U;
+									elseif s < 9958803 then
+										s, k2, b2 = 14090643, -35148, "coroutine";
+										c2 = z[b2];
+										b2 = u[H];
+										A2 = b2(k2);
+										s2 = c2[A2];
+										c2 = s2(e2);
+										k2 = -35130;
+										s2 = c2();
+										c2 = "warn";
+										s2 = z[c2];
+										b2 = u[H];
+										A2 = { b2(k2) };
+										c2 = s2(f(A2));
 									else
-										b, z = 4306263, D;
+										s, S = z.uxuh45HTvOBnL, { A };
 									end;
 								else
-									if 6015268 > b then
-										b, T = 8056308, 6;
-										g = T - D;
-										a = 2;
-										w = a ^ g;
-										p = w;
+									if s < 9615016 then
+										A, S, H = "tostring", "SetAsync", -35110;
+										s = u[t[1]];
+										O = z[A];
+										k = u[t[2]];
+										A = O(k);
+										k = u[t[3]];
+										m = k(H);
+										k = u[t[4]];
+										S, d = s[S], -35149;
+										Y = u[t[5]];
+										H = k(Y);
+										k = u[t[3]];
+										Y = k(d);
+										k = u[t[6]];
+										O = { [m] = H, [Y] = k };
+										S = S(s, A, O);
+										S, s = {}, z.qJsOminZtkUaum;
+									elseif 9662202 > s then
+										I = b();
+										b2, d, s, Z, S, A2 = 33696401915211, nil, {}, "__index", "setmetatable", 21957145290736;
+										R = b();
+										u[I] = s;
+										H = nil;
+										s = T(1348620, {
+											I,
+											Y,
+											r,
+											F,
+										});
+										Q, D = nil, 3154454463932;
+										u[R] = s;
+										i = {};
+										W = b();
+										s = {};
+										u[W] = s;
+										v, h = "__metatable", nil;
+										s = z[S];
+										q = nil;
+										w = u[W];
+										Y2, J = 6545297329127, { [Z] = w, [v] = q };
+										S = s(i, J);
+										Z = 33866756275610;
+										s = n(6904683, {
+											W,
+											I,
+											m,
+											Y,
+											r,
+											R,
+										});
+										F = L(F);
+										d = 16237197319561;
+										I = L(I);
+										r = L(r);
+										J, f2 = 2509420037264, 26341778206698;
+										W = L(W);
+										k, A, W, U = s, S, 28261026542440, 10104580887137;
+										m = L(m);
+										R = L(R);
+										h = 16182577421679;
+										Y = L(Y);
+										Y, t2, R, v, r, j = "B\205\138\008", 25396869164594, 7115417783537, 13528708126875, 14389635963436, 30807589517321;
+										H = k(Y, d);
+										m = A[H];
+										o2, K, d = 3493284595290, 17901769351312, "I\188\205\203\252\247";
+										Y = k(d, r);
+										I = 19820297741325;
+										H = A[Y];
+										n2, r, p = 32560304732986, "\170~~\198)\r\242\201\130", 6747373063237;
+										d = k(r, h);
+										P, h = 3632560309915, "+\030+\207\131!\1319\132%\1683\213}\129 &\140\021`r\173\127\168\176_\030\127\234f\178d\242\251_h\151\rs\144\006\247\196.\192\160\233\018\002x\183\008\171\216\001\253\181\223\129\207\169\162OF6h<\147=\153Sq\007\132\024\210N\208)s\1439\204|\251\195|;";
+										Y = A[d];
+										k2, Q = 22440812030161, 21174901352068;
+										r = k(h, Q);
+										Q, F = "\195\190o\252\012\162k`<wtj\181\'\175\195C\178\176\155\138>8\003Z\235\228\172\167PR\253\179\000\030k\137\128z\250\250\193<\253\229\184\215\181\246\181&eM\134fs", 29397688956281;
+										d = A[r];
+										h = k(Q, F);
+										X = 34072359583226;
+										r = A[h];
+										F, g, H2 = "\"\004D\211^E\1494\236\031\158|y\181\r\163\134\152\219\008", 32419045964536, 35045096390591;
+										Q = k(F, I);
+										q = 12604284360429;
+										h = A[Q];
+										d2, I, i = 25674091425459, "\233^\158\204NA\026\r\226|\212\160v", 23663607098123;
+										F = k(I, R);
+										R = "5\163\175";
+										Q = A[F];
+										w, s2, u2 = 16718342545001, 9214291726530, 19447725253472;
+										I = k(R, W);
+										F = A[I];
+										W = "\236\169S-\140";
+										R = k(W, i);
+										I = A[R];
+										m2, a, i, C2 = 15230372354996, 32258823404205, "\ra\232", 10240657658528;
+										W = k(i, J);
+										B2, E = 30681773406159, 32751522855827;
+										R = A[W];
+										J = "\195!\248";
+										i = k(J, Z);
+										Z = "0w\159\250\129\167\190\020";
+										W = A[i];
+										J = k(Z, w);
+										i = A[J];
+										w = "A\167\n\236\239X\207\004\178\250C\222\224@\227\002%C";
+										Z = k(w, v);
+										J = A[Z];
+										v = "\014\150\142\145\127.\031\140\130\157\214\024\005P";
+										w = k(v, q);
+										Z = A[w];
+										q = "{\147\186Kr\213";
+										v = k(q, E);
+										w = A[v];
+										E, z2 = "\215\211>P\130\183", 22078820591657;
+										q = k(E, a);
+										v = A[q];
+										a, x = "\194?\182\130\030\198K\255D\128S>\030O\159P\139\216\211\142\008", 31697472453032;
+										E = k(a, P);
+										q = A[E];
+										N, P = 166299385933, "i\221%\157\135\196\133NO\167\017";
+										a = k(P, x);
+										E = A[a];
+										x = "\176b\0188\184t\r\210A$";
+										P = k(x, j);
+										j = "\251\172\008:^\029\230JP<\220\206\144%\148T4\233\251";
+										a = A[P];
+										x = k(j, p);
+										P = A[x];
+										V, p, e2 = 28883753268362, "\164iP\141\158\237\020\187\185O", 1284084449877;
+										j = k(p, g);
+										g = "\208R\247\189\012\163f\136\173\024tI\191\249J\167\251\158\002<\152`\159\r\164}\002\130\017\197[C\225\158h=\138ml\007\030\021\204\186n\195\166Qm\193\163\002\001\137n\005\158z\128";
+										x = A[j];
+										y = 32674941385583;
+										p = k(g, y);
+										j = A[p];
+										y = "\134u\138_\176\197\156\224?\234\245=L\233\189\237p\246*\015D";
+										g = k(y, D);
+										M2, G = 28183522145091, 6623389797388;
+										p = A[g];
+										D = "P0\198\208I\006\167n\239\r<\012\009#=\181c\129\173P\190:\156BHZ\181\020\209\236\noG\'\1329-~\129\199\164\162j\199\175\162\n\200Z\162\171\157\153\143\020t\1829I\017k\253\166u\",\190\012\162\1875\223\222H\168\0119Z\239\011\132t\182\026\"\154H\224\141D\235\200\156\021\135,\253\224";
+										y = k(D, V);
+										V, T2 = "w\225\2366\024@\175B\209", 12797523121991;
+										g = A[y];
+										D = k(V, X);
+										X = "V\171\\}\148X,z+\146\178\155\020\158\197\141\023\209\002u6MRxu$\135w\028\135_\164\223\243\199\026\254\207\188\165\167~\005\2231\234\'\r0vI\150\200\003\188Q\134\016272\255\137\145\029\203\227[\129\243\229\198\019\017\170i\227\137/\210\r";
+										y = A[D];
+										S2 = 10032794800703;
+										V = k(X, K);
+										D = A[V];
+										K = "f\165gc\142\224";
+										X = k(K, N);
+										N = "[\151\177;\003\002\031\213\251d";
+										V = A[X];
+										K = k(N, G);
+										O2, G = 23758427843383, "\197";
+										X = A[K];
+										N = k(G, U);
+										U = "\207.&\r\156\194T\172\223w+\196Y\155\137\028\1603m;B^\238\171`\253\234\227\n\170&vw\239\178\152\252\009\016\003\227\158\025sC\031\136~\244\147\236P\220]\185\020\232\156\143\240\029\246N";
+										K = A[N];
+										G = k(U, z2);
+										N = A[G];
+										L2, z2 = 301481328780, "?\225\136\178";
+										U = k(z2, s2);
+										s2 = ";\175\2345";
+										G = A[U];
+										z2 = k(s2, f2);
+										U = A[z2];
+										c2, f2 = 12332307469934, "\2266V\173\026\246\022\143\163\008%Z^;\'~\145\030\194\176\021\153%\230\220:b\007\242\014 f\133Y(\229)\189y\156\169\247\228\021;\021\246\141\158p\154k\248";
+										s2 = k(f2, e2);
+										e2 = "\232\219\233";
+										z2 = A[s2];
+										f2 = k(e2, t2);
+										t2 = "a\026\191\139_`";
+										s2 = A[f2];
+										e2 = k(t2, c2);
+										f2 = A[e2];
+										c2 = "l\166\'\144\024\180X\004w:\191\233\006\018hS\025P\151\165\174\130\233\199v\154pOG\026\217\246\172\197w\179ol\\B\179\251!:\147\237p\188\"";
+										t2 = k(c2, B2);
+										e2 = A[t2];
+										B2 = "\234_\183>\189;\192\006\231\211\150\018e\237\252T";
+										c2 = k(B2, S2);
+										S2 = "\143\000\024e\030\236\234\014\127-(.\021\2106\253\134<\135x";
+										t2 = A[c2];
+										B2 = k(S2, u2);
+										c2 = A[B2];
+										u2 = "\233E|\161\242\002g7\222\019\216\214\149\213\006G\206\131u\149-\151\166\211\003\222\0013\026\243\002\165\218-\246\236\184\251\255\192\011;\234\244";
+										S2 = k(u2, O2);
+										O2 = "\151C\168L\200\008\018 U$\000\172\024\188";
+										B2 = A[S2];
+										u2 = k(O2, b2);
+										S2 = A[u2];
+										b2 = "\224\232\143\149b)\177\162\166I\249y\023\005\162\n\132c\147\217\246\006\240\252\180&\239;\134v\141\217\251O\r\128\219\127\231\177\008\1863)";
+										O2 = k(b2, A2);
+										A2 = "]\172$\225.a.\196\029\n\235[\227}]Z";
+										u2 = A[O2];
+										b2 = k(A2, k2);
+										k2 = "DU\153\157\203\237\188\206";
+										O2 = A[b2];
+										A2 = k(k2, m2);
+										b2 = A[A2];
+										m2 = "\148\005\184lj\201\146\179\178r\218\149.\'\216\230.x\186S\226%\007x\199d?`\177\239\169\005\174y\183>eS\133\139I\255U\027{\137-\251\144u\227\022+m4\140{\138o\137Y\185~\133\215\130\2305";
+										k2 = k(m2, L2);
+										A2 = A[k2];
+										L2 = "xz\026-\028\236\022\206VS87\219prj\173\207\228\231\219me\235*\2448\138\253\156\202k\n\127\217WJ\n[\195\143\004</\248Fhb\002\181u\231e\169\025\212\008\127";
+										m2 = k(L2, H2);
+										k2 = A[m2];
+										H2 = "9\226O6G\170\1559\213\023\127\231\132`\031\202\136\225\251I";
+										L2 = k(H2, T2);
+										m2 = A[L2];
+										T2, l2 = "\241\166\149n\\\186O+M\254\018\140z+\243\155\223\000\212\173!9b\169N\004v\004B\238\180\"P\166T\251)P\194\1428J\246\004\168\153r\007qxit\225$\015\248\168\007\138\198N\251\180\000\250\029?\149(t", 9310623469807;
+										H2 = k(T2, n2);
+										n2 = "\172\231\188m2\209\0277\167\148z\197\159\024\154]\220\214\023\212\150t\229N\224\028]0K\0276\201\251\181\133\147\151;\149\008\135a\021\195\0255\004\200\153C\127b9[\009\191ux\154\196j\184\152KW\149g\174\224\251n\227\253\004\029\145\1841\134\0038\159x\154\190\129\172C#\230\170";
+										L2 = A[H2];
+										T2 = k(n2, o2);
+										o2 = "\174\188\002\239t&\003)\206\253=:\147j\1311\176XK>\224\187\239~~\175\009\210\241,\001";
+										H2 = A[T2];
+										n2 = k(o2, l2);
+										l2 = "\030\194\015\0043\165\025\158\246VR\139I\017u\172k\246\139\201\rd\167\230\255\186\200\154\207";
+										T2 = A[n2];
+										o2 = k(l2, M2);
+										M2 = ")\198_`\246\152~P\215`\204\224\023\017\248";
+										n2 = A[o2];
+										l2 = k(M2, C2);
+										C2 = "\169\203\181\176h\223W\191\164R\000Q7\175\'\193\254C\171\240";
+										o2 = A[l2];
+										M2 = k(C2, Y2);
+										Y2 = "\148\145O\189\021\175Gke[\135\206OY";
+										l2 = A[M2];
+										C2 = k(Y2, d2);
+										M2 = A[C2];
+										s = {
+											m,
+											H,
+											Y,
+											d,
+											r,
+											h,
+											Q,
+											F,
+											I,
+											R,
+											W,
+											i,
+											J,
+											Z,
+											w,
+											v,
+											q,
+											E,
+											a,
+											P,
+											x,
+											j,
+											p,
+											g,
+											y,
+											D,
+											V,
+											X,
+											K,
+											N,
+											G,
+											U,
+											z2,
+											s2,
+											f2,
+											e2,
+											t2,
+											c2,
+											B2,
+											S2,
+											u2,
+											O2,
+											b2,
+											A2,
+											k2,
+											m2,
+											L2,
+											H2,
+											T2,
+											n2,
+											o2,
+											l2,
+											M2,
+										};
+										Y, I, R, F = "ipairs", 53, 44, 1;
+										m = b();
+										H = b();
+										W = 53;
+										u[m] = s;
+										s = o(12422698, { m });
+										u[H] = s;
+										Q = { F, I };
+										I = 1;
+										s = z[Y];
+										F = { I, R };
+										R = 45;
+										I = { R, W };
+										h = { Q, F, I };
+										Q = { s(h) };
+										d, s, Y, r = Q[2], 10628738, Q[1], Q[3];
 									else
-										F = 2;
-										b = T(W, F);
-										B, W, S = 0, b, {};
-										F = p(W);
-										L = 1;
-										b, m = 4181923, 0;
+										d, i, I = k, -35153, "sub";
+										I, Q, r = O[I], s, s;
+										I = I(O, d, d);
+										R = u[t[1]];
+										W = R(i);
+										F = I == W;
+										h, s = F, F and 12632157 or 9413032;
 									end;
 								end;
 							end;
@@ -2739,75 +2826,8 @@ return (function(K, I, d, i, V, U, n, J, u, c, Q, e, k, t, H, b, E, R, O, j, v, 
 				end;
 			end;
 		end;
-		b = #d;
-		return U(i);
-	end, function(I)
-		E[I] = E[I] - 1;
-		if 0 == E[I] then
-			E[I], J[I] = nil, nil;
-		end;
-	end, function(I)
-		for b = 1, #I, 1 do
-			E[I[b]] = E[I[b]] + 1;
-		end;
-		if V then
-			local b = V(true);
-			local U = d(b);
-			U.__index, U.__gc, U.__len = I, c, function()
-				return -1487344;
-			end;
-			return b;
-		else
-			return K({}, { __gc = c, __index = I, __len = function()
-				return -1487344;
-			end });
-		end;
-	end, function(I, U)
-		local V = Q(U);
-		local K = function(...)
-			return b(I, { ... }, U, V);
-		end;
-		return K;
-	end, function(I, U)
-		local V = Q(U);
-		local K = function(K, d)
-			return b(I, { K, d }, U, V);
-		end;
-		return K;
-	end, function(I, U)
-		local V = Q(U);
-		local K = function(K, d, n, i, J, E)
-			return b(I, {
-				K,
-				d,
-				n,
-				i,
-				J,
-				E,
-			}, U, V);
-		end;
-		return K;
-	end, function(I, U)
-		local V = Q(U);
-		local K = function(K)
-			return b(I, { K }, U, V);
-		end;
-		return K;
-	end, function()
-		O = O + 1;
-		E[O] = 1;
-		return O;
-	end, 0, function(I, U)
-		local V = Q(U);
-		local K = function(K, d, n, i)
-			return b(I, {
-				K,
-				d,
-				n,
-				i,
-			}, U, V);
-		end;
-		return K;
+		s = #c;
+		return f(S);
 	end, {};
-	return (t(6402229, {}))(U(i));
-end)(setmetatable, getfenv and getfenv() or _ENV, getmetatable, { ... }, newproxy, unpack or table.unpack, select);
+	return (H(4480913, {}))(f(S));
+end)(setmetatable, unpack or table.unpack, getmetatable, select, getfenv and getfenv() or _ENV, newproxy, { ... });
