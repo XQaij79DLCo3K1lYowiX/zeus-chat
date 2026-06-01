@@ -1,4 +1,4 @@
-local debug = true
+local debug = false
 local function log(message)
 	if debug and game["Run Service"]:IsStudio() then
 		print("[autocomp server] " .. message)
@@ -32,9 +32,6 @@ local WordCache: {[Player]: {[string]: number}} = {}
 
 local AUTOSAVE_INTERVAL = 120
 
--- ==========================
--- UTILITY
--- ==========================
 
 local function NormalizeWord(word: string)
 	-- make it normal and not stupid and weird
@@ -60,10 +57,6 @@ local function stringStartsWith(prefix, inputString)
 	return string.sub(inputString, 1, #prefix) == prefix
 end
 
--- ==========================
--- LOAD / SAVE
--- ==========================
-
 local function LoadStats(player: Player)
 	log("Loading stats...")
 	local key = "WordStats_" .. player.UserId
@@ -78,43 +71,35 @@ local function LoadStats(player: Player)
 end
 
 local function SaveStats(player: Player)
-	--log("saving stats...")
+	log("saving stats...")
 	local data = WordCache[player]
 	if not data then return end
 
 	local key = "WordStats_" .. player.UserId
 	store:Set(key, data)
-	--log("finished saving")
+	log("finished saving")
 end
 
--- ==========================
--- MAIN MESSAGE HANDLER
--- ==========================
-
-local function RegisterWords(player: Player, message: string)
-	--log("registering words...")
+local function RegisterWords(player: Player, words)
+	log("registering words...")
 	local data = WordCache[player]
-	if not data then return end
-
-	local words = SplitWords(message)
+	if not data then log("no data") return end
 
 	for _, word in ipairs(words) do
+		log("registered word: " .. word)
 		data[word] = (data[word] or 0) + 1
 	end
-	--log("finished registering")
+	log("finished registering")
 end
 
--- ==========================
--- REMOTE FUNCTION FOR CLIENT
--- ==========================
 
 GetWordStats.OnServerInvoke = function(player)
 	return WordCache[player] or {}
 end
 
--- ==========================
--- PLAYER HANDLERS
--- ==========================
+for _, player in Players:GetPlayers() do
+	LoadStats(player)
+end
 
 Players.PlayerAdded:Connect(function(player)
 	LoadStats(player)
@@ -125,9 +110,6 @@ Players.PlayerRemoving:Connect(function(player)
 	WordCache[player] = nil
 end)
 
--- ==========================
--- AUTOSAVE LOOP
--- ==========================
 
 task.spawn(function()
 	while true do
@@ -138,14 +120,13 @@ task.spawn(function()
 	end
 end)
 
--- ==========================
--- HOOK INTO THE CHAT SYSTEM
--- ==========================
 
-local brod = _G.brodcastRemote
-brod.OnServerEvent:Connect(function(player, message)
-	if stringStartsWith(";", message) then
-		return
+
+local relay = _G.relay
+relay.OnServerEvent:Connect(function(player, command, words)
+	log("event fired")
+	if command == "RegisterWords" then
+		log("command is correct")
+		RegisterWords(player, words) -- words is an array
 	end
-	RegisterWords(player, message)
 end)
