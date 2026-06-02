@@ -345,7 +345,8 @@ table.insert(AutoCompleteProviders, {
 		local prefix = match.prefix:lower()
 
 		for _, plr in ipairs(game.Players:GetPlayers()) do
-			if plr.Name:lower():sub(1, #prefix) == prefix then
+			-- Check if the player matches the prefix AND is not the local player
+			if plr ~= game.Players.LocalPlayer and plr.Name:lower():sub(1, #prefix) == prefix then
 				return plr.Name
 			end
 		end
@@ -355,7 +356,6 @@ table.insert(AutoCompleteProviders, {
 		return replaceRange(text, match.startPos, match.endPos, suggestion)
 	end
 })
-
 
 
 
@@ -628,13 +628,25 @@ local function initDesktopGUI()
 				-- Intercept and run !private routing checks
 				if cleanText:match("^!private%s+%w+") then
 					local targetUser = cleanText:match("^!private%s+(%w+)")
+					if not game.Players:FindFirstChild(targetUser) then
+						log("Private chat failed: user '" .. targetUser .. "' not found")
+						Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#f70019'>[ZC]</font> User not found")
+						task.defer(function() tb:CaptureFocus() end)
+						return	
+					elseif targetUser == game.Players.LocalPlayer.Name then
+						Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#f70019'>[ZC]</font> You cant message yourself.")
+						task.defer(function() tb:CaptureFocus() end)
+						return	
+					else
+						snd:Fire("init_private", targetUser)
+						startPrivateChat(targetUser)
 
-					snd:Fire("init_private", targetUser)
-					startPrivateChat(targetUser)
+						-- Refocus immediately so they can begin messaging seamlessly
+						task.defer(function() tb:CaptureFocus() end)
+						return 
+					end
 
-					-- Refocus immediately so they can begin messaging seamlessly
-					task.defer(function() tb:CaptureFocus() end)
-					return 
+					
 				end
 
 				-- Dynamic message payload distribution
