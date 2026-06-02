@@ -4,7 +4,7 @@ local config = {
 	-- off means anyone can use the chat
 	-- friends means only friends of the owner can use the chat
 	-- whitelist means only the users in the "users" table can use the chat
-	permissionMode = "friends",
+	permissionMode = "all",
 	
 	-- the users that will be able to use zeuschat, given whitelist is enabled
 	-- users with data will have data applied even if whitelist is disabled
@@ -27,7 +27,8 @@ local config = {
 		
 		["Zeus_gameover"] = {
 			verified = false
-		}
+		},
+
 	},
 	
 	--[[
