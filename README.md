@@ -22,6 +22,7 @@ Instead of intercepting chat messages, modern Zeus chat simply uses a custom cha
   + Player name autocomplete
   + Adonis commands autocomplete
 + [Dynamic code loading](#dcl-anchor)
++ private chat with end to end encryption
 
 
 
