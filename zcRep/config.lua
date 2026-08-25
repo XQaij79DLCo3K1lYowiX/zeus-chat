@@ -30,11 +30,12 @@ local config = {
 		},
 
 	},
-	
-	--[[
-	
-	
-	]]
+
+	-- filters profanity in messages using https://www.profanity.dev/
+	-- might be a little weird, and adds a very slight delay to sending
+	-- messages
+
+	filter = false,
 	
 	
 	-- adonis auto complete for commands. if this is enabled and you do not
